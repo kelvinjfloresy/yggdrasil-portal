@@ -1,5 +1,13 @@
 <p align="center">
-  <img src="assets/branding/banner_github.png" alt="Yggdrasil Environmental Systems Banner" width="100%" />
+  <a href="https://kelvinjfloresy.github.io/yggdrasil-portal/">
+    <img src="assets/yggdrasil_horizontal_dark.svg" alt="Yggdrasil Environmental Systems" width="560" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://kelvinjfloresy.github.io/yggdrasil-portal/">
+    <img src="assets/renders/banner_osiris_16_9.png" alt="Yggdrasil Cyber-Physical Digital Twin Platform" width="100%" />
+  </a>
 </p>
 
 <h1 align="center">🌳 Yggdrasil Environmental Systems</h1>
@@ -30,7 +38,7 @@
 
 **Yggdrasil Environmental Systems** es una plataforma tecnológica integral de computación ambiental y gemelos ciberfísicos diseñada para infraestructuras críticas, administraciones públicas, compañías de seguros y fondos de inversión en sostenibilidad.
 
-A diferencia de los modelos de caja negra o la simulación hidráulica/térmica clásica que tarda horas en resolver mallas complejas, **Yggdrasil integra operadores neuronales informados por la física (FNO / PINN) capaces de realizar inferencias deterministas en menos de 38 milisegundos**, garantizando la conservación exacta de masa y momento con estricta trazabilidad judicial.
+A diferencia de los modelos de caja negra o la simulación hidráulica y térmica clásica que tarda horas en resolver mallas complejas, **Yggdrasil integra operadores neuronales informados por la física (FNO / PINN) capaces de resolver ecuaciones Navier-Stokes y cinéticas químicas en menos de 38 milisegundos**, garantizando la conservación exacta de masa y momento con estricta trazabilidad judicial.
 
 ```
                   ┌────────────────────────────────────────────────────────┐
@@ -48,7 +56,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica/térmica 
 
 ---
 
-## 🎮 Demostraciones en Vivo & Centros de Mando Tácticos
+## 🎮 Centros de Mando Tácticos & Demostraciones en Vivo
 
 <table>
   <tr>
@@ -83,32 +91,115 @@ A diferencia de los modelos de caja negra o la simulación hidráulica/térmica 
 
 ### 🌊 Bloque 1: Núcleos Operativos en Producción (Validación Empírica & Despliegue Activo)
 
-| Núcleo | Ámbito & Especialidad | 🌍 En el mundo real | Caso Real & Métrica Tangible | Marco Normativo |
-| :--- | :--- | :--- | :--- | :--- |
-| **HYDRO-CORE: OSIRIS**<br>`DOI: 10.5281/zenodo.22919526` | Gemelo Ciberfísico Hidráulico & Nowcasting FNO 2D | Avisa con hasta 146 minutos de antelación dónde y con cuánta fuerza se desbordará una rambla o río, permitiendo a Protección Civil evacuar a tiempo. | **Rambla del Poyo (Valencia, DANA 29-O):** Inferencia en 38.4 ms anticipando el desbordamiento con 42 min de margen. | Directiva 2007/60/CE de Inundaciones · Solvencia II · EU AI Act |
-| **AQUA-CORE: HYGIEIA**<br>`DOI: 10.5281/zenodo.23321969` | Vigilancia Hidrosanitaria & Erradicación de Legionella | Vigila 24/7 la concentración de desinfectante en tuberías hospitalarias y urbanas, eliminando purgas a ciegas y previniendo brotes mortales. | **Red Hospitalaria (12 km):** Ahorro del 64.3% del agua potable desperdiciada en purgas manuales y 0 brotes. | Real Decreto 3/2023 · RD 487/2022 (Legionella) · PERTE Agua |
-| **PYRO-CORE: PROMETHEUS**<br>`DOI: 10.5281/zenodo.22727839` | Peritaje Satelital de Incendios & Obras de Urgencia | Mide con satélites Sentinel-2 la pérdida exacta de suelo tras un incendio y calcula el presupuesto de diques y fajinas antes de las lluvias torrenciales. | **Gran Incendio de Niebla (Huelva, 3.200 ha):** Pérdida de suelo calculada (48.2 t/ha) y 4.73 M€ en obras de urgencia presupuestadas. | Ley 43/2003 de Montes · LEC Art. 335.2 · Directiva Europea de Suelos |
+<table>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_hydro_osiris.png" width="240" alt="HYDRO-CORE OSIRIS" /><br>
+      <code>DOI: 10.5281/zenodo.22919526</code>
+    </td>
+    <td>
+      <strong>HYDRO-CORE: OSIRIS — Prevención Inmediata de Inundaciones & Protección Civil</strong><br>
+      🌍 <strong>En el mundo real:</strong> Avisa con hasta 146 minutos de antelación dónde y con cuánta fuerza se desbordará una rambla o río, permitiendo a Protección Civil evacuar a tiempo.<br>
+      📊 <strong>Caso Real & Cifras:</strong> En la Rambla del Poyo (Valencia, DANA 29-O), anticipó el calado con <strong>42 minutos de margen</strong> y error menor al 1.2% en 38.4 ms de inferencia.<br>
+      📜 <strong>Normativa:</strong> Directiva Europea 2007/60/CE de Inundaciones · Solvencia II · EU AI Act.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_aqua_hygieia.png" width="240" alt="AQUA-CORE HYGIEIA" /><br>
+      <code>DOI: 10.5281/zenodo.23321969</code>
+    </td>
+    <td>
+      <strong>AQUA-CORE: HYGIEIA — Vigilancia Hidrosanitaria Continua & Erradicación de Legionella</strong><br>
+      🌍 <strong>En el mundo real:</strong> Vigila las 24 horas del día la concentración de desinfectante en tuberías de hospitales y ciudades, alertando antes de que proliferen bacterias de Legionella.<br>
+      📊 <strong>Caso Real & Cifras:</strong> En red hospitalaria (12 km), ahorra un <strong>64.3% del agua potable</strong> desperdiciada en purgas manuales y garantiza 0 brotes.<br>
+      📜 <strong>Normativa:</strong> Real Decreto 3/2023 (Agua de consumo) · Real Decreto 487/2022 (Legionella) · PERTE Digitalización del Agua.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_pyro_prometheus.png" width="240" alt="PYRO-CORE PROMETHEUS" /><br>
+      <code>DOI: 10.5281/zenodo.22727839</code>
+    </td>
+    <td>
+      <strong>PYRO-CORE: PROMETHEUS — Peritaje Satelital de Incendios & Restauración de Urgencia</strong><br>
+      🌍 <strong>En el mundo real:</strong> Mide con satélites Sentinel-2 la pérdida exacta de suelo tras un incendio y calcula el presupuesto de diques y fajinas antes de que las lluvias arrastren la montaña.<br>
+      📊 <strong>Caso Real & Cifras:</strong> En el Gran Incendio de Niebla (Huelva, 3.200 ha), diagnosticó una pérdida de suelo de 48.2 t/ha y presupuestó <strong>4.73 millones de euros</strong> bajo tarifas TRAGSA.<br>
+      📜 <strong>Normativa:</strong> Ley 43/2003 de Montes · Ley de Enjuiciamiento Civil (LEC Art. 335.2) · Directiva Europea de Suelos.
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### ⚡ Bloque 2: Núcleos en Despliegue Secuencial 2026
 
-| Núcleo | Especialidad Operativa | 🌍 En el mundo real | Rendimiento Bancable / Retorno |
-| :--- | :--- | :--- | :--- |
-| **SOLAR-CORE: HELIOS** | Plantas Solares Bancables & Baterías BESS | Modela al céntimo cuánta energía limpia generará un parque fotovoltaico a 25 años y programa las baterías para inyectar en horas pico de precio. | Planta de 4.95 MWp (Fuentejara, Andalucía): Rentabilidad auditada del **12.4% de TIR** y certificación de cero afección a Red Natura 2000. |
-| **CYBER-CORE: DAEDALUS** | Edificios Inteligentes BACS Clase A & Monetización CAE | Supervisa climatización, ventilación e iluminación en grandes edificios y convierte el ahorro certificado en dinero en efectivo que abona el Estado. | Edificio terciario de 4.900 m² en Madrid: **148.600 kWh ahorrados al año**, amortización en 8.4 meses vía Certificados de Ahorro Energético (CAE). |
-| **CIRCULAR-CORE: OUROBOROS** | Reciclaje Hospitalario & Residuo Cero (CSRD) | Reorganiza la gestión de residuos hospitalarios para evitar mezclar basura común en bolsas de biopeligro, recortando drásticamente el canon de vertedero. | Hospital CSMC Magdalena (Castellón): Tasa de reciclaje del **74.2%** y **42.600 € al año ahorrados** en tasas de depósito. |
+<table>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_solar_helios.png" width="240" alt="SOLAR-CORE HELIOS" />
+    </td>
+    <td>
+      <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas & Baterías BESS</strong><br>
+      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años y programa las baterías para verter energía en las horas de precio más alto.<br>
+      📊 <strong>Rendimiento Bancable:</strong> Planta de 4.95 MWp (Fuentejara, Andalucía): rentabilidad auditada del <strong>12.4% de TIR</strong> y certificación de cero afección a Red Natura 2000.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_cyber_daedalus.png" width="240" alt="CYBER-CORE DAEDALUS" />
+    </td>
+    <td>
+      <strong>CYBER-CORE: DAEDALUS — Edificios Inteligentes & Monetización de Ahorros CAE</strong><br>
+      🌍 <strong>En el mundo real:</strong> Supervisa inteligentemente la climatización, ventilación e iluminación de grandes edificios y convierte los ahorros certificados en dinero en efectivo que paga el Estado.<br>
+      📊 <strong>Rendimiento Bancable:</strong> Edificio terciario de 4.900 m² en Madrid: <strong>148.600 kWh ahorrados al año</strong>, inversión amortizada en 8.4 meses vía CAE.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_circular_ouroboros.png" width="240" alt="CIRCULAR-CORE OUROBOROS" />
+    </td>
+    <td>
+      <strong>CIRCULAR-CORE: OUROBOROS — Reciclaje Hospitalario & Residuo Cero (CSRD)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Reorganiza la gestión de residuos hospitalarios para evitar mezclar basura común en bolsas de biopeligro, reduciendo drásticamente el canon de vertedero.<br>
+      📊 <strong>Rendimiento Bancable:</strong> Hospital CSMC Magdalena (Castellón): tasa de reciclaje del <strong>74.2%</strong> y <strong>42.600 euros al año ahorrados</strong> en tasas de vertedero.
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### 🔬 Bloque 3: Pipeline de Innovación I+D (2027-2028)
 
-| Núcleo | Misión Tecnológica | 🌍 En el mundo real |
-| :--- | :--- | :--- |
-| **THERMO-CORE: JANUS** | Climatización Pasiva & Confort Urbano | Diseña el aislamiento pasivo y la orientación de edificios y plazas públicas para reducir el calor extremo sin disparar la factura de aire acondicionado. |
-| **TOX-CORE: TALOS** | Monitoreo Estructural de Tanques Químicos APQ | Supervisa tanques de plástico industrial (HDPE) con químicos corrosivos o ácidos para alertar de deformaciones antes de roturas o derrames graves. |
-| **URBAN-CORE: THEMIS** | Diagnóstico Satelital Territorial & Sombraje | Diagnostica qué barrios de una ciudad sufren más estrés térmico para ubicar parques y sombras a menos de 10 minutos a pie de los vecinos más vulnerables. |
-| **AGRO-CORE: CERES** | Asimilación Satelital para Riego y Nitrógeno | Analiza con satélites agrícolas el nitrógeno y la humedad de los cultivos para reducir fertilizantes y asegurar ayudas de la PAC europea. |
+<table>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_thermo_janus.png" width="240" alt="THERMO-CORE JANUS" />
+    </td>
+    <td>
+      <strong>THERMO-CORE: JANUS — Climatización Pasiva & Confort Urbano</strong><br>
+      🌍 <strong>En el mundo real:</strong> Diseña el aislamiento pasivo y la orientación de edificios y plazas públicas para reducir el calor extremo sin disparar la factura de aire acondicionado.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_tox_talos.png" width="240" alt="TOX-CORE TALOS" />
+    </td>
+    <td>
+      <strong>TOX-CORE: TALOS — Monitoreo de Integridad Estructural en Tanques Químicos (APQ)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Supervisa tanques de plástico industrial (HDPE) con químicos corrosivos para alertar de deformaciones antes de roturas o vertidos.
+    </td>
+  </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_urban_themis.png" width="240" alt="URBAN-CORE THEMIS" />
+    </td>
+    <td>
+      <strong>URBAN-CORE: THEMIS — Diagnóstico Satelital Territorial & Refugios Climáticos</strong><br>
+      🌍 <strong>En el mundo real:</strong> Diagnostica qué barrios sufren más estrés térmico para ubicar parques y sombras a menos de 10 minutos a pie de los vecinos más vulnerables.
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -142,7 +233,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica/térmica 
       🛡️ <strong>Auditorías & Cumplimiento:</strong> Auditor Líder ISO 14001 / ISO 45001 · Estándar Forense Digital ISO/IEC 27037 · EU AI Act (Art. 14 HITL)<br>
       ⚖️ <strong>Actuación Pericial:</strong> Habilitado para Dictámenes Técnicos y Defensa Colegiada ante Tribunales de Justicia (LEC Art. 335.2)
       <br><br>
-      📬 <strong>Contacto:</strong> <a href="mailto:yggdrasil.environmental@gmail.com">yggdrasil.environmental@gmail.com</a> &nbsp;|&nbsp; 📱 <strong>WhatsApp:</strong> +34 642 022 669 &nbsp;|&nbsp; 💼 <a href="https://www.linkedin.com/in/kelvin-flores-yarihuaman/"><strong>LinkedIn Profile</strong></a>
+      📬 <strong>Contacto Institucional:</strong> <a href="mailto:yggdrasil.environmental@gmail.com">yggdrasil.environmental@gmail.com</a> &nbsp;|&nbsp; 📱 <strong>WhatsApp:</strong> +34 642 022 669 &nbsp;|&nbsp; 💼 <a href="https://www.linkedin.com/in/kelvin-flores-yarihuaman/"><strong>Perfil Oficial de LinkedIn</strong></a>
     </td>
   </tr>
 </table>
