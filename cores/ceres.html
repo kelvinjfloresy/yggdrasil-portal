@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRI-CORE: CERES | Teledetección NDVI/NDRE, Riego de Precisión & Cumplimiento PAC</title>
+  <meta name="description" content="Gemelo digital para agronomía de precisión: balance hídrico edafoclimático FAO-56 Penman-Monteith, teledetección de estrés hídrico con Sentinel-2 y cumplimiento de la PAC 2023-2027.">
+  <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              void: '#070B12',
+              surface: '#0B121F',
+              card: '#111B2C',
+              border: '#1A273D',
+              green: '#00F5A0',
+              cyan: '#00D2FF',
+              lime: '#A3E635',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-green transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Volver al Portal Principal</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-lime-400 animate-pulse"></span>
+          <span class="font-montserrat font-bold text-sm text-lime-400">AGRI-CORE: CERES</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="../assets/dossiers/factsheet_ceres.pdf" download class="px-3 py-1.5 rounded-lg bg-lime-400 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shadow">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar Factsheet PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
+    
+    <!-- Hero Banner -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border border-lime-500/40 shadow-2xl relative overflow-hidden mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="text-xs font-mono px-3 py-1 rounded bg-lime-500/20 text-lime-300 border border-lime-400/30 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+              <span>PIPELINE 2028 · RESERVA I+D / PAC</span>
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
+              Agronomía de Precisión & Regadío Eficiente
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
+              PAC 2023-2027 · CUE / SIEX · RD 47/2022
+            </span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
+            AGRO-CORE: CERES
+          </h1>
+          <p class="text-base sm:text-xl text-lime-400 font-mono mt-2">
+            Teledetección Satelital NDVI/NDRE, Optimización de Riego & Cumplimiento PAC
+          </p>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+            Gemelo digital paramétrico edafoclimático que integra sensores de humedad de suelo con series temporales multiespectrales de Sentinel-2 (NDVI, NDRE y NDWI a 10 metros). Modela el balance hídrico radicular bajo la metodología FAO-56 Penman-Monteith para dosificar el riego de forma milimétrica, reduciendo el consumo hídrico y garantizando el cumplimiento del Cuaderno Digital de Explotación Agraria (CUE).
+          </p>
+        </div>
+        <div class="flex-shrink-0 self-start md:self-center p-4 rounded-2xl bg-lime-500/10 border border-lime-500/30 text-lime-400">
+          <i data-lucide="sprout" class="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_0_20px_rgba(163,230,53,0.4)]"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Propósito Operativo & Resolución Práctica -->
+    <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-lime-500/30 shadow-xl">
+      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
+        <span class="p-2.5 rounded-xl bg-lime-500/10 text-lime-300 border border-lime-500/30">
+          <i data-lucide="sprout" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
+          <p class="text-xs font-mono text-lime-400">Ahorro hídrico en regadío, prevención de lixiviación de nitratos y cuaderno CUE</p>
+        </div>
+      </div>
+
+      <!-- Callout Práctico Mundo Real -->
+      <div class="mb-6 p-4 rounded-2xl bg-lime-950/40 border border-lime-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
+        <div class="p-2.5 rounded-xl bg-lime-500/20 text-lime-300 shrink-0"><i data-lucide="sprout" class="w-5 h-5"></i></div>
+        <div>
+          <strong class="text-lime-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
+          Dice al agricultor y a la comunidad de regantes el día y la hora exacta en que deben abrir los aspersores y cuántos litros necesita cada parcela para no gastar de más, ahorrando hasta un 40% de agua y cumpliendo las exigencias del Cuaderno Digital de la PAC.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-lime-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              El riego a ojo o sobredimensionado agota los acuíferos y arrastra nitratos agrícolas a las aguas subterráneas, causando sanciones europeas y pérdida de ayudas directas de la PAC.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
+            Desperdicio de agua & multas nitratos
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve CERES</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Calcula la evapotranspiración de cultivo real por satélite (Sentinel-2) y prescribe la dosis justa por sector agronómico, ahorrando un <strong>31.8% de agua de riego</strong> y evitando el lavado de fertilizante.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
+            -31.8% de consumo de agua
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Indicadores Técnicos</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Ahorro auditado de 1.450 m³/ha·año y reducción del 22% en la lixiviación de nitratos en parcelas piloto, con telemetría de suelo validada por sondas FDR.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
+            1.450 m³/ha·año · -22% lixiviación N
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-lime-500/40 bg-gradient-to-br from-lime-950/20 to-brand-void flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-lime-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Cumplimiento del Real Decreto 47/2022 (zonas vulnerables a nitratos), integración obligatoria con el Cuaderno Digital de Explotación (CUE / SIEX) y eco-regímenes de la PAC 2023-2027.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-lime-500/30 text-[11px] font-mono text-lime-300 font-bold">
+            PAC 2023-2027 · SIEX / CUE
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicadores Clave -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Ahorro Hídrico Auditado</div>
+        <div class="text-2xl font-mono font-bold text-lime-400 mt-1">-31.8 %</div>
+        <div class="text-[10px] text-lime-300 mt-1">1.450 m³/ha·año ahorrados</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Reducción Lixiviación</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">-22 % N</div>
+        <div class="text-[10px] text-brand-green mt-1">● Protección de zonas vulnerables</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Resolución Espectral</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">10 metros</div>
+        <div class="text-[10px] text-slate-400 mt-1">Sentinel-2 MSI (B04, B05, B08, B11)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Trazabilidad PAC</div>
+        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">100% CUE</div>
+        <div class="text-[10px] text-slate-400 mt-1">Integración digital directa con SIEX</div>
+      </div>
+    </div>
+
+    <!-- Grid de Ficha Técnica -->
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Bloque 1: Formulación Edafoclimática -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="sprout" class="w-5 h-5 text-lime-400"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">FAO-56 & Índices Espectrales</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          Balance de agua en el suelo y curvas de absorción foliar:
+        </p>
+        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-lime-400 space-y-1 mb-3">
+          <div>ET_0 = [0.408·Δ·(Rn - G) + γ·(900/(T+273))·u2·(es - ea)] / [Δ + γ·(1 + 0.34·u2)]</div>
+          <div>ET_c = K_s · K_c · ET_0  (Demanda hídrica diaria)</div>
+          <div>NDRE = (B08_NIR - B05_RedEdge) / (B08_NIR + B05_RedEdge)</div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Donde <em>K_c</em> es el coeficiente de cultivo calibrado dinámicamente según el vigor foliar satelital y <em>K_s</em> el coeficiente de estrés hídrico medido mediante tensiómetros de matriz de succión en suelo a 30 y 60 cm.
+        </p>
+      </div>
+
+      <!-- Bloque 2: Caso de Estudio Real -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="droplet" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Finca Agrícola de Regadío (850 ha)</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          <strong>Valle del Ebro / Levante — Cultivo leñoso de alto valor:</strong>
+        </p>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Reducción de 1.450 m³/ha·año mediante riego deficitario controlado sin merma de cosecha.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Sectorización automatizada por polígonos homogéneos de vigor NDRE, optimizando el abonado de fondo.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Exportación automática de tratamientos fitosanitarios y riegos al Cuaderno Digital (SIEX).</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloque 3: Normativa & Ecorregímenes -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="scale" class="w-5 h-5 text-brand-gold"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & PAC</h3>
+        </div>
+        <ul class="space-y-2.5 text-xs text-slate-300">
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">PAC 2023-2027 (RD 1048/2022):</strong> Cumplimiento de ecorregímenes de agricultura sostenible y gestión eficiente del agua.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">RD 1054/2022 (SIEX / CUE):</strong> Registro digital homologado de labores agrícolas y uso de fertilizantes en explotaciones.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">RD 47/2022 (Zonas Vulnerables a Nitratos):</strong> Limitación de lixiviados agrícolas hacia masas de agua subterráneas.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs & Temporary Files
+*.log
+*.tmp
+__pycache__/
+
+# Uncompressed Raw WAV Audio (preserves repo lightweight < 60MB)
+assets/audio/*.wav
+
+# Local Python caches
+*.pyc

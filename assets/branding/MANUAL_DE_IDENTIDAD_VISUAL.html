@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANUAL DE IDENTIDAD VISUAL & RESPONSIVE LOGO SYSTEM | Yggdrasil Environmental Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void-bg: #070B12;
+      --surface-bg: #0C1220;
+      --card-bg: #10182A;
+      --border-color: #1A263D;
+      --border-light: #2A3B59;
+      --brand-forest: #1E3F35;
+      --brand-copper: #C88A75;
+      --brand-emerald: #00F5A0;
+      --brand-cyan: #00D2FF;
+      --text-main: #F8FAFC;
+      --text-muted: #8E9FB5;
+      --font-display: 'Montserrat', sans-serif;
+      --font-ui: 'Space Grotesk', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--void-bg);
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background: rgba(7, 11, 18, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-brand img { width: 36px; height: 36px; }
+
+    .top-title h1 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .top-title p {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--brand-emerald); }
+
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* HERO PORTADA */
+    .manual-hero {
+      background: linear-gradient(145deg, #0C1322 0%, #070B12 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      margin-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .manual-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 245, 160, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(0, 245, 160, 0.08);
+      border: 1px solid rgba(0, 245, 160, 0.25);
+      color: var(--brand-emerald);
+      padding: 0.35rem 0.8rem;
+      border-radius: 99px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .hero-author-box {
+      background: #090F1A;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--brand-copper);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .hero-author-box p {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #CAD5E2;
+    }
+
+    .hero-author-box strong {
+      color: var(--brand-copper);
+      font-weight: 700;
+    }
+
+    .hero-preview {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-preview img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* SECCIONES */
+    section {
+      margin-bottom: 4.5rem;
+    }
+
+    .section-header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .section-header span {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--brand-emerald);
+      font-weight: 700;
+    }
+
+    /* TARJETAS Y GRIDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #FFFFFF;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    /* RESPONSIVE LOGO SIMULATOR */
+    .resp-showcase {
+      background: var(--surface-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .resp-tabs {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+    }
+
+    .resp-tab-btn {
+      background: #0D1626;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.6rem 1.25rem;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .resp-tab-btn.active, .resp-tab-btn:hover {
+      background: rgba(0, 245, 160, 0.12);
+      border-color: var(--brand-emerald);
+      color: var(--brand-emerald);
+    }
+
+    .resp-display-stage {
+      background: #05080E;
+      border: 1px dashed var(--border-light);
+      border-radius: 16px;
+      padding: 3rem;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .resp-display-stage.light-stage {
+      background: #FFFFFF !important;
+      border-style: solid;
+    }
+
+    .stage-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: #141E30;
+      color: var(--text-muted);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    /* TABLA CROMÁTICA */
+    .color-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.88rem;
+    }
+
+    .color-table th {
+      background: #090F1A;
+      padding: 1rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .color-table td {
+      padding: 1.15rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+    }
+
+    .color-swatch-cell {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .color-swatch {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      flex-shrink: 0;
+    }
+
+    .copy-chip {
+      background: #0D1626;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .copy-chip:hover {
+      border-color: var(--brand-emerald);
+      color: var(--brand-emerald);
+    }
+
+    /* CORES SHOWCASE */
+    .cores-grid-manual {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .core-card-manual {
+      background: var(--surface-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .core-icon-box {
+      background: #05080E;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .core-icon-box img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+    }
+
+    .core-info h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .core-info span {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .core-desc {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* TOAST */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--brand-emerald);
+      color: #05080E;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.8rem 1.4rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 245, 160, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    #toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="top-bar">
+    <div class="top-brand">
+      <img src="../01_logos_oficiales/favicons_app/favicon_64.svg" alt="Yggdrasil Logo">
+      <div class="top-title">
+        <h1>YGGDRASIL ENVIRONMENTAL SYSTEMS</h1>
+        <p>MANUAL DE IDENTIDAD VISUAL V4.0 · RESPONSIVE LOGO SYSTEM</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#simbolo">1. El Símbolo</a>
+      <a href="#responsive">2. Responsive System</a>
+      <a href="#colores">3. Paleta Cromática</a>
+      <a href="#cores">4. Galería de Cores</a>
+      <a href="HUB_DE_MARCA_FREYJA.html" style="color: var(--brand-emerald);">← Ir al Hub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <div class="manual-hero">
+      <div>
+        <div class="hero-meta">
+          <span>●</span> ESTÁNDAR CORPORATIVO OFICIAL V4.0.0
+        </div>
+        <h1 class="hero-title">Manual de Identidad Visual Corporativa</h1>
+        <p class="hero-subtitle">
+          Arquitectura gráfica y sistema responsivo de marcas para ingeniería ambiental, computación biofísica distribuida y misiones C6ISR.
+        </p>
+        <div class="hero-author-box">
+          <p>
+            Arquitecto Líder & Diseñador del Sistema:<br>
+            <strong>Kelvin J. Flores</strong> — <em>Lead Systems Architect & Environmental Engineer</em><br>
+            Acreditación: <strong>MECES Nivel 3 / EQF Nivel 7 (Máster Oficial Europeo)</strong>
+          </p>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <img src="../01_logos_oficiales/vertical/yggdrasil_vertical_forest_green.svg" alt="Sello Corporativo Oficial">
+      </div>
+    </div>
+
+    <!-- 1. EL SÍMBOLO -->
+    <section id="simbolo">
+      <div class="section-header">
+        <h2>1. EL SÍMBOLO: ÁRBOL DE TOPOLOGÍA DE REDES</h2>
+        <span>NETWORK GRAPH WORLD TREE</span>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Filosofía y Racional de Diseño</h3>
+          <p>
+            En la tradición nórdica, <strong>Yggdrasil</strong> es el fresno cósmico cuyas ramas y raíces sostienen los nueve mundos. En nuestra arquitectura, el árbol es una metáfora rigurosa de la <strong>ciencia de sistemas y la interconexión planetaria</strong>.
+          </p>
+          <p>
+            El diseño adopta la sobriedad y precisión de la <strong>escuela suiza de diseño gráfico</strong>: sustituye formas orgánicas imprecisas o infantiles por una <strong>malla topológica de nodos y aristas de datos</strong>.
+          </p>
+          <ul style="color: var(--text-muted); font-size: 0.88rem; padding-left: 1.25rem; line-height: 1.7;">
+            <li><strong>Copa Geodésica (53 Nodos de Red):</strong> Representa sensores in-situ, estaciones meteorológicas, satélites y modelos biofísicos comunicándose en tiempo real.</li>
+            <li><strong>Tronco Ortográfico Central:</strong> El eje de cómputo donde confluye la telemetría y se procesan los tensores y operadores neuronales (FNO).</li>
+            <li><strong>Raíces de Anclaje Territorial:</strong> Raíces estructuradas que tocan tierra, simbolizando que toda computación debe nacer y servir a la realidad del suelo físico, cuencas hídricas y ecosistemas.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: #FAFCFA;">
+          <img src="../01_logos_oficiales/isotipo_emblema/yggdrasil_emblem_forest_green.svg" style="max-width: 280px; height: auto;" alt="Isotipo Detallado">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #1E3F35; margin-top: 1rem; font-weight: 700;">
+            Geometría Cuadrada 1:1 · ViewBox 1010 222 730 730
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RESPONSIVE LOGO SYSTEM -->
+    <section id="responsive">
+      <div class="section-header">
+        <h2>2. RESPONSIVE LOGO SYSTEM & DECLINACIONES</h2>
+        <span>ADAPTABILIDAD MULTI-ESCALA</span>
+      </div>
+
+      <div class="resp-showcase">
+        <div class="resp-tabs">
+          <button class="resp-tab-btn active" onclick="switchResp('macro')">1. Macro Horizontal (≥768px)</button>
+          <button class="resp-tab-btn" onclick="switchResp('vertical')">2. Institucional Vertical (≥480px)</button>
+          <button class="resp-tab-btn" onclick="switchResp('wordmark')">3. Compact Wordmark (220-480px)</button>
+          <button class="resp-tab-btn" onclick="switchResp('squircle')">4. Micro Squircle (16-128px)</button>
+        </div>
+
+        <div class="resp-display-stage" id="respStage">
+          <span class="stage-badge" id="respBadge">MACRO LANDSCAPE · 790x260</span>
+          <img id="respImg" src="../01_logos_oficiales/horizontal/yggdrasil_horizontal_dark.svg" style="max-height: 120px; max-width: 90%;" alt="Responsive Demo">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+          <p id="respDesc" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin: 0;">
+            Cabecera completa para web, headers de aplicaciones, membretes oficiales A4 y banners institucionales.
+          </p>
+          <button class="copy-chip" onclick="toggleStageBg()">🌓 Alternar Fondo Claro/Oscuro</button>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Nivel 1: Macro Horizontal</h3>
+          <p>Para aplicaciones de escritorio, portales web y documentos formales donde el ancho es superior a 768px.</p>
+          <span class="copy-chip">yggdrasil_horizontal_*.svg</span>
+        </div>
+        <div class="card">
+          <h3>Nivel 2: Institucional Vertical</h3>
+          <p>Para portadas de informes técnicos, diplomas, licitaciones internacionales y formatos con eje vertical dominante.</p>
+          <span class="copy-chip">yggdrasil_vertical_*.svg</span>
+        </div>
+        <div class="card">
+          <h3>Nivel 4: Micro Squircle & Favicon</h3>
+          <p>Para favicons (16-64px), app icons móviles (PWA/macOS) y marcas de agua sin interferencia tipográfica.</p>
+          <span class="copy-chip">app_icon_512.svg // favicon.svg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PALETA CROMÁTICA OFICIAL -->
+    <section id="colores">
+      <div class="section-header">
+        <h2>3. ESPECIFICACIÓN CROMÁTICA PROFESIONAL</h2>
+        <span>SISTEMAS CMYK · RGB · HEX · PANTONE® · RAL®</span>
+      </div>
+
+      <div class="card" style="padding: 1rem; overflow-x: auto;">
+        <table class="color-table">
+          <thead>
+            <tr>
+              <th>COLOR & MUESTRA</th>
+              <th>CÓDIGO HEX</th>
+              <th>RGB DIGITAL</th>
+              <th>CMYK IMPRENTA</th>
+              <th>PANTONE® APROX.</th>
+              <th>RAL® INDUSTRIAL</th>
+              <th>APLICACIÓN OFICIAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="color-swatch-cell">
+                  <div class="color-swatch" style="background: #1E3F35;"></div>
+                  <div>
+                    <strong>Deep Forest Green</strong><br>
+                    <small style="color: var(--text-muted);">Sello Oficial Matriz</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="copy-chip" onclick="copyHex('#1E3F35')">#1E3F35 📋</span></td>
+              <td><code>30, 63, 53</code></td>
+              <td><code>80, 45, 65, 55</code></td>
+              <td><strong>Pantone 5535 C</strong></td>
+              <td><strong>RAL 6009</strong> <em>(Tannengrün)</em></td>
+              <td>Papelería, membretes oficiales, dossiers, contratos ejecutivos.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="color-swatch-cell">
+                  <div class="color-swatch" style="background: #C88A75;"></div>
+                  <div>
+                    <strong>Executive Copper Foil</strong><br>
+                    <small style="color: var(--text-muted);">Alta Dirección</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="copy-chip" onclick="copyHex('#C88A75')">#C88A75 📋</span></td>
+              <td><code>200, 138, 117</code></td>
+              <td><code>18, 48, 52, 5</code></td>
+              <td><strong>Pantone 7515 C</strong></td>
+              <td><strong>RAL 8004</strong> <em>(Kupferbraun)</em></td>
+              <td>Tarjetas ejecutivas, estampación térmica, folios de firma oficial.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="color-swatch-cell">
+                  <div class="color-swatch" style="background: #00F5A0;"></div>
+                  <div>
+                    <strong>Titanium Emerald</strong><br>
+                    <small style="color: var(--text-muted);">Cyber & Telemetría</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="copy-chip" onclick="copyHex('#00F5A0')">#00F5A0 📋</span></td>
+              <td><code>0, 245, 160</code></td>
+              <td><code>60, 0, 50, 0</code></td>
+              <td><strong>Pantone 802 C</strong></td>
+              <td><em>(Fluorescente)</em></td>
+              <td>Consolas de telemetría dark, dashboards de sensores, modo noche.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="color-swatch-cell">
+                  <div class="color-swatch" style="background: #070B12; border-color: #2A3B59;"></div>
+                  <div>
+                    <strong>Obsidian Void</strong><br>
+                    <small style="color: var(--text-muted);">Sustrato Tecnológico</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="copy-chip" onclick="copyHex('#070B12')">#070B12 📋</span></td>
+              <td><code>7, 11, 18</code></td>
+              <td><code>85, 75, 60, 85</code></td>
+              <td><strong>Pantone Black 6 C</strong></td>
+              <td><strong>RAL 9005</strong> <em>(Tiefschwarz)</em></td>
+              <td>Fondo de interfaz de usuario, cards de cómputo y contraste C6ISR.</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="color-swatch-cell">
+                  <div class="color-swatch" style="background: #FFFFFF;"></div>
+                  <div>
+                    <strong>Pure White</strong><br>
+                    <small style="color: var(--text-muted);">Soporte de Lectura</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="copy-chip" onclick="copyHex('#FFFFFF')">#FFFFFF 📋</span></td>
+              <td><code>255, 255, 255</code></td>
+              <td><code>0, 0, 0, 0</code></td>
+              <td><strong>Opaque White</strong></td>
+              <td><strong>RAL 9016</strong> <em>(Verkehrsweiß)</em></td>
+              <td>Papel para impresión, cartas, tipografía en pantallas oscuras.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. GALERÍA DE CORES -->
+    <section id="cores">
+      <div class="section-header">
+        <h2>4. SUITE DE IDENTIDAD DE LOS 13 CORES SISTÉMICOS</h2>
+        <span>DECLINACIONES DISTRIBUIDAS A CADA PROYECTO SATÉLITE</span>
+      </div>
+
+      <div class="cores-grid-manual">
+
+        <!-- HYDRO-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_hydro_osiris.png" alt="Hydro App Icon">
+          </div>
+          <div class="core-info">
+            <h4>HYDRO-CORE</h4>
+            <span style="color: #00D2FF;">OSIRIS · 060°E</span>
+          </div>
+          <p class="core-desc">Saint-Venant 2D FNO, Nowcast riadas DANA Valencia / Barranco del Poyo, hidrodinámica en tiempo real.</p>
+          <img src="../02_variantes_cores/badges/png/badge_hydro_osiris.png" style="width: 100%; border-radius: 6px;" alt="Hydro Badge">
+        </div>
+
+        <!-- PYRO-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_pyro_prometheus.png" alt="Pyro App Icon">
+          </div>
+          <div class="core-info">
+            <h4>PYRO-CORE</h4>
+            <span style="color: #FF453A;">PROMETHEUS · 300°W</span>
+          </div>
+          <p class="core-desc">Piroconvección, modelado GIF Niebla 2026, dNBR/RBR Sentinel-2, erosión post-incendio RUSLE.</p>
+          <img src="../02_variantes_cores/badges/png/badge_pyro_prometheus.png" style="width: 100%; border-radius: 6px;" alt="Pyro Badge">
+        </div>
+
+        <!-- CYBER-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_cyber_daedalus.png" alt="Cyber App Icon">
+          </div>
+          <div class="core-info">
+            <h4>CYBER-CORE</h4>
+            <span style="color: #0066FF;">DAEDALUS · 315°W</span>
+          </div>
+          <p class="core-desc">BACS ISO 52120-1 Clase A, BMS Madrid Óptima, BACnet/SC, microcontroladores LoRaWAN, CAE TER050.</p>
+          <img src="../02_variantes_cores/badges/png/badge_cyber_daedalus.png" style="width: 100%; border-radius: 6px;" alt="Cyber Badge">
+        </div>
+
+        <!-- AQUA-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_aqua_hygieia.png" alt="Aqua App Icon">
+          </div>
+          <div class="core-info">
+            <h4>AQUA-CORE</h4>
+            <span style="color: #00BA88;">HYGIEIA · 240°S-W</span>
+          </div>
+          <p class="core-desc">Planes de Seguridad del Agua (PSA CSMC), cinética cloro libre, calidad microbiológica e ingesta TRAGSA.</p>
+          <img src="../02_variantes_cores/badges/png/badge_aqua_hygieia.png" style="width: 100%; border-radius: 6px;" alt="Aqua Badge">
+        </div>
+
+        <!-- CIRCULAR-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_circular_ouroboros.png" alt="Circular App Icon">
+          </div>
+          <div class="core-info">
+            <h4>CIRCULAR-CORE</h4>
+            <span style="color: #30D158;">OUROBOROS · 045°E</span>
+          </div>
+          <p class="core-desc">Descarbonización hospitalaria Scope 3 (CSMC Magdalena), ACV gravimétrico y valorización de residuos.</p>
+          <img src="../02_variantes_cores/badges/png/badge_circular_ouroboros.png" style="width: 100%; border-radius: 6px;" alt="Circular Badge">
+        </div>
+
+        <!-- LOGOS-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_logos_apolo.png" alt="Logos App Icon">
+          </div>
+          <div class="core-info">
+            <h4>LOGOS-CORE</h4>
+            <span style="color: #AF52DE;">APOLO · 345°N-W</span>
+          </div>
+          <p class="core-desc">Soberanía epistémica, combate a la desinformación climática, grafos ontológicos y entropía Shannon H(W)≥4.92.</p>
+          <img src="../02_variantes_cores/badges/png/badge_logos_apolo.png" style="width: 100%; border-radius: 6px;" alt="Logos Badge">
+        </div>
+
+        <!-- NEXUS-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_nexus_hermes.png" alt="Nexus App Icon">
+          </div>
+          <div class="core-info">
+            <h4>NEXUS-CORE</h4>
+            <span style="color: #5E5CE6;">HERMES · 015°N-E</span>
+          </div>
+          <p class="core-desc">Malla de eventos distribuidos, licitaciones internacionales (TED, LCSP, SEACE, Horizon Europe), agentes RAG.</p>
+          <img src="../02_variantes_cores/badges/png/badge_nexus_hermes.png" style="width: 100%; border-radius: 6px;" alt="Nexus Badge">
+        </div>
+
+        <!-- SOLAR-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_solar_helios.png" alt="Solar App Icon">
+          </div>
+          <div class="core-info">
+            <h4>SOLAR-CORE</h4>
+            <span style="color: #FFD60A;">HELIOS · 120°S-E</span>
+          </div>
+          <p class="core-desc">Irradiancia solar directa y difusa, rendimiento fotovoltaico, profundidad óptica de aerosoles.</p>
+          <img src="../02_variantes_cores/badges/png/badge_solar_helios.png" style="width: 100%; border-radius: 6px;" alt="Solar Badge">
+        </div>
+
+        <!-- THERMO-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_thermo_janus.png" alt="Thermo App Icon">
+          </div>
+          <div class="core-info">
+            <h4>THERMO-CORE</h4>
+            <span style="color: #FF9F0A;">JANUS · 030°E</span>
+          </div>
+          <p class="core-desc">Islas de calor urbano, balance térmico microclimático e intercambio energético superficial.</p>
+          <img src="../02_variantes_cores/badges/png/badge_thermo_janus.png" style="width: 100%; border-radius: 6px;" alt="Thermo Badge">
+        </div>
+
+        <!-- TOX-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_tox_talos.png" alt="Tox App Icon">
+          </div>
+          <div class="core-info">
+            <h4>TOX-CORE</h4>
+            <span style="color: #BF5AF2;">TALOS · 330°W</span>
+          </div>
+          <p class="core-desc">Dispersión de plumas químicas tóxicas, sensores de gases nocivos y bioseguridad ambiental.</p>
+          <img src="../02_variantes_cores/badges/png/badge_tox_talos.png" style="width: 100%; border-radius: 6px;" alt="Tox Badge">
+        </div>
+
+        <!-- URBAN-CORE -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_urban_themis.png" alt="Urban App Icon">
+          </div>
+          <div class="core-info">
+            <h4>URBAN-CORE</h4>
+            <span style="color: #64D2FF;">THEMIS · 180°S</span>
+          </div>
+          <p class="core-desc">Planificación territorial inteligente, zonificación GIS, justicia ambiental y presión vial de rescate.</p>
+          <img src="../02_variantes_cores/badges/png/badge_urban_themis.png" style="width: 100%; border-radius: 6px;" alt="Urban Badge">
+        </div>
+
+        <!-- ATHENA-AI -->
+        <div class="core-card-manual">
+          <div class="core-icon-box">
+            <img src="../02_variantes_cores/app_icons/png/app_icon_athena_ai.png" alt="Athena App Icon">
+          </div>
+          <div class="core-info">
+            <h4>ATHENA-AI</h4>
+            <span style="color: #00F5A0;">ZENITH APEX · 000°N</span>
+          </div>
+          <p class="core-desc">Meta-supervisión de modelos frontier (Alignerr), orquestación global C6ISR y cumplimiento EU AI Act.</p>
+          <img src="../02_variantes_cores/badges/png/badge_athena_ai.png" style="width: 100%; border-radius: 6px;" alt="Athena Badge">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. ARQUITECTURA BIMODAL: OBSIDIAN VOID VS. CLEAN TECH WHITE -->
+    <section class="manual-section">
+      <div class="section-header">
+        <h2>5. ARQUITECTURA CROMÁTICA BIMODAL</h2>
+        <span>CUÁNDO USAR OBSIDIAN VOID VS. CUÁNDO USAR CLEAN TECH WHITE</span>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-top: 4px solid var(--brand-forest); background: #0A101C;">
+          <h3 style="color: #00F5A0;">🏛️ Superficie Institucional &amp; Corporativa (Clean Tech White)</h3>
+          <p><strong>Fondo Principal:</strong> Blanco Puro (<code>#FFFFFF</code>) / Nieve Técnico (<code>#FAFCFA</code>)<br>
+          <strong>Sello y Tipografía:</strong> Deep Forest Green (<code>#1E3F35</code>) &amp; Executive Copper Foil (<code>#C88A75</code>)</p>
+          <div style="background: #FFFFFF; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 1px solid #E2E8F0;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="../01_logos_oficiales/horizontal/yggdrasil_horizontal_forest_green.svg" style="max-height: 48px;" alt="Logo Corporativo">
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: #CBD5E1;">
+            <strong>Ámbitos de Uso Obligatorios:</strong>
+            <br>• Perfil oficial de empresa en <strong>LinkedIn</strong> (Avatar y Banner corporativo).
+            <br>• Membretes de correspondencia oficial, facturas y contratos mercantiles.
+            <br>• Memorias de licitaciones públicas internacionales (TED, LCSP, Horizon Europe).
+            <br>• Informes periciales de ingeniería ambiental y auditorías técnicas.
+            <br>• Tarjetas de presentación y papelería ejecutiva de alta dirección (MECES 3 / EQF 7).
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--brand-emerald); background: #0A101C;">
+          <h3 style="color: var(--brand-emerald);">⚡ Superficie Operativa &amp; C6ISR (Obsidian Void)</h3>
+          <p><strong>Fondo Principal:</strong> Obsidian Void (<code>#070B12</code>) / Dark Grid (<code>#0C1322</code>)<br>
+          <strong>Nodos y Acentos:</strong> Titanium Emerald Neon (<code>#00F5A0</code>), Cyan (<code>#00D2FF</code>) &amp; Neones por Core</p>
+          <div style="background: #070B12; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 1px solid #1B283D;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="../01_logos_oficiales/horizontal/yggdrasil_horizontal_dark.svg" style="max-height: 48px;" alt="Logo C6ISR">
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: #CBD5E1;">
+            <strong>Ámbitos de Uso Obligatorios:</strong>
+            <br>• Centros de control 24/7 y dashboards de telemetría física en tiempo real.
+            <br>• Consolas de comando (CLI), visores cartográficos GIS y gemelos digitales.
+            <br>• Monitoreo satelital (Copernicus Sentinel-2, ahora riadas Valencia, Niebla 2026).
+            <br>• App Icons en interfaces de software, dockers y terminales Linux/Windows.
+            <br>• Presentaciones de alta tecnología para fondos DeepTech y foros de ciberdefensa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ARQUITECTURA DE CORES ENDOSADOS (PRODUCT FAMILY) -->
+    <section class="manual-section">
+      <div class="section-header">
+        <h2>6. ARQUITECTURA DE CORES ENDOSADOS (PRODUCT FAMILY BRANDING)</h2>
+        <span>GLIFO FÍSICO DISTINTIVO + ENDOSO CORPORATIVO DE YGGDRASIL</span>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>El Modelo de Endoso Arquitectónico</h3>
+        <p style="font-size: 0.95rem; line-height: 1.7;">
+          Para evitar que los 13 núcleos parezcan clones idénticos y pierdan su personalidad científica, cada software posee su <strong>Glifo Físico Especializado</strong> (la llama en Pyro, las ondas de fluido en Hydro, el escudo en Cyber, el sol en Helios, etc.). A su vez, para garantizar la unidad de la marca, todos los activos incorporan el <strong>Sello de Endoso Oficial de Yggdrasil</strong>.
+        </p>
+
+        <div class="grid-2" style="margin-top: 1.5rem;">
+          <div style="background: #06090F; border: 1px solid #172438; border-radius: 12px; padding: 1.5rem;">
+            <h4 style="color: #00D2FF; margin-bottom: 0.5rem; font-family: var(--font-display);">En el App Icon (512x512 Squircle)</h4>
+            <p style="font-size: 0.85rem; color: #8FA0B8;">
+              • <strong>Centro Dominante:</strong> Glifo físico propio con trazo grueso y halo de color temático.<br>
+              • <strong>Borde Perimetral Visible:</strong> Trazo gradiente reactivo al color del núcleo, garantizando que el icono resalte sobre el fondo negro de Windows Explorer y macOS Dock.<br>
+              • <strong>Endoso Tipográfico:</strong> Firma superior <code>YGGDRASIL COMPUTING</code> y ángulo de navegación.
+            </p>
+          </div>
+          <div style="background: #06090F; border: 1px solid #172438; border-radius: 12px; padding: 1.5rem;">
+            <h4 style="color: #FF453A; margin-bottom: 0.5rem; font-family: var(--font-display);">En el Badge Horizontal (540x120)</h4>
+            <p style="font-size: 0.85rem; color: #8FA0B8;">
+              • <strong>Sección Izquierda:</strong> Glifo físico del Core a 64x64px con halo concéntrico.<br>
+              • <strong>Sección Central:</strong> Nombre, alias, dominio físico y especificación C6ISR.<br>
+              • <strong>Sección Derecha (Endoso Matriz):</strong> Divisor arquitectónico + Mini-Árbol de Topología de Redes de Yggdrasil con la leyenda <code>A CORE OF YGGDRASIL</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ESPECIFICACIÓN DE REDES SOCIALES & ASSETS DIGITALES -->
+    <section class="manual-section">
+      <div class="section-header">
+        <h2>7. ESPECIFICACIONES DE REDES SOCIALES &amp; PRESENCIA DIGITAL</h2>
+        <span>ACTIVOS DESPLEGADOS EN BRAND-CORE_FREYJA/05_redes_sociales/</span>
+      </div>
+
+      <div class="grid-3">
+        <!-- LinkedIn Profile -->
+        <div class="card">
+          <h4>LinkedIn Company Avatar</h4>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--brand-copper);">400x400 / 800x800 PNG &amp; SVG</span>
+          <p style="font-size: 0.82rem; margin-top: 0.5rem;">
+            Optimizado con radio de seguridad de 160px para que el recorte circular de LinkedIn no corte las ramas ni raíces del árbol.
+          </p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <a href="../05_redes_sociales/linkedin/linkedin_avatar_corporate_forest_green_800.png" download class="btn-action primary" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; background: var(--brand-emerald); color: #000; font-weight: 700;">PNG Corp</a>
+            <a href="../05_redes_sociales/linkedin/linkedin_avatar_cyber_obsidian_800.png" download class="btn-action" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid #1E2D42; color: #FFF;">PNG Cyber</a>
+          </div>
+        </div>
+
+        <!-- LinkedIn Banner -->
+        <div class="card">
+          <h4>LinkedIn Company Banner</h4>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--brand-copper);">1128x191 / 2256x382 Retina PNG</span>
+          <p style="font-size: 0.82rem; margin-top: 0.5rem;">
+            Proporción oficial de página de empresa en LinkedIn. Integra marca matriz, lema biofísico y créditos oficiales de Kelvin J. Flores.
+          </p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <a href="../05_redes_sociales/linkedin/linkedin_banner_corporate_light_2256x382.png" download class="btn-action primary" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; background: var(--brand-emerald); color: #000; font-weight: 700;">Banner Corp</a>
+            <a href="../05_redes_sociales/linkedin/linkedin_banner_cyber_dark_2256x382.png" download class="btn-action" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid #1E2D42; color: #FFF;">Banner Dark</a>
+          </div>
+        </div>
+
+        <!-- OpenGraph Card -->
+        <div class="card">
+          <h4>OpenGraph / Web Share</h4>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--brand-copper);">1200x630 Retina PNG &amp; SVG</span>
+          <p style="font-size: 0.82rem; margin-top: 0.5rem;">
+            Tarjeta de previsualización que se despliega automáticamente al compartir enlaces de Yggdrasil en LinkedIn, WhatsApp y Twitter.
+          </p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <a href="../05_redes_sociales/opengraph/opengraph_share_card_corporate_1200x630.png" download class="btn-action primary" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; background: var(--brand-emerald); color: #000; font-weight: 700;">OG Corp</a>
+            <a href="../05_redes_sociales/opengraph/opengraph_share_card_dark_1200x630.png" download class="btn-action" style="font-size: 0.75rem; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid #1E2D42; color: #FFF;">OG Dark</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast">Copiado al portapapeles</div>
+
+  <script>
+    const respData = {
+      macro: {
+        src: '../01_logos_oficiales/horizontal/yggdrasil_horizontal_dark.svg',
+        badge: 'MACRO LANDSCAPE · 790x260',
+        desc: 'Cabecera completa para web, headers de aplicaciones, membretes oficiales A4 y banners institucionales.',
+        maxH: '120px'
+      },
+      vertical: {
+        src: '../01_logos_oficiales/vertical/yggdrasil_vertical_forest_green.svg',
+        badge: 'INSTITUCIONAL VERTICAL · 1562x1180',
+        desc: 'Formato póster para portadas de memorias técnicas, informes periciales, diplomas y licitaciones.',
+        maxH: '200px'
+      },
+      wordmark: {
+        src: '../01_logos_oficiales/wordmark/yggdrasil_wordmark_dark.svg',
+        badge: 'COMPACT WORDMARK · 520x120',
+        desc: 'Tipografía de ingeniería pura para espacios restringidos verticalmente (<50px) y firmas de correo.',
+        maxH: '60px'
+      },
+      squircle: {
+        src: '../01_logos_oficiales/favicons_app/app_icon_512.svg',
+        badge: 'MICRO SQUIRCLE · 512x512',
+        desc: 'Icono de aplicación para iOS/macOS/PWA, avatar de GitHub y favicon de alta densidad.',
+        maxH: '160px'
+      }
+    };
+
+    function switchResp(type) {
+      document.querySelectorAll('.resp-tab-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const data = respData[type];
+      const img = document.getElementById('respImg');
+      img.src = data.src;
+      img.style.maxHeight = data.maxH;
+      document.getElementById('respBadge').innerText = data.badge;
+      document.getElementById('respDesc').innerText = data.desc;
+    }
+
+    function toggleStageBg() {
+      const stage = document.getElementById('respStage');
+      stage.classList.toggle('light-stage');
+    }
+
+    function copyHex(val) {
+      navigator.clipboard.writeText(val).then(() => {
+        showToast('Copiado ' + val);
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2200);
+    }
+  </script>
+</body>
+</html>

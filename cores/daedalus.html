@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER-CORE: DAEDALUS | Edificación BACS Clase A & Eficiencia Energética CAE</title>
+  <meta name="description" content="Gemelo digital para edificios terciarios inteligentes conforme a ISO 52120-1 BACS Clase A, simulación térmica transitoria y monetización de Certificados de Ahorro Energético (CAE - RD 36/2023).">
+  <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              void: '#070B12',
+              surface: '#0B121F',
+              card: '#111B2C',
+              border: '#1A273D',
+              green: '#00F5A0',
+              cyan: '#00D2FF',
+              blue: '#0066FF',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
+
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-green transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Volver al Portal Principal</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+          <span class="font-montserrat font-bold text-sm text-blue-400">CYBER-CORE: DAEDALUS</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="../assets/dossiers/factsheet_daedalus.pdf" download class="px-3 py-1.5 rounded-lg bg-blue-500 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar Factsheet PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
+    
+    <!-- Hero Banner -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border border-blue-500/40 shadow-2xl relative overflow-hidden mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="text-xs font-mono px-3 py-1 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              <span>SEMANA 5 (11 - 17 NOV 2026) · LANZAMIENTO PROGRAMADO</span>
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
+              Sector Terciario & Smart Buildings
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
+              ISO 52120-1 Clase A · RD 36/2023 CAE
+            </span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
+            CYBER-CORE: DAEDALUS
+          </h1>
+          <p class="text-base sm:text-xl text-blue-400 font-mono mt-2">
+            Cerebro Ciberfísico de Edificación BACS Clase A & Monetización de Certificados de Ahorro Energético (CAE)
+          </p>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+            Gemelo digital paramétrico multizona para edificios terciarios complejos. Modela la inercia térmica en tiempo real, erradica el consumo fantasma climatizando solo espacios ocupados y convierte el ahorro auditado en ingresos directos mediante el sistema CAE.
+          </p>
+        </div>
+        <div class="flex-shrink-0 self-start md:self-center">
+          <img src="../assets/branding/emblem_cyber_daedalus.svg" alt="Emblema Oficial DAEDALUS" class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-contain drop-shadow-[0_0_25px_rgba(0,102,255,0.4)]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Propósito Operativo & Resolución Práctica -->
+    <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-blue-500/30 shadow-xl">
+      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
+        <span class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/30">
+          <i data-lucide="building-2" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
+          <p class="text-xs font-mono text-blue-400">Eficiencia térmica BACS Clase A, fin del derroche y monetización CAE</p>
+        </div>
+      </div>
+
+      <!-- Callout Práctico Mundo Real -->
+      <div class="mb-6 p-4 rounded-2xl bg-blue-950/40 border border-blue-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
+        <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-300 shrink-0"><i data-lucide="gauge" class="w-5 h-5"></i></div>
+        <div>
+          <strong class="text-blue-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
+          Apaga automáticamente el aire acondicionado y las luces en salas de reuniones y despachos vacíos en grandes edificios, calcula exactamente cuántos kilovatios-hora se han ahorrado y emite la documentación técnica para vender esos ahorros por dinero en efectivo al sistema de Certificados de Ahorro Energético (CAE) del Gobierno.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Los edificios terciarios (oficinas, sedes) derrochan del 25% al 35% de su energía climatizando salas vacías o forzando consignas fijas que ignoran la inercia térmica del edificio.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
+            Derroche fantasma: 25 - 35%
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve DAEDALUS</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Supervisa la ocupación con sensores LoRaWAN y modula compuertas y fancoils por BACnet/SC en tiempo real, asegurando confort óptimo y certificando ahorros oficiales en el sistema CAE.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
+            Control BACS Clase A
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Validación Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Edificio terciario HQ 4.900 m² en Madrid: 148.600 kWh/año ahorrados, retorno íntegro de la inversión de sensores y software en 8.4 meses y expediente CAE monetizado.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
+            148.6 MWh/año · Retorno en 8.4 meses
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-blue-500/40 bg-gradient-to-br from-blue-950/20 to-brand-void flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-blue-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Clasificación oficial según UNE-EN ISO 52120-1:2022 (BACS Clase A), Real Decreto 36/2023 de Certificados de Ahorro Energético (CAE) y Código Técnico CTE DB-HE.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-500/30 text-[11px] font-mono text-blue-300 font-bold">
+            ISO 52120-1 · RD 36/2023 CAE
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="cpu" class="w-5 h-5 text-blue-400"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Formulación Termodinámica</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          El modelo resuelve los balances entálpicos por zona térmica conforme a ISO 52016-1:
+        </p>
+        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-blue-400 space-y-1 mb-3">
+          <div>C_z · (dT_z/dt) = Q_trans + Q_vent + Q_int + Q_sol + Q_hvac</div>
+          <div>Q_hvac = m_dot · Cp · (T_supply - T_z)</div>
+          <div>CVRMSE = (1/T_mean) · sqrt(∑(y - ŷ)² / (N - p)) &lt; 15%</div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Calibrado bajo el protocolo ASHRAE Guideline 14 / IPMVP Opción C para garantizar que cada kilovatio-hora ahorrado sea certificable ante el Ministerio para la Transición Ecológica (MITECO).
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="building" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Validación Terciaria Real</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          <strong>Edificio de oficinas 4.900 m² (Madrid, Zona Climática D3):</strong>
+        </p>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Ahorro anual auditado: 148.600 kWh/año con reducción del 31.4% de consumo eléctrico.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Monetización de 148.6 CAE con ingreso directo y retorno de inversión en 8.4 meses.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Confort térmico RITE garantizado al 100% de las horas ocupadas (PPD &lt; 10%).</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="shield-check" class="w-5 h-5 text-brand-gold"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Normativa & Certificación</h3>
+        </div>
+        <ul class="space-y-2.5 text-xs text-slate-300">
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">UNE-EN ISO 52120-1:2022:</strong> Rendimiento energético de los edificios. Automatización, regulación y gestión técnica (BACS Clase A).
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Real Decreto 36/2023:</strong> Sistema de Certificados de Ahorro Energético (CAE) y fichas estandarizadas del catálogo.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Reglamento RITE (RD 178/2021):</strong> Instalaciones Térmicas en los Edificios.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ================= ADOPCIÓN TECNOLÓGICA: OPEN-CORE VS ENTERPRISE ================= -->
+    <div class="mb-12">
+      <div class="mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 px-3 py-1 rounded bg-brand-surface border border-brand-border">
+          Modelos de Adopción Tecnológica
+        </span>
+        <h2 class="mt-2 text-xl sm:text-2xl font-montserrat font-bold text-slate-100">
+          Edición Comunitaria (Open-Core) vs. Edición Enterprise (BACS Clase A & CAE)
+        </h2>
+        <p class="text-xs text-slate-400 mt-1 max-w-3xl">
+          Ecuaciones de balance térmico y curvas de carga en código abierto, junto a control ciberfísico BACnet/IP en tiempo real y monetización oficial de Certificados de Ahorro Energético (CAE).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Tarjeta Open-Core -->
+        <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                EDICIÓN COMUNITARIA · OPEN-CORE
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">Eficiencia & BACS Teórico</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Modelado Térmico & Consignas ISO 52120-1
+            </h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Diseñada para ingenieros de climatización, auditores energéticos y universidades que investigan el control predictivo en edificios sin hardware propietario.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                <span><strong>Lógica BACS ISO 52120-1:</strong> Ecuaciones de confort térmico PMV/PPD y algoritmos de consigna en Python.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                <span><strong>Dataset Terciario 4.900 m²:</strong> Datos estáticos de demanda de climatización e iluminación con hash SHA-256.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                <span><strong>Cuadernos de Balance Térmico:</strong> Simulación horaria de inercia y coeficientes globales U de envolvente.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-slate-500 shrink-0 mt-0.5"></i>
+                <span class="text-slate-400">Sin drivers de campo BACnet/IP, sin regulación dinámica sobre compuertas/chillers y sin emisión de CAE.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="https://github.com/kelvinjfloresy" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-blue-400 hover:underline font-bold">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>Repositorio en GitHub</span>
+            </a>
+            <span class="text-[11px] font-mono text-slate-500">Licencia CC-BY-NC 4.0</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Enterprise -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-blue-500/60 shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-blue-500 text-white font-mono text-[9px] font-extrabold uppercase tracking-wider">
+            BACS CLASE A & CAE
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40">
+                EDICIÓN ENTERPRISE · TERCIARIO & HOSPITALES
+              </span>
+              <span class="text-[11px] font-mono text-blue-300">BMS Nativo & MITECO CAE</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Control BACnet/IP en Vivo & Liquidación de Certificados CAE
+            </h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Desplegada para fondos inmobiliarios, cadenas hoteleras, hospitales y empresas de servicios energéticos (ESEs) con metas de descarbonización activa.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-200 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="zap" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                <span><strong>Conectores de Campo BACnet/IP & Modbus:</strong> Regulación en tiempo real de fancoils, UTAs, enfriadoras e iluminación DALI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="coins" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>Monetización de Ahorro CAE (MITECO):</strong> Expediente de liquidación de 148.6 MWh/año auditado bajo protocolo IPMVP.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="file-check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Certificación BACS Clase A (ISO 52120-1):</strong> Acreditación oficial exigida por la directiva europea de eficiencia energética en edificios (EPBD).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>SLA 99.9% de Gestión Energética:</strong> Servidor local edge o nube segura con soporte técnico 24/7 y telemetría ininterrumpida.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="https://wa.me/34642022669?text=Hola%20Kelvin,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20la%20versi%C3%B3n%20Enterprise%20de%20DAEDALUS" target="_blank"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-bold text-xs font-mono shadow-lg transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Solicitar Demostración BACS</span>
+            </a>
+            <span class="text-[11px] font-mono text-blue-300 font-semibold">SLA Garantizado · Contrato B2B / G2B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

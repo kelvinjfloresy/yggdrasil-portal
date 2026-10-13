@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="286" height="24" viewBox="0 0 286 24">
+  <rect width="286" height="24" rx="4" fill="#0B121F" stroke="#1E2A3D" stroke-width="1"/>
+  <rect x="113" width="173" height="24" rx="0" fill="#30D158" fill-opacity="0.15"/>
+  <line x1="113" y1="0" x2="113" y2="24" stroke="#30D158" stroke-width="1.2"/>
+  <text x="56.5" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">CIRCULAR-CORE</text>
+  <text x="199.5" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#30D158" letter-spacing="1">OUROBOROS · LCA 14040</text>
+</svg>

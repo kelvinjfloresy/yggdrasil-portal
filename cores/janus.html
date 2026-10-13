@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THERMO-CORE: JANUS | Recuperación de Calor de CPD & Redes de Distrito</title>
+  <meta name="description" content="Gemelo digital termodinámico para valorización del calor residual de centros de proceso de datos (CPD), bombeo de calor de alta temperatura (COP > 4.5) e inyección en redes de distrito conforme a RITE RD 178/2021.">
+  <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              void: '#070B12',
+              surface: '#0B121F',
+              card: '#111B2C',
+              border: '#1A273D',
+              green: '#00F5A0',
+              cyan: '#00D2FF',
+              orange: '#FF9F0A',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-green transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Volver al Portal Principal</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-orange-400 animate-pulse"></span>
+          <span class="font-montserrat font-bold text-sm text-orange-400">THERMO-CORE: JANUS</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="../assets/dossiers/factsheet_janus.pdf" download class="px-3 py-1.5 rounded-lg bg-orange-500 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shadow">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar Factsheet PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
+    
+    <!-- Hero Banner -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border border-orange-500/40 shadow-2xl relative overflow-hidden mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="text-xs font-mono px-3 py-1 rounded bg-orange-500/20 text-orange-400 border border-orange-400/30 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+              <span>PIPELINE 2027 · Q1 2027 · EN MODELADO TÉCNICO</span>
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
+              Termodinámica de Data Centers & Redes de Calor
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
+              RITE RD 178/2021 · Directiva (UE) 2023/1791
+            </span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
+            THERMO-CORE: JANUS
+          </h1>
+          <p class="text-base sm:text-xl text-orange-400 font-mono mt-2">
+            Termodinámica Híbrida & Recuperación de Calor Residual en CPD para Redes de Distrito
+          </p>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+            Arquitectura ciberfísica para la valorización exergética del calor disipado por servidores en centros de datos. Modela ciclos de compresión con bombas de calor de alto COP para inyectar agua a 65–70 °C en redes urbanas de calefacción, reduciendo la factura térmica y el PUE del CPD.
+          </p>
+        </div>
+        <div class="flex-shrink-0 self-start md:self-center">
+          <img src="../assets/branding/emblem_thermo_janus.svg" alt="Emblema Oficial JANUS" class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-contain drop-shadow-[0_0_25px_rgba(255,105,97,0.4)]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Propósito Operativo & Resolución Práctica -->
+    <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-orange-500/30 shadow-xl">
+      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
+        <span class="p-2.5 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/30">
+          <i data-lucide="flame" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
+          <p class="text-xs font-mono text-orange-400">Recuperación de calor en CPDs, reducción de PUE e integración en distritos urbanos</p>
+        </div>
+      </div>
+
+      <!-- Callout Práctico Mundo Real -->
+      <div class="mb-6 p-4 rounded-2xl bg-orange-950/40 border border-orange-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
+        <div class="p-2.5 rounded-xl bg-orange-500/20 text-orange-300 shrink-0"><i data-lucide="flame" class="w-5 h-5"></i></div>
+        <div>
+          <strong class="text-orange-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
+          Aprovecha el calor que expulsan los servidores de los centros de datos para calentar el agua de las calefacciones y duchas de los barrios y hospitales vecinos, ahorrando millones en gas natural y bajando las emisiones de CO2 de la ciudad.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Los data centers gastan fortunas enfriando racks con torres de refrigeración que disipan calor residual al aire, desperdiciando energía mientras los barrios adyacentes queman gas fósil para calefacción.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
+            Pérdida térmica total a la atmósfera
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve JANUS</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Modela el bombeo térmico exergético elevando el calor a 65–70 °C con bombas de compresión de alta eficiencia (COP &gt; 4.5) para abastecer redes urbanas de calefacción de distrito (District Heating).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
+            COP &gt; 4.5 a 65–70 °C
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Indicadores Técnicos</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Optimización del PUE del centro de datos hasta 1.15 (frente al 1.42 de referencia estándar), garantizando recuperación continua y estabilidad térmica de servidores según estándares ASHRAE TC 9.9.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
+            PUE 1.15 · ASHRAE TC 9.9
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-orange-500/40 bg-gradient-to-br from-orange-950/20 to-brand-void flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-orange-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Cumplimiento de la Directiva (UE) 2023/1791 de Eficiencia Energética, Reglamento RITE RD 178/2021 y directivas de gases refrigerantes F-Gas con HFO de nulo ODP.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-orange-500/30 text-[11px] font-mono text-orange-300 font-bold">
+            Directiva 2023/1791 · RITE
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicadores Clave -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Eficiencia Térmica COP</div>
+        <div class="text-2xl font-mono font-bold text-orange-400 mt-1">COP &gt; 4.5</div>
+        <div class="text-[10px] text-orange-300 mt-1">Elevación térmica a 65 °C</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Eficacia PUE del CPD</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">1.15 PUE</div>
+        <div class="text-[10px] text-brand-green mt-1">● Frente a 1.42 de referencia tradicional</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Reducción de Huella</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">-65% CO2</div>
+        <div class="text-[10px] text-slate-400 mt-1">1.280 tCO2e/año evitadas en gas natural</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Normativa RITE</div>
+        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">RD 178/2021</div>
+        <div class="text-[10px] text-slate-400 mt-1">Aprovechamiento obligatorio de efluentes</div>
+      </div>
+    </div>
+
+    <!-- Grid de Ficha Técnica -->
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Bloque 1: Termodinámica & Balances Entálpicos -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="flame" class="w-5 h-5 text-orange-400"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Balances Entálpicos & PUE</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          Termodinámica de ciclo de bomba de calor y reutilización:
+        </p>
+        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-orange-400 space-y-1 mb-3">
+          <div>COP_real = η_Carnot · [ T_cond / (T_cond - T_evap) ] &gt; 4.5</div>
+          <div>PUE = E_total_CPD / E_IT ; ERF = E_reutilizado / E_total_CPD</div>
+          <div>Q_util = m_ref · (h_descarga - h_liquido)</div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Donde <em>ERF</em> es el Energy Reuse Factor estandarizado por ISO/IEC 30134-6, modelando el acoplamiento directo entre el circuito secundario de refrigeración líquida a nivel de rack y el intercambiador de la red de distrito.
+        </p>
+      </div>
+
+      <!-- Bloque 2: Caso de Estudio Real -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="server" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Data Center Terciario de 1.2 MW</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          <strong>Infraestructura de computación de alta densidad:</strong>
+        </p>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Captura de 850 kW térmicos a 35 °C y elevación a 65 °C sin penalizar el rendimiento de los procesadores.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Inyección continua en el anillo térmico municipal para calefacción y agua caliente sanitaria (ACS).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Retorno de inversión (Payback) modelado en 3.4 años mediante la monetización del calor exportado.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloque 3: Normativa & Directivas Europeas -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="scale" class="w-5 h-5 text-brand-gold"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & Directivas</h3>
+        </div>
+        <ul class="space-y-2.5 text-xs text-slate-300">
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Directiva (UE) 2023/1791 (EED):</strong> Artículo 11 que exige a los centros de datos &gt;500 kW publicar planes de aprovechamiento del calor residual.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Real Decreto 178/2021 (RITE):</strong> Exigencia de recuperación energética y prohibición de disipar calores residuales viables económicamente.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Reglamento F-Gas (UE) 2024/573:</strong> Empleo exclusivo de hidrofluoroolefinas (HFO) de ultrabajo potencial de calentamiento (GWP &lt; 1).
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="emblemGlow_pyro_prometheus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF453A" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#070B12" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#070B12" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#emblemGlow_pyro_prometheus)"/>
+  <rect x="15" y="15" width="470" height="470" rx="24" fill="none" stroke="#FF453A" stroke-width="2" stroke-opacity="0.4"/>
+  <circle cx="250" cy="250" r="160" fill="none" stroke="#FF453A" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3"/>
+
+  <g transform="translate(250, 250) scale(1.15) translate(-256, -230)">
+    
+        <!-- Símbolo Pyro: Llama Convectiva FNO & Delta Térmico -->
+        <path d="M 256,140 C 280,185 320,225 320,270 C 320,305 292,330 256,330 C 220,330 192,305 192,270 C 192,235 225,200 256,140 Z" 
+              fill="none" stroke="#FF453A" stroke-width="4.5"/>
+        <path d="M 256,205 C 270,235 292,255 292,280 C 292,302 276,316 256,316 C 236,316 220,302 220,280 C 220,255 242,235 256,205 Z" 
+              fill="#FF453A" opacity="0.35"/>
+        <circle cx="256" cy="280" r="10" fill="#FFFFFF"/>
+        
+  </g>
+</svg>

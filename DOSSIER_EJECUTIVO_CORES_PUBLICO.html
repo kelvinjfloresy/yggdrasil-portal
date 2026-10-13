@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUÍA EJECUTIVA // YGGDRASIL ENVIRONMENTAL SYSTEMS</title>
+    <style>
+        @page { 
+            size: A4 portrait; 
+            margin: 10mm 12mm 10mm 12mm;
+        }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: #FFFFFF; 
+            color: #0F172A; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.42; 
+            font-size: 8.6pt; 
+        }
+        
+        .header { 
+            border-bottom: 2.5px solid #00F5A0; 
+            padding-bottom: 8px; 
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header-title-block { flex: 1; }
+        .brand-badge { 
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 7.5pt; 
+            font-weight: 800; 
+            letter-spacing: 0.8px;
+            padding: 2.5px 7px; 
+            background: #070B12; 
+            color: #00F5A0; 
+            border-radius: 4px; 
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        h1 { 
+            font-size: 14pt; 
+            font-weight: 900;
+            margin: 3px 0 2px 0; 
+            color: #070B12; 
+            letter-spacing: -0.2px;
+        }
+        .header-sub { 
+            font-size: 8.2pt; 
+            color: #475569; 
+            font-weight: 600;
+        }
+        .header-meta {
+            text-align: right;
+            font-size: 7.3pt;
+            color: #475569;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.35;
+        }
+        .header-meta strong { color: #0F172A; }
+
+        .canon-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px;
+            margin-bottom: 10px;
+        }
+        .canon-box { 
+            border-radius: 5px; 
+            padding: 6px 8px; 
+            font-size: 7.8pt; 
+            page-break-inside: avoid; 
+            border: 1px solid #E2E8F0;
+        }
+        .canon-0 { background: #F0FDF4; border-left: 3.5px solid #00F5A0; }
+        .canon-0 strong { color: #166534; }
+        .canon-1 { background: #F0F9FF; border-left: 3.5px solid #00D2FF; }
+        .canon-1 strong { color: #075985; }
+        .canon-2 { background: #FEF3C7; border-left: 3.5px solid #D97706; }
+        .canon-2 strong { color: #92400E; }
+        .canon-3 { background: #FAF5FF; border-left: 3.5px solid #9333EA; }
+        .canon-3 strong { color: #6B21A8; }
+
+        .tax-box {
+            background: #F8FAFC;
+            border: 1px solid #CBD5E1;
+            border-radius: 5px;
+            padding: 6px 8px;
+            margin: 6px 0 10px 0;
+            font-size: 7.6pt;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+            page-break-inside: avoid;
+        }
+        .tax-item {
+            padding: 5px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            border: 1px solid #E2E8F0;
+        }
+        .tax-item strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 7.8pt;
+        }
+
+        .block-title { 
+            font-size: 9pt; 
+            font-weight: 800; 
+            background: #070B12; 
+            color: #FFFFFF; 
+            padding: 3.5px 7px; 
+            border-radius: 4px; 
+            margin: 10px 0 6px 0; 
+            page-break-after: avoid; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .block-title-tag {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 7.2pt;
+            color: #00F5A0;
+            font-weight: normal;
+        }
+
+        .core-card { 
+            background: #F8FAFC; 
+            border: 1px solid #E2E8F0; 
+            border-radius: 5px; 
+            padding: 7px 9px; 
+            margin-bottom: 7px; 
+            page-break-inside: avoid; 
+        }
+        .core-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline; 
+            margin-bottom: 3px; 
+            border-bottom: 1px solid #E2E8F0; 
+            padding-bottom: 2.5px; 
+        }
+        .core-name { 
+            font-size: 9.3pt; 
+            font-weight: 800; 
+        }
+        .core-badge { 
+            font-size: 6.8pt; 
+            font-weight: bold; 
+            padding: 1.5px 5px; 
+            border-radius: 3px; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .tag-live { background: #ECFDF5; color: #065F46; border: 1px solid #34D399; }
+        .tag-deploy { background: #EFF6FF; color: #1E40AF; border: 1px solid #60A5FA; }
+
+        .core-desc { 
+            margin: 2px 0; 
+            font-size: 7.9pt; 
+            color: #334155;
+        }
+        .core-desc strong { color: #0F172A; }
+        .core-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            margin-top: 3px;
+            padding-top: 3px;
+            border-top: 1px dashed #CBD5E1;
+            font-size: 7.3pt;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 5px; 
+            font-size: 7.6pt; 
+            page-break-inside: avoid;
+        }
+        th, td { 
+            border: 1px solid #CBD5E1; 
+            padding: 4px 6px; 
+            text-align: left; 
+        }
+        th { 
+            background: #F1F5F9; 
+            color: #0F172A; 
+            font-weight: 700; 
+        }
+        td code {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0284C7;
+        }
+
+        .footer { 
+            margin-top: 10px; 
+            border-top: 1.5px solid #CBD5E1; 
+            padding-top: 6px; 
+            font-size: 7pt; 
+            color: #64748B; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer strong { color: #0F172A; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-title-block">
+            <span class="brand-badge">YGGDRASIL ENVIRONMENTAL SYSTEMS · SOLUCIONES EMPRESARIALES</span>
+            <h1>GUÍA EJECUTIVA DE SOLUCIONES Y GEMELOS PARAMÉTRICOS</h1>
+            <div class="header-sub">
+                Ingeniería Ambiental Computacional · Simulación Física Determinista · Reducción de Pérdidas Operativas
+            </div>
+        </div>
+        <div class="header-meta">
+            <strong>Dirección Técnica:</strong> Kelvin Jesús Flores Yarihuamán<br>
+            <strong>Habilitación Oficial:</strong> MECES Nivel 3 · EQF Level 7 (Máster Oficial Homologado)<br>
+            <strong>Auditoría:</strong> Auditor Líder ISO 45001 / ISO 14001<br>
+            <strong>Contacto:</strong> yggdrasil.environmental@gmail.com · +34 642 022 669
+        </div>
+    </div>
+
+    <div class="canon-grid">
+        <div class="canon-box canon-0">
+            <strong>🌿 1. RESPETO INVIOLABLE A LA FÍSICA Y BIOLOGÍA</strong><br>
+            <em>"Jamás le vamos a ganar a la naturaleza; la tecnología existe para comprenderla y salvaguardar la vida."</em> Modelos orientados a resiliencia climática, mitigación de desastres y prevención de daños procesales.
+        </div>
+        <div class="canon-box canon-1">
+            <strong>⚙️ 2. FÍSICA Y MATEMÁTICAS DETERMINISTAS (CERO ALUCINACIONES)</strong><br>
+            Ecuaciones analíticas puras (Saint-Venant, Navier-Stokes, balances de masa). La IA opera únicamente como acelerador de cálculo en GPU (&lt;38 ms). Si la IA se apaga, la física sigue resolviendo con rigor legal.
+        </div>
+        <div class="canon-box canon-2">
+            <strong>🏛️ 3. SUPERVISIÓN HUMANA OBLIGATORIA (HITL · ART. 14 EU AI ACT)</strong><br>
+            Operación exclusiva como Sistemas de Soporte a la Decisión (DSS). Ninguna compuerta ni válvula se mueve sin intervención humana. La firma y responsabilidad corresponden siempre al facultativo cualificado.
+        </div>
+        <div class="canon-box canon-3">
+            <strong>⚖️ 4. BLINDAJE JURÍDICO Y VALIDEZ PROCESAL (LEC ART. 335.2)</strong><br>
+            Depósito público inmutable de memorias y código en CERN/Zenodo (DOI oficial). Sellado criptográfico SHA-256 bajo estándar forense ISO/IEC 27037 para plena validez en tribunales y licitaciones del Estado.
+        </div>
+    </div>
+
+    <div class="tax-box">
+        <div class="tax-item">
+            <strong style="color: #0284C7;">Nivel 1: Gemelo Paramétrico</strong>
+            Modelado tridimensional de alta fidelidad para proyectos de ingeniería, dimensionamiento y peritajes judiciales sin necesidad de sensores en vivo.
+        </div>
+        <div class="tax-item">
+            <strong style="color: #059669;">Nivel 2: Sombra Digital (DSS)</strong>
+            Telemetría en tiempo real desde sensores hacia el gemelo digital; detecta anomalías y emite alertas de soporte a la decisión humana.
+        </div>
+        <div class="tax-item">
+            <strong style="color: #DC2626;">Nivel 3: Control Autónomo Desatendido</strong>
+            <span style="color: #DC2626; font-weight: bold;">Excluido por Diseño</span> en infraestructuras críticas bajo el principio de precaución y directivas de ciberseguridad (NIS2).
+        </div>
+    </div>
+
+    <div class="block-title">
+        <span>BLOQUE 1: NÚCLEOS OPERATIVOS EN PRODUCCIÓN (VALIDACIÓN EMPÍRICA & DESPLIEGUE ACTIVO)</span>
+        <span class="block-title-tag">LIVE CLOUD & DICTÁMENES HOMOLOGADOS</span>
+    </div>
+
+    <!-- OSIRIS -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #0284C7;">💧 HYDRO-CORE: OSIRIS — Prevención Inmediata de Inundaciones & Protección Civil</span>
+            <span class="core-badge tag-live">PRODUCCIÓN LIVE · DOI: 10.5281/zenodo.22919526</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Avisa con hasta 146 minutos de antelación dónde y con cuánta fuerza se va a desbordar un río o rambla, permitiendo a la policía y servicios de emergencia cortar carreteras y evacuar antes de que el agua atrape personas y vehículos.</div>
+        <div class="core-desc"><strong>⚠️ Dolor que Resuelve:</strong> En tormentas torrenciales (DANA), los modelos hidráulicos clásicos tardan hasta 45 minutos en calcular la riada. Cuando el cálculo termina, la catástrofe ya ha ocurrido.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> Calcula en <strong>38.4 milisegundos</strong>. En la Rambla del Poyo (Valencia, DANA 29-O) anticipó el calado con <strong>42 minutos de margen</strong> y error menor al 1.2%, blindando a las autoridades ante negligencias penales.</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Plataforma web accesible desde tablets de mando, planos A1 y memoria de protección civil.</div>
+            <div><strong>📜 Normativa:</strong> Directiva Europea 2007/60/CE de Inundaciones, Solvencia II y EU AI Act.</div>
+        </div>
+    </div>
+
+    <!-- HYGIEIA -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #0284C7;">🚰 AQUA-CORE: HYGIEIA — Vigilancia Hidrosanitaria Continua & Erradicación de Legionella</span>
+            <span class="core-badge tag-live">PRODUCCIÓN LIVE · DOI: 10.5281/zenodo.23321969</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Vigila las 24 horas del día la concentración de cloro en las tuberías de hospitales y ciudades, alertando antes de que proliferen bacterias de Legionella y eliminando las purgas de agua a ciegas.</div>
+        <div class="core-desc"><strong>⚠️ Dolor que Resuelve:</strong> En tramos distales de hospitales o redes urbanas, el agua se estanca y pierde el desinfectante, arriesgando cierres de quirófanos, multas sanitarias millonarias y querellas penales.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> Ahorra un <strong>64.3% del agua potable</strong> antes desperdiciada en purgas manuales preventivas, reduciendo costes operativos y garantizando 0 brotes bacterianos.</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Panel de control en tiempo real, mapas de riesgo de tuberías y reportes oficiales para SINAC v3.</div>
+            <div><strong>📜 Normativa:</strong> Real Decreto 3/2023 (Agua de consumo), Real Decreto 487/2022 (Legionella) y PERTE Digitalización.</div>
+        </div>
+    </div>
+
+    <!-- PROMETHEUS -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #DC2626;">🔥 PYRO-CORE: PROMETHEUS — Peritaje Satelital de Incendios & Restauración de Urgencia</span>
+            <span class="core-badge tag-live">OPERATIVO · DICTAMEN PERICIAL · DOI: 10.5281/zenodo.22727839</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Utiliza satélites Sentinel-2 para medir exactamente cuánta vegetación se quemó y calcula el presupuesto exacto de obras forestales antes de que las lluvias arrastren la montaña en forma de barro.</div>
+        <div class="core-desc"><strong>⚠️ Dolor que Resuelve:</strong> Tras un incendio, la tierra calcinada queda desprotegida; si la administración no licita diques y fajinas de urgencia, la primera tormenta colmata embalses e inunda poblaciones.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> En el Gran Incendio de Niebla (3.200 ha en Huelva), diagnosticó una pérdida de suelo de 48.2 t/ha y presupuestó <strong>4,73 millones de euros</strong> bajo tarifas oficiales TRAGSA, listo para licitación urgente.</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Dictamen pericial judicial (LEC Art. 335.2), mapas dNBR a 10 m de resolución y pliego técnico de obra.</div>
+            <div><strong>📜 Normativa:</strong> Ley 43/2003 de Montes, Ley de Enjuiciamiento Civil y Directiva Europea de Suelos.</div>
+        </div>
+    </div>
+
+    <div class="block-title">
+        <span>BLOQUE 2: NÚCLEOS EN DESPLIEGUE SECUENCIAL 2026</span>
+        <span class="block-title-tag">INGENIERÍA AVANZADA & MONETIZACIÓN B2B</span>
+    </div>
+
+    <!-- HELIOS -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #D97706;">⚡ SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas & Baterías BESS</span>
+            <span class="core-badge tag-deploy">SEMANA 2 · 21-27 OCTUBRE 2026</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años y programa las baterías para verter energía en las horas de precio más alto en el mercado mayorista.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> Proyecto calibrado para planta de 4.95 MWp (Fuentejara, Andalucía): rentabilidad auditada del <strong>12.4% de TIR</strong> y certificación de cero afección ambiental (&gt;1.250 m de Red Natura 2000).</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Modelo financiero bancable para fondos de inversión (Project Finance) y Estudio de Impacto Ambiental.</div>
+            <div><strong>📜 Normativa:</strong> Ley 21/2013 de Evaluación Ambiental y directivas europeas de transición energética.</div>
+        </div>
+    </div>
+
+    <!-- DAEDALUS -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #2563EB;">🏢 CYBER-CORE: DAEDALUS — Edificios Inteligentes & Monetización de Ahorros CAE</span>
+            <span class="core-badge tag-deploy">SEMANA 5 · 11-17 NOVIEMBRE 2026</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Supervisa inteligentemente la climatización, ventilación e iluminación de grandes edificios para no gastar en despachos vacíos, y convierte los ahorros en dinero en efectivo que paga el Estado.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> Edificio terciario de 4.900 m² en Madrid: <strong>148.600 kWh ahorrados al año</strong>, inversión amortizada en <strong>8.4 meses</strong> y monetización en Certificados de Ahorro Energético (CAE).</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Conexión BACnet/SC y Modbus RTU, panel BACS Clase A y expediente de liquidación de CAE.</div>
+            <div><strong>📜 Normativa:</strong> UNE-EN ISO 52120-1 (BACS Clase A), Real Decreto 36/2023 (Sistema CAE) y RITE.</div>
+        </div>
+    </div>
+
+    <!-- OUROBOROS -->
+    <div class="core-card">
+        <div class="core-header">
+            <span class="core-name" style="color: #059669;">🔄 CIRCULAR-CORE: OUROBOROS — Reciclaje Hospitalario e Industrial & Residuo Cero</span>
+            <span class="core-badge tag-deploy">SEMANA 4 · 4-10 NOVIEMBRE 2026</span>
+        </div>
+        <div class="core-desc"><strong>🌍 En el mundo real:</strong> Reorganiza la gestión de residuos hospitalarios e industriales para evitar mezclar basura común en bolsas de riesgo biológico, reduciendo drásticamente la factura de gestión y el canon de vertedero.</div>
+        <div class="core-desc"><strong>💰 Cifras Tangibles:</strong> Hospital CSMC Magdalena (Castellón): tasa de reciclaje del <strong>74.2%</strong> (superando el 70% legal) y <strong>42.600 euros al año ahorrados</strong> en tasas de depósito en vertedero.</div>
+        <div class="core-meta-grid">
+            <div><strong>📦 Entregables:</strong> Libro digital de gestión según catálogo europeo LER y auditoría de descarbonización Alcance 3 CSRD.</div>
+            <div><strong>📜 Normativa:</strong> Ley 7/2022 de Residuos y Suelos Contaminados y Directiva (UE) 2018/851.</div>
+        </div>
+    </div>
+
+    <div class="block-title">
+        <span>BLOQUE 3: PIPELINE DE INNOVACIÓN I+D (2027-2028)</span>
+        <span class="block-title-tag">DESARROLLO CONCEPTUAL REGULATORIO</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 14%;">Core ID</th>
+                <th style="width: 26%;">Nombre Canónico</th>
+                <th style="width: 44%;">🗣️ En el mundo real & Impacto</th>
+                <th style="width: 16%;">Normativa Base</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>JANUS</code></td>
+                <td>🌡️ <strong>THERMO-CORE: JANUS</strong></td>
+                <td>Diseño pasivo y confort térmico en edificios y plazas para reducir el calor extremo sin disparar la factura de aire acondicionado.</td>
+                <td>CTE DB-HE</td>
+            </tr>
+            <tr>
+                <td><code>TALOS</code></td>
+                <td>☣️ <strong>TOX-CORE: TALOS</strong></td>
+                <td>Supervisa tanques de plástico industrial (HDPE) con químicos corrosivos para alertar de deformaciones antes de roturas o vertidos.</td>
+                <td>RD 656/2017 APQ</td>
+            </tr>
+            <tr>
+                <td><code>THEMIS</code></td>
+                <td>⚖️ <strong>URBAN-CORE: THEMIS</strong></td>
+                <td>Diagnóstico territorial para ubicar parques y sombras a menos de 10 minutos a pie de los vecinos más vulnerables.</td>
+                <td>One Health OMS</td>
+            </tr>
+            <tr>
+                <td><code>CERES</code></td>
+                <td>🌾 <strong>AGRO-CORE: CERES</strong></td>
+                <td>Satélites agrícolas para medir nitrógeno y humedad en cultivos, reduciendo fertilizantes y asegurando ayudas de la PAC.</td>
+                <td>PAC Unión Europea</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 5px; padding: 6px 9px; margin-top: 8px; font-size: 7.4pt;">
+        <strong>💼 MODALIDADES DE CONTRATACIÓN:</strong>
+        <strong>1. Licitaciones Públicas:</strong> Solvencia técnica acreditada conforme a la Ley 9/2017 de Contratos del Sector Público (LCSP). ·
+        <strong>2. Despliegues Privados:</strong> Modelos en servidores dedicados o cloud segura con cifrado TLS 1.3 y conformidad con el Esquema Nacional de Seguridad (ENS). ·
+        <strong>3. Dictámenes Periciales:</strong> Informes técnicos con validez en tribunales y juzgados (LEC Art. 335.2).
+    </div>
+
+    <div class="footer">
+        <div>
+            <strong>YGGDRASIL ENVIRONMENTAL SYSTEMS</strong> · Lead Systems Architect: <strong>Kelvin Jesús Flores Yarihuamán</strong><br>
+            Contacto: <strong>yggdrasil.environmental@gmail.com</strong> · Teléfono / WhatsApp: <strong>+34 642 022 669</strong>
+        </div>
+        <div style="text-align: right;">
+            Habilitación Oficial <strong>MECES Nivel 3 · EQF Level 7</strong> (Máster Oficial Homologado) | Auditor Líder ISO 45001 / ISO 14001<br>
+            Conforme a ISO 23247 · ISO/IEC 27037 · Reglamento (UE) 2024/1689 (EU AI Act) · CERN/Zenodo DOI
+        </div>
+    </div>
+
+</body>
+</html>

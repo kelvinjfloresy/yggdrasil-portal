@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="24" viewBox="0 0 264 24">
+  <rect width="264" height="24" rx="4" fill="#0B121F" stroke="#1E2A3D" stroke-width="1"/>
+  <rect x="91" width="173" height="24" rx="0" fill="#0066FF" fill-opacity="0.15"/>
+  <line x1="91" y1="0" x2="91" y2="24" stroke="#0066FF" stroke-width="1.2"/>
+  <text x="45.5" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">COMPLIANCE</text>
+  <text x="177.5" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#0066FF" letter-spacing="1">ISO 52120-1 · CLASE A</text>
+</svg>

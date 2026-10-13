@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="cardGlow_thermo_janus_light" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FF9F0A" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#FAFCFA" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="borderGrad_thermo_janus_light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F0A" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF9F0A" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#cardGlow_thermo_janus_light)" stroke="url(#borderGrad_thermo_janus_light)" stroke-width="3"/>
+  <circle cx="256" cy="230" r="120" fill="none" stroke="#FF9F0A" stroke-width="1.2" stroke-dasharray="4 8" opacity="0.35"/>
+
+  
+        <!-- Símbolo Thermo: Bipolaridad Térmica & Balance Termodinámico -->
+        <circle cx="256" cy="230" r="54" fill="none" stroke="#FF9F0A" stroke-width="4"/>
+        <path d="M 256,145 L 256,315" stroke="#FF9F0A" stroke-width="4"/>
+        <path d="M 256,176 C 290,176 310,200 310,230 C 310,260 290,284 256,284" fill="#FF9F0A" opacity="0.4"/>
+        <circle cx="256" cy="230" r="12" fill="#FFFFFF"/>
+        
+
+  <!-- Tipografía Suiza & Endoso Yggdrasil -->
+  <g text-anchor="middle">
+    <text x="256" y="85" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#475569" letter-spacing="4">YGGDRASIL COMPUTING</text>
+    <text x="256" y="388" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A" letter-spacing="2">THERMO-CORE</text>
+    <text x="256" y="415" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FF9F0A" letter-spacing="4">JANUS</text>
+    <text x="256" y="442" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="2">KERNEL ANGLE · 180°S</text>
+  </g>
+</svg>

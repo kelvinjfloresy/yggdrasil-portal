@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="cardGlow_aqua_hygieia_dark" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#00BA88" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#0A111D" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#06090F" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="borderGrad_aqua_hygieia_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BA88" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#22334D" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00BA88" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#cardGlow_aqua_hygieia_dark)" stroke="url(#borderGrad_aqua_hygieia_dark)" stroke-width="3"/>
+  <circle cx="256" cy="230" r="120" fill="none" stroke="#00BA88" stroke-width="1" stroke-dasharray="4 8" opacity="0.3"/>
+
+  
+        <!-- Símbolo Aqua: Gota Molecular de Purificación & Triple Anillo -->
+        <circle cx="256" cy="235" r="70" fill="none" stroke="#00BA88" stroke-width="2" stroke-dasharray="6 8"/>
+        <circle cx="256" cy="235" r="48" fill="none" stroke="#5CFFD4" stroke-width="3"/>
+        <path d="M 256,155 C 238,185 218,215 218,242 C 218,262 235,278 256,278 C 277,278 294,262 294,242 C 294,215 274,185 256,155 Z" 
+              fill="#00BA88" opacity="0.35" stroke="#00BA88" stroke-width="3.5"/>
+        <circle cx="256" cy="246" r="8" fill="#FFFFFF"/>
+        
+
+  <!-- Tipografía Suiza & Endoso Yggdrasil -->
+  <g text-anchor="middle">
+    <text x="256" y="85" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#718096" letter-spacing="4">YGGDRASIL COMPUTING</text>
+    <text x="256" y="388" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="2">AQUA-CORE</text>
+    <text x="256" y="415" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#00BA88" letter-spacing="4">HYGIEIA</text>
+    <text x="256" y="442" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#4A5568" letter-spacing="2">KERNEL ANGLE · 240°S-W</text>
+  </g>
+</svg>

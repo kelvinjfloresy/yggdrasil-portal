@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLAR-CORE: HELIOS | Simulación Fotovoltaica Bifacial TopCon & Evaluación Ambiental</title>
+  <meta name="description" content="Gemelo digital fotovoltaico utility-scale: modelado bifacial TopCon 4.95 MWp, pérdidas térmicas PVGIS, viabilidad financiera DCF y buffer ambiental Red Natura 2000 conforme a Ley 21/2013.">
+  <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              void: '#070B12',
+              surface: '#0B121F',
+              card: '#111B2C',
+              border: '#1A273D',
+              green: '#00F5A0',
+              cyan: '#00D2FF',
+              amber: '#FFD60A',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-green transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Volver al Portal Principal</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="font-montserrat font-bold text-sm text-amber-400">SOLAR-CORE: HELIOS</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="../assets/dossiers/factsheet_helios.pdf" download class="px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shadow">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar Factsheet PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
+    
+    <!-- Hero Banner -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border border-amber-500/40 shadow-2xl relative overflow-hidden mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="text-xs font-mono px-3 py-1 rounded bg-amber-500/20 text-yellow-300 border border-amber-400/30 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+              <span>SEMANA 2 (21 - 27 OCT 2026) · LANZAMIENTO PROGRAMADO</span>
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
+              Sector Energía Renovable & Project Finance
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
+              Ley 21/2013 EIA · Mercado OMIE
+            </span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
+            SOLAR-CORE: HELIOS
+          </h1>
+          <p class="text-base sm:text-xl text-yellow-400 font-mono mt-2">
+            Ingeniería Solar Fotovoltaica Bifacial TopCon, Almacenamiento BESS & Arbitraje OMIE
+          </p>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+            Gemelo digital paramétrico para el diseño, dimensionamiento electroquímico y estructuración financiera de plantas fotovoltaicas con sistemas de almacenamiento (BESS). Optimiza el arbitraje diario en OMIE para erradicar el vertido de energía en horas solares valle y maximizar la rentabilidad bancable.
+          </p>
+        </div>
+        <div class="flex-shrink-0 self-start md:self-center">
+          <img src="../assets/branding/emblem_solar_helios.svg" alt="Emblema Oficial HELIOS" class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-contain drop-shadow-[0_0_25px_rgba(255,214,10,0.4)]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Propósito Operativo & Resolución Práctica -->
+    <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-yellow-500/30 shadow-xl">
+      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
+        <span class="p-2.5 rounded-xl bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">
+          <i data-lucide="sun-medium" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
+          <p class="text-xs font-mono text-yellow-400">Rentabilidad bancable, almacenamiento BESS y arbitraje en el mercado eléctrico</p>
+        </div>
+      </div>
+
+      <!-- Callout Práctico Mundo Real -->
+      <div class="mb-6 p-4 rounded-2xl bg-yellow-950/40 border border-yellow-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
+        <div class="p-2.5 rounded-xl bg-yellow-500/20 text-yellow-300 shrink-0"><i data-lucide="zap" class="w-5 h-5"></i></div>
+        <div>
+          <strong class="text-yellow-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
+          Evita que un parque solar regale su electricidad gratis a las 12 del mediodía: carga baterías de litio cuando la luz no vale nada y la inyecta a la red eléctrica por la noche cuando el mercado OMIE paga el megavatio-hora a precio de oro.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-yellow-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Las plantas solares puras sufren el fenómeno de "precios cero" en horas centrales del día en OMIE y vertidos obligados de energía (curtailment), reduciendo drásticamente los ingresos previstos en los modelos financieros.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
+            Pérdida por vertidos: hasta 28%
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve HELIOS</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Modela el acoplamiento óptimo de baterías (BESS) para almacenar los excedentes en horas valle y despacharlos en las horas de precio punta nocturno o participar en servicios de ajuste de REE, asegurando la bancabilidad.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
+            Arbitraje de ingresos 24h
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Validación Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Planta Fuentejara (4.95 MWp + 2 MWh BESS): TIR bancable auditada del 12.4% y modelado de dispersión atmosférica de partículas PM10 para aprobación ambiental sin litigios frente a la Red Natura 2000.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
+            TIR: 12.4% · 8.420 MWh/año
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-yellow-500/40 bg-gradient-to-br from-yellow-950/20 to-brand-void flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-yellow-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Conformidad con la Ley 21/2013 de Evaluación Ambiental, directivas de integración de almacenamiento de REE y transposición horaria satelital certificada por PVGIS.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-yellow-500/30 text-[11px] font-mono text-yellow-300 font-bold">
+            Ley 21/2013 · REE / OMIE
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicadores Clave -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Potencia Pico TopCon</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">4.95 MWp</div>
+        <div class="text-[10px] text-slate-500 mt-1">8.540 Módulos Bifaciales 580 Wp</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Producción Específica</div>
+        <div class="text-2xl font-mono font-bold text-amber-400 mt-1">1,701 kWh/kWp</div>
+        <div class="text-[10px] text-amber-300 mt-1">Generación: 8,420 MWh/año (PR: 82.4%)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Buffer Ambiental</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">1,250 m</div>
+        <div class="text-[10px] text-brand-green mt-1">● Red Natura 2000 y DPH libre</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Rentabilidad DCF</div>
+        <div class="text-2xl font-mono font-bold text-brand-cyan mt-1">TIR 12.4%</div>
+        <div class="text-[10px] text-slate-500 mt-1">LCOE: 31.8 €/MWh | Payback: 6.8 años</div>
+      </div>
+    </div>
+
+    <!-- Grid de Ficha Técnica -->
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Bloque 1: Formulación Térmica y Bifacial -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="sun-medium" class="w-5 h-5 text-amber-400"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Modelado Físico & Bifacial</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          Cálculo del comportamiento térmico de célula y rendimiento horario:
+        </p>
+        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-amber-400 space-y-1 mb-3">
+          <div>T_cell = T_amb + (G_poa / 800) · (NOCT - 20) · (1 - η_ref / 0.9)</div>
+          <div>P_DC = P_STC · [1 + γ · (T_cell - 25)] · (G_front + ϕ_bifi · G_rear) / 1000</div>
+          <div>VAN = ∑ [CF_t / (1 + WACC)^t] - CAPEX  [TIR = 12.4%]</div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Donde <em>γ</em> es el coeficiente térmico de potencia (-0.30%/°C para TopCon N-type), <em>ϕ_bifi</em> es el factor de bifacialidad (0.80) y <em>G_rear</em> la irradiancia reflejada por el suelo según el albedo del terreno medido espectrométricamente.
+        </p>
+      </div>
+
+      <!-- Bloque 2: Caso de Estudio Real -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="zap" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Planta Solar Fuentejara (4.95 MWp)</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          <strong>Andalucía — Proyecto con punto de conexión garantizado:</strong>
+        </p>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>8.540 módulos fotovoltaicos TopCon de 580 Wp sobre seguidores solares 1-eje horizontal (1P).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>8.420 MWh/año de energía inyectada a subestación evacuadora con pérdidas por suciedad modeladas &lt; 2.5%.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+            <span>Buffer de exclusión &gt;1.200 m frente a ZEPA/LIC y ausencia de servidumbres de Dominio Público Hidráulico.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloque 3: Normativa & Bancabilidad -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="scale" class="w-5 h-5 text-brand-gold"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & Bancabilidad</h3>
+        </div>
+        <ul class="space-y-2.5 text-xs text-slate-300">
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Ley 21/2013 de Evaluación Ambiental:</strong> Estudio de impacto ambiental con modelado de visibilidad paisajística y corredores faunísticos.
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">RD 413/2014 & RD 244/2019:</strong> Régimen de producción eléctrica de origen renovable y cumplimiento de código de red (P.O. 12.2 de REE).
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Project Finance Tier-1:</strong> Modelado financiero auditado bajo estándares de la banca multilateral (P50/P90 de generación).
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ================= ADOPCIÓN TECNOLÓGICA: OPEN-CORE VS ENTERPRISE ================= -->
+    <div class="mb-12">
+      <div class="mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 px-3 py-1 rounded bg-brand-surface border border-brand-border">
+          Modelos de Adopción Tecnológica
+        </span>
+        <h2 class="mt-2 text-xl sm:text-2xl font-montserrat font-bold text-slate-100">
+          Edición Comunitaria (Open-Core) vs. Edición Enterprise (Project Finance & OMIE)
+        </h2>
+        <p class="text-xs text-slate-400 mt-1 max-w-3xl">
+          Modelos abiertos de balance radiativo y curvas P-V, junto a optimización bancable con arbitraje diario de baterías BESS y conexión continua a OMIE y REE.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Tarjeta Open-Core -->
+        <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                EDICIÓN COMUNITARIA · OPEN-CORE
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">Ingeniería & Simulación</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Curvas I-V, PVGIS & Pérdidas Térmicas
+            </h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Diseñada para ingenieros proyectistas, investigadores energéticos y estudiantes que precisan modelar el comportamiento óptico-eléctrico de celdas TopCon.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Modelos Bifaciales TopCon:</strong> Balances de irradiación difusa, albedo y factor de temperatura en Python.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Dataset Fuentejara 4.95 MWp:</strong> Series de irradiación PVGIS horaria y geometría de seguidores 1P.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Cuadernos de Pérdidas:</strong> Degradación anual modelada y ensuciamiento (soiling) en código abierto.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-slate-500 shrink-0 mt-0.5"></i>
+                <span class="text-slate-400">Sin arbitraje en tiempo real OMIE/REE, sin despacho automático BESS y sin modelo financiero bancable P50/P90.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="https://github.com/kelvinjfloresy" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:underline font-bold">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>Repositorio en GitHub</span>
+            </a>
+            <span class="text-[11px] font-mono text-slate-500">Licencia CC-BY-NC 4.0</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Enterprise -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-yellow-500/60 shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-yellow-500 text-slate-950 font-mono text-[9px] font-extrabold uppercase tracking-wider">
+            PROJECT FINANCE & OMIE
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">
+                EDICIÓN ENTERPRISE · IPPs & FONDOS
+              </span>
+              <span class="text-[11px] font-mono text-yellow-300">Mercado Eléctrico & BESS</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Arbitraje de Baterías, Conexión OMIE/REE & Bancabilidad
+            </h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Desplegada para promotores fotovoltaicos (IPPs), fondos de inversión en infraestructuras renovables y gestores de plantas con almacenamiento BESS.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-200 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="zap" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Arbitraje Diario Automatizado OMIE:</strong> Carga de baterías en horas de precio cero o negativo y venta en picos de demanda.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="battery-charging" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>Despacho BESS Multiquímica:</strong> Algoritmo de degradación electroquímica para baterías LFP/NMC con maximización del TIR (12.4%).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="file-check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Certificación Bancable P50/P90:</strong> Modelado financiero auditado para cierre de deuda con entidades financieras Tier-1.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>Cumplimiento de Red REE (P.O. 12.2):</strong> Control de potencia reactiva y telemedida homologada con SLA 99.9%.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="https://wa.me/34642022669?text=Hola%20Kelvin,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20la%20versi%C3%B3n%20Enterprise%20de%20HELIOS" target="_blank"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold text-xs font-mono shadow-lg transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Solicitar Demostración Energética</span>
+            </a>
+            <span class="text-[11px] font-mono text-yellow-300 font-semibold">SLA Garantizado · Contrato B2B / G2B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

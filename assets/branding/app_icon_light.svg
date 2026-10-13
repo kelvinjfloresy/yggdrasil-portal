@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="cardGlow_astraea_light" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#FAFCFA" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="borderGrad_astraea_light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#cardGlow_astraea_light)" stroke="url(#borderGrad_astraea_light)" stroke-width="3"/>
+  <circle cx="256" cy="230" r="120" fill="none" stroke="#818CF8" stroke-width="1.2" stroke-dasharray="4 8" opacity="0.35"/>
+
+  
+    <!-- Glifo ASTRAEA: La Balanza Estelar de la Verdad Criptográfica & Verificación Formal -->
+    <!-- 1. Estrella de 8 Puntas de Astraea (Apex Starlight de la Inocencia y la Justicia) -->
+    <g transform="translate(256, 145)">
+      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="#818CF8"/>
+      <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#FFFFFF"/>
+      <circle cx="0" cy="0" r="2.5" fill="#818CF8"/>
+    </g>
+
+    <!-- 2. Eje Vertical de Verificación / Plomada de la Verdad Inmutable -->
+    <line x1="256" y1="130" x2="256" y2="320" stroke="#C7D2FE" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.6"/>
+    <line x1="256" y1="160" x2="256" y2="305" stroke="#818CF8" stroke-width="3"/>
+
+    <!-- 3. Anillo de Calibración Pericial / Órbita de Constelación Virgo-Libra -->
+    <circle cx="256" cy="230" r="76" fill="none" stroke="#818CF8" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.35"/>
+    <circle cx="256" cy="230" r="46" fill="none" stroke="#C7D2FE" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.4"/>
+
+    <!-- 4. Viga de la Balanza de Precisión Geométrica (Eje Horizontal) -->
+    <path d="M 185,200 L 256,192 L 327,200" fill="none" stroke="#818CF8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Pivote central del fulcro -->
+    <circle cx="256" cy="192" r="7" fill="#818CF8"/>
+    <circle cx="256" cy="192" r="3" fill="#FFFFFF"/>
+
+    <!-- 5. Brazo y Plato Izquierdo de la Balanza (Evidencia Criptográfica Entrada) -->
+    <!-- Tirantes de suspensión -->
+    <line x1="185" y1="200" x2="162" y2="252" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round"/>
+    <line x1="185" y1="200" x2="208" y2="252" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round"/>
+    <!-- Bandeja cóncava izquierda -->
+    <path d="M 156,252 Q 185,274 214,252 Z" fill="#818CF8" fill-opacity="0.25" stroke="#818CF8" stroke-width="3"/>
+    <!-- Orbe de Verdad / Checkpoint Izquierdo -->
+    <circle cx="185" cy="245" r="7" fill="#C7D2FE"/>
+    <circle cx="185" cy="245" r="3" fill="#FFFFFF"/>
+
+    <!-- 6. Brazo y Plato Derecho de la Balanza (Evidencia Criptográfica Salida) -->
+    <!-- Tirantes de suspensión -->
+    <line x1="327" y1="200" x2="304" y2="252" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round"/>
+    <line x1="327" y1="200" x2="350" y2="252" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round"/>
+    <!-- Bandeja cóncava derecha -->
+    <path d="M 298,252 Q 327,274 356,252 Z" fill="#818CF8" fill-opacity="0.25" stroke="#818CF8" stroke-width="3"/>
+    <!-- Orbe de Verdad / Checkpoint Derecho -->
+    <circle cx="327" cy="245" r="7" fill="#C7D2FE"/>
+    <circle cx="327" cy="245" r="3" fill="#FFFFFF"/>
+
+    <!-- 7. Prisma Diamante Central (Zero-Knowledge Verifier / Merkle Root Hub) -->
+    <polygon points="256,206 278,230 256,254 234,230" fill="#818CF8" fill-opacity="0.3" stroke="#818CF8" stroke-width="2.5"/>
+    <polygon points="256,214 270,230 256,246 242,230" fill="#FFFFFF" fill-opacity="0.8"/>
+    <circle cx="256" cy="230" r="4" fill="#818CF8"/>
+
+    <!-- 8. Base de Anclaje de Inmutabilidad SHA-256 -->
+    <path d="M 236,315 L 256,305 L 276,315 Z" fill="#818CF8"/>
+    <line x1="226" y1="318" x2="286" y2="318" stroke="#C7D2FE" stroke-width="3" stroke-linecap="round"/>
+    
+  <g text-anchor="middle">
+    <text x="256" y="85" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#475569" letter-spacing="4">YGGDRASIL COMPUTING</text>
+    <text x="256" y="388" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A" letter-spacing="2">VERI-AUDIT</text>
+    <text x="256" y="415" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#818CF8" letter-spacing="4">ASTRAEA</text>
+    <text x="256" y="442" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="2">KERNEL ANGLE · 010°N-E</text>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="219" height="24" viewBox="0 0 219 24">
+  <rect width="219" height="24" rx="4" fill="#0B121F" stroke="#1E2A3D" stroke-width="1"/>
+  <rect x="83" width="136" height="24" rx="0" fill="#10B981" fill-opacity="0.15"/>
+  <line x1="83" y1="0" x2="83" y2="24" stroke="#10B981" stroke-width="1.2"/>
+  <text x="41.5" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">YGGDRASIL</text>
+  <text x="151.0" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#10B981" letter-spacing="1">YES // ECOSYSTEM</text>
+</svg>

@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-10-12 14:29:04",
+  "total_cores": 14,
+  "online_count": 8,
+  "cores": {
+    "CYBER-CORE_DAEDALUS": {
+      "alias": "DAEDALUS",
+      "port": 8501,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#00F5A0",
+      "domain": "Smart Building & BACS Clase A (ISO 52120-1)"
+    },
+    "HYDRO-CORE_OSIRIS": {
+      "alias": "OSIRIS",
+      "port": 8502,
+      "status": "ONLINE",
+      "latency_ms": 15.2,
+      "color_hex": "#00D2FF",
+      "domain": "Hidrolog\u00eda & DANA Nowcast (FNO 2D / Saint-Venant)"
+    },
+    "CIRCULAR-CORE_OUROBOROS": {
+      "alias": "OUROBOROS",
+      "port": 8503,
+      "status": "ONLINE",
+      "latency_ms": 0.5,
+      "color_hex": "#30D158",
+      "domain": "Metabolismo Material & Alcance 1-2-3 (CSRD)"
+    },
+    "PYRO-CORE_PROMETHEUS": {
+      "alias": "PROMETHEUS",
+      "port": 8504,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#FF453A",
+      "domain": "Forense de Incendios & Restauraci\u00f3n (TRAGSA)"
+    },
+    "AQUA-CORE_HYGIEIA": {
+      "alias": "HYGIEIA",
+      "port": 8505,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#00D2FF",
+      "domain": "Calidad del Agua & Microbioma Continental"
+    },
+    "TOX-CORE_TALOS": {
+      "alias": "TALOS",
+      "port": 8506,
+      "status": "ONLINE",
+      "latency_ms": 0.9,
+      "color_hex": "#BF5AF2",
+      "domain": "Dispersi\u00f3n Toxicol\u00f3gica & Plumas Qu\u00edmicas"
+    },
+    "SOLAR-CORE_HELIOS": {
+      "alias": "HELIOS",
+      "port": 8507,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#FFD60A",
+      "domain": "Solar Fotovoltaica & EIA (Ley 21/2013)"
+    },
+    "URBAN-CORE_THEMIS": {
+      "alias": "THEMIS",
+      "port": 8508,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#64D2FF",
+      "domain": "Planeamiento Territorial & Geoinformaci\u00f3n"
+    },
+    "THERMO-CORE_JANUS": {
+      "alias": "JANUS",
+      "port": 8509,
+      "status": "OFFLINE",
+      "latency_ms": 0.0,
+      "color_hex": "#FF9F0A",
+      "domain": "Termodin\u00e1mica Urbana & Microclima (CTE D3)"
+    },
+    "VERI-AUDIT_ASTRAEA": {
+      "alias": "ASTRAEA",
+      "port": 8510,
+      "status": "ONLINE",
+      "latency_ms": 15.2,
+      "color_hex": "#818CF8",
+      "domain": "Auditor\u00eda Forense Criptogr\u00e1fica & Verificaci\u00f3n ZK (EU AI Act)"
+    },
+    "LOGOS-CORE_APOLO": {
+      "alias": "APOLO",
+      "port": 7070,
+      "status": "ONLINE",
+      "latency_ms": 1.0,
+      "color_hex": "#AF52DE",
+      "domain": "Razonamiento Simb\u00f3lico & Ontolog\u00edas Epist\u00e9micas"
+    },
+    "NEXUS-CORE_HERMES": {
+      "alias": "HERMES",
+      "port": 5054,
+      "status": "ONLINE",
+      "latency_ms": 15.4,
+      "color_hex": "#5E5CE6",
+      "domain": "Orquestaci\u00f3n de Comunicaciones & Malla C6ISR"
+    },
+    "BRAND-CORE_FREYJA": {
+      "alias": "FREYJA",
+      "port": 8511,
+      "status": "ONLINE",
+      "latency_ms": 1.0,
+      "color_hex": "#EC4899",
+      "domain": "Gobernanza de Identidad, Design System & Centinela"
+    },
+    "AI-CORE_ATHENA": {
+      "alias": "ATHENA",
+      "port": 8514,
+      "status": "ONLINE",
+      "latency_ms": 13.8,
+      "color_hex": "#A855F7",
+      "domain": "Directora Cient\u00edfica Suprema, B\u00f3veda Epist\u00e9mica & Centinela F\u00edsico"
+    }
+  }
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PYRO-CORE: PROMETHEUS | Diagnóstico Satelital de Incendios & Restauración TRAGSA</title>
+  <meta name="description" content="Plataforma de teledetección espectral de incendios forestales (Sentinel-2 dNBR/RBR) y cálculo de pérdida de suelo RUSLE calibrado con tarifas oficiales TRAGSA.">
+  <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              void: '#070B12',
+              surface: '#0B121F',
+              card: '#111B2C',
+              border: '#1A273D',
+              green: '#00F5A0',
+              cyan: '#00D2FF',
+              red: '#FF453A',
+              gold: '#C5A059'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-green transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Volver al Portal Principal</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <span class="font-montserrat font-bold text-sm text-red-400">PYRO-CORE: PROMETHEUS</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://doi.org/10.5281/zenodo.22727839" target="_blank" class="px-3 py-1 rounded-lg bg-brand-surface border border-brand-border text-xs font-mono text-red-400 hover:border-red-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span>DOI: 10.5281/zenodo.22727839</span>
+        </a>
+        <a href="../assets/dossiers/factsheet_prometheus.pdf" download class="px-3 py-1.5 rounded-lg bg-red-500 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar Factsheet PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
+    
+    <!-- Hero Banner -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border border-red-500/40 shadow-2xl relative overflow-hidden mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="text-xs font-mono px-3 py-1 rounded bg-red-500/20 text-red-300 border border-red-400/30 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+              <span>SEMANA 6 (18 - 24 NOV 2026) · CIERRE CICLO 2026</span>
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
+              Sector Forestal & Restauración Edáfica
+            </span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-red-500/20 text-red-400 border border-red-500/30 font-bold">
+              DOI Zenodo V1: 10.5281/zenodo.22727839
+            </span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
+            PYRO-CORE: PROMETHEUS
+          </h1>
+          <p class="text-base sm:text-xl text-red-400 font-mono mt-2">
+            Peritaje Satelital dNBR, Modelado de Erosión RUSLE & Presupuestos de Urgencia TRAGSA
+          </p>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+            Suite de teledetección espectral de alta resolución (Sentinel-2 a 10 m). Automatiza el diagnóstico forense post-incendio en menos de 24 horas y emite proyectos oficiales de restauración hidrotécnica calibrados bajo tarifas TRAGSA antes de las lluvias torrenciales de otoño.
+          </p>
+        </div>
+        <div class="flex-shrink-0 self-start md:self-center">
+          <img src="../assets/branding/emblem_pyro_prometheus.svg" alt="Emblema Oficial PROMETHEUS" class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-contain drop-shadow-[0_0_25px_rgba(255,69,58,0.4)]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Propósito Operativo & Resolución Práctica -->
+    <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-red-500/30 shadow-xl">
+      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
+        <span class="p-2.5 rounded-xl bg-red-500/10 text-red-400 border border-red-500/30">
+          <i data-lucide="flame" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
+          <p class="text-xs font-mono text-red-400">Diagnóstico forense, freno a la pérdida de suelo fértil y licitaciones de emergencia</p>
+        </div>
+      </div>
+
+      <!-- Callout Práctico Mundo Real -->
+      <div class="mb-6 p-4 rounded-2xl bg-red-950/40 border border-red-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
+        <div class="p-2.5 rounded-xl bg-red-500/20 text-red-300 shrink-0"><i data-lucide="shield-alert" class="w-5 h-5"></i></div>
+        <div>
+          <strong class="text-red-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
+          En las primeras 24 horas tras apagarse un gran incendio forestal, analiza por satélite qué zonas han quedado calcinadas y calcula exactamente cuántas albarradas de piedra y fajinas de madera hay que construir (con tarifas oficiales de TRAGSA) para que las primeras lluvias de otoño no provoquen riadas de ceniza y fango que destruyan los pueblos cercanos.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-red-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Tras un incendio forestal, las primeras lluvias otoñales arrastran el suelo fértil provocando avalanchas de lodo, colmatación de presas y daños millonarios si las fajinas no se ejecutan de inmediato.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
+            Erosión post-fuego: hasta 120 t/ha·año
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve PROMETHEUS</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Procesa bandas Sentinel-2 en menos de 24 horas, calcula severidad dNBR, modela el riesgo erosivo RUSLE y redacta el presupuesto de obras de urgencia con partidas oficiales de TRAGSA.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
+            Diagnóstico en &lt; 24 horas
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Caso Real (DOI Zenodo)</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Incendio Forestal de Niebla (Huelva, 3.200 ha): Proyecto oficial de restauración con fajinas, albarradas y diques valorado en 4.73 M€ bajo tarifas TRAGSA (DOI: 10.5281/zenodo.22727839).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
+            4.73 M€ TRAGSA · DOI Registrado
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-void/80 border border-red-500/40 bg-gradient-to-br from-red-950/20 to-brand-void flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-red-300 uppercase tracking-wider mb-2">04 · Cierre Ciclo 2026</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Transición de la versión V1 (dictamen pericial forense certificado) a la versión V2 web interactiva en la nube, concluyendo la hoja de ruta de lanzamientos del ejercicio 2026.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-red-500/30 text-[11px] font-mono text-red-300 font-bold">
+            De V1 PDF ➔ V2 Web en Vivo
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Dossier Grid -->
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Bloque 1: Teledetección Espectral -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="satellite" class="w-5 h-5 text-red-400"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Formulación Espectral & RUSLE</h3>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+          Cálculo del cociente normalizado de quema y severidad relativa:
+        </p>
+        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-red-400 space-y-1 mb-3">
+          <div>NBR = (B08_NIR - B12_SWIR2) / (B08_NIR + B12_SWIR2)</div>
+          <div>dNBR = NBR_pre - NBR_post</div>
+          <div>A_erosión = R · K · LS · C · P (t/ha·año)</div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Donde <em>R</em> es la erosividad de la lluvia (MOPU), <em>K</em> la erodabilidad del suelo según el mapa litológico de España, <em>LS</em> el factor topográfico derivado de MDT LiDAR y <em>C</em> el factor de cubierta vegetal recalibrado por el dNBR.
+        </p>
+      </div>
+
+      <!-- Bloque 2: Caso de Estudio Real -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="flame" class="w-5 h-5 text-brand-gold"></i>
+            <h3 class="font-montserrat font-bold text-slate-100">Incendio Forestal de Niebla (V1)</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            <strong>Huelva (Andalucía) — Caso forense calibrado de 3.200 ha:</strong>
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300 mb-4">
+            <li class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+              <span>3.200 hectáreas cartografiadas con severidad espectral validada en campo.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+              <span>Pérdida de suelo estimada en 48.2 t/ha·año en laderas con pendiente &gt; 25%.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+              <span>Presupuesto oficial de 4,73 M€ en obras TRAGSA (albarradas de gaviones y fajinas).</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="pt-4 border-t border-brand-border">
+          <a href="../assets/dossiers/DICTAMEN_PERICIAL_NIEBLA_PROMETHEUS_V1.pdf" download
+             class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-xs font-mono transition-all shadow-lg">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Descargar Dictamen Pericial Niebla V1 (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bloque 3: Normativa & Tarifas -->
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="scale" class="w-5 h-5 text-brand-green"></i>
+            <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & Contratación</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="p-2 rounded bg-brand-void border border-brand-border">
+              <strong class="text-brand-gold">Ley de Montes 43/2003:</strong> Artículos 44 a 50 relativos a restauración de terrenos forestales incendiados y planes de emergencia.
+            </li>
+            <li class="p-2 rounded bg-brand-void border border-brand-border">
+              <strong class="text-brand-gold">Tarifas Oficiales TRAGSA:</strong> Partidas homologadas para contratación por medios propios de la Administración Pública.
+            </li>
+            <li class="p-2 rounded bg-brand-void border border-brand-border">
+              <strong class="text-brand-gold">Registro Zenodo V1:</strong> DOI 10.5281/zenodo.22727839 con dataset y cartografía ráster verificada.
+            </li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-brand-border text-center">
+          <a href="https://doi.org/10.5281/zenodo.22727839" target="_blank" class="text-xs font-mono text-red-400 hover:underline flex items-center justify-center gap-1.5">
+            <span>Ver Registro Oficial en Zenodo</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= ADOPCIÓN TECNOLÓGICA: OPEN-CORE VS ENTERPRISE ================= -->
+    <div class="mb-12">
+      <div class="mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-widest text-red-400 px-3 py-1 rounded bg-brand-surface border border-brand-border">
+          Modelos de Adopción Tecnológica
+        </span>
+        <h2 class="mt-2 text-xl sm:text-2xl font-montserrat font-bold text-slate-100">
+          Edición Comunitaria (Open-Core V1) vs. Edición Enterprise (Táctica V2)
+        </h2>
+        <p class="text-xs text-slate-400 mt-1 max-w-3xl">
+          Dictámenes periciales auditados en Zenodo y formulaciones físicas abiertas, junto a simulación táctica 3D en tiempo real para unidades de extinción y aseguradoras.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Tarjeta Open-Core -->
+        <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                EDICIÓN COMUNITARIA · V1 OPERATIVA
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">Zenodo DOI · Peritaje Forense</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Modelado Rothermel & Dictamen Niebla 2026
+            </h3>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Diseñada para investigadores forestales, ingenieros de montes y peritos ambientales que requieren contrastar la física de propagación y la teledetección dNBR.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span><strong>Ecuaciones de Rothermel:</strong> Balances semiempíricos de frente de fuego y longitud de llama en Python.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span><strong>Severidad Sentinel-2 (dNBR/MIRBI):</strong> Cartografía ráster y bandas espectrales calibradas en QGIS.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span><strong>Memoria Pericial Completa:</strong> Expediente Niebla 2026 descargable en PDF con registro Zenodo oficial.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-slate-500 shrink-0 mt-0.5"></i>
+                <span class="text-slate-400">Sin simulación en tiempo real 3D, sin ingestión meteorológica continua AEMET y sin soporte judicial en sala.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="../assets/dossiers/DICTAMEN_PERICIAL_NIEBLA_PROMETHEUS_V1.pdf" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-mono text-red-400 hover:underline font-bold">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Descargar Dictamen V1 (PDF)</span>
+            </a>
+            <span class="text-[11px] font-mono text-slate-500">DOI 10.5281/zenodo.22727839</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Enterprise -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-red-500/60 shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-red-500 text-slate-950 font-mono text-[9px] font-extrabold uppercase tracking-wider">
+            OPERACIONES & TRIBUNALES
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-red-500/20 text-red-300 border border-red-500/40">
+                EDICIÓN ENTERPRISE · TÁCTICA V2
+              </span>
+              <span class="text-[11px] font-mono text-red-300">Mandos de Extinción & Aseguradoras</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
+              Simulación Táctica en Streaming 3D & Peritaje Judicial
+            </h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Desplegada para agencias forestales, consorcios provinciales de bomberos, brigadas de refuerzo (BRIF/UME), despachos de abogados y aseguradoras agrarias.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-200 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="zap" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span><strong>Simulación Física Interactiva en Nube:</strong> Renderizado 3D de frentes activos con datos de viento AEMET en tiempo real.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Líneas de Contención Táctica:</strong> Cálculo automático de tiempos de escape y perímetros defensivos seguros.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="file-check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Peritaje Forense Homologado:</strong> Ratificación pericial facultativa ante juzgados (LEC Art. 335.2 / MECES 3).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="coins" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>Licitación con Partidas TRAGSA:</strong> Presupuestos de restauración vegetal homologados según Ley 43/2003 de Montes.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+            <a href="https://wa.me/34642022669?text=Hola%20Kelvin,%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20la%20versi%C3%B3n%20Enterprise%20de%20PROMETHEUS" target="_blank"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500 hover:bg-red-400 text-slate-950 font-bold text-xs font-mono shadow-lg transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Solicitar Demostración Táctica</span>
+            </a>
+            <span class="text-[11px] font-mono text-red-300 font-semibold">SLA Garantizado · Contrato B2B / G2B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

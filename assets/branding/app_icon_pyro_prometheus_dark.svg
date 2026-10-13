@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="cardGlow_pyro_prometheus_dark" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FF453A" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#0A111D" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#06090F" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="borderGrad_pyro_prometheus_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF453A" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#22334D" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF453A" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#cardGlow_pyro_prometheus_dark)" stroke="url(#borderGrad_pyro_prometheus_dark)" stroke-width="3"/>
+  <circle cx="256" cy="230" r="120" fill="none" stroke="#FF453A" stroke-width="1" stroke-dasharray="4 8" opacity="0.3"/>
+
+  
+        <!-- Símbolo Pyro: Llama Convectiva FNO & Delta Térmico -->
+        <path d="M 256,140 C 280,185 320,225 320,270 C 320,305 292,330 256,330 C 220,330 192,305 192,270 C 192,235 225,200 256,140 Z" 
+              fill="none" stroke="#FF453A" stroke-width="4.5"/>
+        <path d="M 256,205 C 270,235 292,255 292,280 C 292,302 276,316 256,316 C 236,316 220,302 220,280 C 220,255 242,235 256,205 Z" 
+              fill="#FF453A" opacity="0.35"/>
+        <circle cx="256" cy="280" r="10" fill="#FFFFFF"/>
+        
+
+  <!-- Tipografía Suiza & Endoso Yggdrasil -->
+  <g text-anchor="middle">
+    <text x="256" y="85" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#718096" letter-spacing="4">YGGDRASIL COMPUTING</text>
+    <text x="256" y="388" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="2">PYRO-CORE</text>
+    <text x="256" y="415" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FF453A" letter-spacing="4">PROMETHEUS</text>
+    <text x="256" y="442" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#4A5568" letter-spacing="2">KERNEL ANGLE · 300°W</text>
+  </g>
+</svg>

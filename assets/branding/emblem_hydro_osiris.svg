@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="emblemGlow_hydro_osiris" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#070B12" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#070B12" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#emblemGlow_hydro_osiris)"/>
+  <rect x="15" y="15" width="470" height="470" rx="24" fill="none" stroke="#00D2FF" stroke-width="2" stroke-opacity="0.4"/>
+  <circle cx="250" cy="250" r="160" fill="none" stroke="#00D2FF" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3"/>
+
+  <g transform="translate(250, 250) scale(1.15) translate(-256, -230)">
+    
+        <!-- Símbolo Hydro: Dinámica de Fluidos Navier-Stokes & Riadas -->
+        <path d="M 185,200 C 220,175 255,225 290,200 C 310,188 322,194 330,200" fill="none" stroke="#00D2FF" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M 185,235 C 220,210 255,260 290,235 C 310,223 322,229 330,235" fill="none" stroke="#80E9FF" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 185,270 C 220,245 255,295 290,270 C 310,258 322,264 330,270" fill="none" stroke="#00D2FF" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="256" cy="160" r="11" fill="#00D2FF"/>
+        <circle cx="256" cy="160" r="5" fill="#FFFFFF"/>
+        
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+name: Yggdrasil Cores Keep-Alive & Health Check
+
+on:
+  schedule:
+    # Run every 15 minutes to keep Streamlit Cloud GPU clusters warm
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping-clusters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping HYDRO-CORE OSIRIS (Streamlit Cloud)
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://yggdrasil-hidro-core-osiris-poyo-nowcast-kjfy.streamlit.app/" || true
+
+      - name: Ping AQUA-CORE HYGIEIA (Streamlit Cloud)
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/" || true
+
+      - name: Health Log
+        run: |
+          echo "Health check executed successfully at $(date -u)"

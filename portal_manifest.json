@@ -1,0 +1,511 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "system": "Yggdrasil Environmental Systems",
+    "portal_name": "Portal Corporativo Unificado & Hub de Gemelos Digitales Paramétricos",
+    "version": "2.2.0-ENTERPRISE",
+    "lead_systems_architect": "Kelvin Jesús Flores Yarihuamán",
+    "academic_qualification": "MECES Nivel 3 / EQF Level 7 (Máster Oficial Homologado)",
+    "governing_architecture": "Taxonomía ISO 23247 (Niveles 1 y 2) & Supervisión HITL (EU AI Act)",
+    "contact_email": "yggdrasil.environmental@gmail.com",
+    "last_calibrated": "2026-10-12"
+  },
+  "rule_zero_axiom": {
+    "title": "Axioma Supremo de Existencia (Regla Número 0)",
+    "text": "Jamás le vamos a poder ganar a la naturaleza, ni a la biología humana; quien no entienda esto, jamás podrá vivir.",
+    "scientific_foundation": "Principio ontológico, biofísico y etológico: la tecnología, los modelos computacionales y la IA existen para comprender y alinearse con las leyes de la naturaleza, garantizando la resiliencia y soberanía de la vida."
+  },
+  "theme_tokens": {
+    "bimodal": true,
+    "dark": {
+      "void": "#070B12",
+      "surface": "#0B121F",
+      "card": "#111B2C",
+      "card_hover": "#16243A",
+      "border": "#1A273D",
+      "text": "#F8FAFC",
+      "text_muted": "#94A3B8"
+    },
+    "light": {
+      "void": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "card": "#F1F5F9",
+      "card_hover": "#E2E8F0",
+      "border": "#CBD5E1",
+      "text": "#0F172A",
+      "text_muted": "#64748B"
+    },
+    "accents": {
+      "forest_green": "#1B4D3E",
+      "emerald_neon": "#00F5A0",
+      "cyan_water": "#00D2FF",
+      "gold_pericial": "#C5A059",
+      "fire_red": "#FF453A"
+    }
+  },
+  "typography": {
+    "display": "Space Grotesk, sans-serif",
+    "body": "Inter, sans-serif",
+    "mono": "JetBrains Mono, monospace",
+    "min_contrast_ratio": 7
+  },
+  "commercial_cores_directory": [
+    {
+      "id": "HYDRO-CORE_OSIRIS",
+      "alias": "OSIRIS",
+      "is_commercial_product": true,
+      "status": "OPERATIVO_EN_PRODUCCION",
+      "sphere": "Hidrósfera",
+      "domain": "Gemelo Digital Hidrodinámico 2D en Tiempo Real (Nowcasting 38 ms)",
+      "mathematical_framework": "Ecuaciones 2D de Aguas Someras de Saint-Venant acopladas con Fourier Neural Operators (FNO) e Iber 2D",
+      "port": 8502,
+      "color_hex": "#00D2FF",
+      "live_demo_url": "https://yggdrasil-hidro-core-osiris-poyo-nowcast-kjfy.streamlit.app/",
+      "zenodo_doi": "10.5281/zenodo.22919526",
+      "badge_png": "assets/branding/badge_osiris.png",
+      "render_hero": "assets/renders/poster_osiris_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_osiris.pdf",
+      "key_metrics": [
+        {
+          "label": "Tiempo de Respuesta",
+          "value": "38.4 ms",
+          "note": "vs. 4 horas clásico"
+        },
+        {
+          "label": "Precisión Científica",
+          "value": "Error L2 < 1.2%",
+          "note": "Calibrado 29-O"
+        },
+        {
+          "label": "Marco Legal",
+          "value": "Directiva 2007/60/CE",
+          "note": "Riesgo Inundación"
+        }
+      ],
+      "phase": "Fase I · Operativo en la Nube (Q4 2026)",
+      "release_scope": "Producción Cloud Live"
+    },
+    {
+      "id": "AQUA-CORE_HYGIEIA",
+      "alias": "HYGIEIA",
+      "is_commercial_product": true,
+      "status": "OPERATIVO_EN_PRODUCCION",
+      "sphere": "Hidrósfera & Sanidad Pública",
+      "domain": "Vigilancia Continua de Calidad del Agua, PSA & Prevención de Legionella",
+      "mathematical_framework": "Modelado de transporte reactivo EPANET 2.2 / WNTR, cinética de desinfección de primer orden y balances térmicos",
+      "port": 8505,
+      "color_hex": "#00D2FF",
+      "live_demo_url": "https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/",
+      "github_url": "https://github.com/Yggdrasil-Environmental-Systems/AQUA-CORE_HYGIEIA",
+      "zenodo_doi": "10.5281/zenodo.23321969",
+      "badge_png": "assets/branding/badge_hygieia.png",
+      "render_hero": "assets/renders/poster_hygieia_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_hygieia.pdf",
+      "key_metrics": [
+        {
+          "label": "Marco Normativo",
+          "value": "RD 3/2023",
+          "note": "Criterios Sanitarios"
+        },
+        {
+          "label": "Control Biocida",
+          "value": "RD 487/2022",
+          "note": "Prevención Legionella"
+        },
+        {
+          "label": "Elegibilidad",
+          "value": "PERTE Agua",
+          "note": "Digitalización del Ciclo"
+        }
+      ],
+      "phase": "Fase I · Operativo en la Nube (Q4 2026)",
+      "release_scope": "Producción Cloud Live"
+    },
+    {
+      "id": "PYRO-CORE_PROMETHEUS",
+      "alias": "PROMETHEUS",
+      "is_commercial_product": true,
+      "status": "VALIDACION_TECNICA",
+      "sphere": "Atmósfera & Silvicultura",
+      "domain": "Diagnóstico Satelital de Incendios Forestales & Pérdida de Suelo RUSLE / TRAGSA",
+      "mathematical_framework": "Índices espectrales ráster dNBR/RBR Sentinel-2 y Ecuación Universal de Pérdida de Suelo RUSLE calibrada con TRAGSA",
+      "port": 8504,
+      "color_hex": "#FF453A",
+      "zenodo_doi": "10.5281/zenodo.22727839",
+      "badge_png": "assets/branding/badge_prometheus.png",
+      "render_hero": "assets/renders/poster_prometheus_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_prometheus.pdf",
+      "key_metrics": [
+        {
+          "label": "Resolución Ráster",
+          "value": "10 metros",
+          "note": "Sentinel-2 ESA"
+        },
+        {
+          "label": "Modelo Erosión",
+          "value": "RUSLE",
+          "note": "Pérdida edáfica t/ha·año"
+        },
+        {
+          "label": "Presupuesto",
+          "value": "4.73 M€ TRAGSA",
+          "note": "Ley de Montes 43/2003"
+        }
+      ],
+      "phase": "Fase II · Lanzamiento Semana 3 (28 Oct - 3 Nov 2026)",
+      "release_scope": "V2 Web Interactiva & RUSLE"
+    },
+    {
+      "id": "CYBER-CORE_DAEDALUS",
+      "alias": "DAEDALUS",
+      "is_commercial_product": true,
+      "status": "OPERATIVO_EN_PRODUCCION",
+      "sphere": "Edificación Inteligente & Eficiencia",
+      "domain": "Cerebro Ciberfísico BACS Clase A & Monetización de Certificados de Ahorro Energético (CAE)",
+      "mathematical_framework": "Simulación térmica transitoria zonal, balances entálpicos y calibración de modelos conforme a ASHRAE Guideline 14",
+      "port": 8501,
+      "color_hex": "#00F5A0",
+      "badge_png": "assets/branding/badge_daedalus.png",
+      "render_hero": "assets/renders/poster_daedalus_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_daedalus.pdf",
+      "key_metrics": [
+        {
+          "label": "Ahorro Energético",
+          "value": "Hasta 35%",
+          "note": "Monetización CAE"
+        },
+        {
+          "label": "Calibración Térmica",
+          "value": "CVRMSE < 15%",
+          "note": "ASHRAE 14"
+        },
+        {
+          "label": "Normativa BACS",
+          "value": "ISO 52120-1",
+          "note": "Clase A"
+        }
+      ],
+      "phase": "Fase II · Lanzamiento Semana 5 (11-17 Nov 2026)",
+      "release_scope": "BACS Clase A & CAE (Cierre 2026)"
+    },
+    {
+      "id": "CIRCULAR-CORE_OUROBOROS",
+      "alias": "OUROBOROS",
+      "is_commercial_product": true,
+      "status": "OPERATIVO_EN_PRODUCCION",
+      "sphere": "Metabolismo Material & Residuos",
+      "domain": "Trazabilidad Integral de Residuos, Catálogo LER & Descarbonización Scope 3 (CSRD)",
+      "mathematical_framework": "Contabilidad gravimétrica de flujos de masa, análisis de ciclo de vida (ACV ISO 14044) y modelos GHG Protocol",
+      "port": 8503,
+      "color_hex": "#30D158",
+      "badge_png": "assets/branding/badge_ouroboros.png",
+      "render_hero": "assets/renders/poster_ouroboros_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_ouroboros.pdf",
+      "key_metrics": [
+        {
+          "label": "Tasa Valorización",
+          "value": "74.2%",
+          "note": "Desvío de vertedero"
+        },
+        {
+          "label": "Ahorro Impositivo",
+          "value": "Ley 7/2022",
+          "note": "Exención fiscal"
+        },
+        {
+          "label": "Reporte ESG",
+          "value": "EFRAG ESRS E5",
+          "note": "CSRD Europeo"
+        }
+      ],
+      "phase": "Fase II · Lanzamiento Semana 4 (4-10 Nov 2026)",
+      "release_scope": "LCA & Ley 7/2022"
+    },
+    {
+      "id": "SOLAR-CORE_HELIOS",
+      "alias": "HELIOS",
+      "is_commercial_product": true,
+      "status": "OPERATIVO_EN_PRODUCCION",
+      "sphere": "Energía Renovable & Finanzas",
+      "domain": "Ingeniería Solar Fotovoltaica Bifacial TopCon & Project Finance Bancable",
+      "mathematical_framework": "Dispersión de radiación solar PVGIS, modelado de sombras orográficas y dispersión gaussiana de partículas PM10",
+      "port": 8507,
+      "color_hex": "#FFD60A",
+      "badge_png": "assets/branding/badge_helios.png",
+      "render_hero": "assets/renders/poster_helios_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_helios.pdf",
+      "key_metrics": [
+        {
+          "label": "Rendimiento",
+          "value": "1,840 kWh/kWp",
+          "note": "Bifacial TopCon"
+        },
+        {
+          "label": "Rentabilidad",
+          "value": "TIR 12.4%",
+          "note": "Auditado 30 años"
+        },
+        {
+          "label": "Evaluación Ambiental",
+          "value": "Ley 21/2013",
+          "note": "Buffer Red Natura"
+        }
+      ],
+      "phase": "Fase II · Lanzamiento Semana 2 (21-27 Oct 2026)",
+      "release_scope": "BESS & OMIE"
+    },
+    {
+      "id": "TOX-CORE_TALOS",
+      "alias": "TALOS",
+      "is_commercial_product": true,
+      "status": "INCUBACION_TECNICA",
+      "sphere": "Seguridad Química Industrial",
+      "domain": "Seguridad Química APQ-10, Modelado de Fluencia en Polímeros & Parada Segura",
+      "mathematical_framework": "Reología de degradación por fluencia lenta (creep) de polímeros, árboles Bow-Tie y matrices AMFE/FMEA",
+      "port": 8506,
+      "color_hex": "#BF5AF2",
+      "badge_png": "assets/branding/badge_talos.png",
+      "render_hero": "assets/renders/poster_talos_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_talos.pdf",
+      "key_metrics": [
+        {
+          "label": "Reducción Riesgo",
+          "value": "-85.6% NPR",
+          "note": "Bow-Tie & AMFE"
+        },
+        {
+          "label": "Normativa APQ",
+          "value": "RD 656/2017",
+          "note": "Almacenamiento Químico"
+        },
+        {
+          "label": "Parada Segura",
+          "value": "< 500 ms",
+          "note": "Aislamiento Neumático"
+        }
+      ],
+      "phase": "Fase III · Incubación Tecnológica (Q2 2027)",
+      "release_scope": "Seguridad Química APQ-10"
+    },
+    {
+      "id": "URBAN-CORE_THEMIS",
+      "alias": "THEMIS",
+      "is_commercial_product": true,
+      "status": "INCUBACION_TECNICA",
+      "sphere": "Territorio & Urbanismo One Health",
+      "domain": "Planificación Urbana de Proximidad 15 Minutos & Mitigación de Isla de Calor",
+      "mathematical_framework": "Isócronas peatonales Dijkstra, teledetección de temperatura de superficie (LST) y matrices Saaty AHP",
+      "port": 8508,
+      "color_hex": "#64D2FF",
+      "badge_png": "assets/branding/badge_themis.png",
+      "render_hero": "assets/renders/poster_themis_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_themis.pdf",
+      "key_metrics": [
+        {
+          "label": "Mitigación Térmica",
+          "value": "-2.5 °C",
+          "note": "Isla de Calor Urbana"
+        },
+        {
+          "label": "Marco Sanitario",
+          "value": "One Health OMS",
+          "note": "Salud Integrada"
+        },
+        {
+          "label": "Teledetección",
+          "value": "Sentinel-2 LST",
+          "note": "Temperatura Superficie"
+        }
+      ],
+      "phase": "Fase III · Incubación Tecnológica (Q3 2027)",
+      "release_scope": "Ciudad 15 min & One Health"
+    },
+    {
+      "id": "THERMO-CORE_JANUS",
+      "alias": "JANUS",
+      "is_commercial_product": true,
+      "status": "I+D_CONCEPTUAL",
+      "sphere": "Energía Térmica & Data Centers",
+      "domain": "Recuperación de Calor Residual de Centros de Proceso de Datos (CPD) & Redes de Distrito",
+      "mathematical_framework": "Balances entálpicos termodinámicos, optimización de PUE y modelado de bombas de calor de alta temperatura",
+      "port": 8509,
+      "color_hex": "#FF9F0A",
+      "badge_png": "assets/branding/badge_janus.png",
+      "render_hero": "assets/renders/poster_janus_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_janus.pdf",
+      "key_metrics": [
+        {
+          "label": "Eficiencia Red",
+          "value": "COP > 4.5",
+          "note": "Geotermia Terciaria"
+        },
+        {
+          "label": "Normativa RITE",
+          "value": "RD 178/2021",
+          "note": "Instalaciones Térmicas"
+        },
+        {
+          "label": "Descarbonización",
+          "value": "-65% CO2",
+          "note": "Sustitución Fósil"
+        }
+      ],
+      "phase": "Fase III · Incubación Tecnológica (Q1 2027)",
+      "release_scope": "Calor Residual CPD & District Heating"
+    },
+    {
+      "id": "AGRI-CORE_CERES",
+      "alias": "CERES",
+      "is_commercial_product": true,
+      "status": "INCUBACION_TECNICA",
+      "sphere": "Agronomía Digital de Precisión",
+      "domain": "Teledetección Satelital NDVI/NDRE, Optimización de Riego & Cumplimiento PAC",
+      "mathematical_framework": "Balances hídricos FAO-56 Penman-Monteith, curvas de reflectancia espectral y dosificación variable VRA",
+      "port": 8515,
+      "color_hex": "#A3E635",
+      "badge_png": "assets/branding/badge_ceres.png",
+      "render_hero": "assets/renders/poster_ceres_4_5.png",
+      "factsheet_pdf": "assets/dossiers/factsheet_ceres.pdf",
+      "key_metrics": [
+        {
+          "label": "Ahorro de Agua",
+          "value": "Hasta 40%",
+          "note": "Riego Deficitario"
+        },
+        {
+          "label": "Teledetección",
+          "value": "NDVI / NDRE",
+          "note": "Resolución 10 m"
+        },
+        {
+          "label": "Sostenibilidad",
+          "value": "PAC 2023-2027",
+          "note": "Ecorregímenes"
+        }
+      ],
+      "phase": "Fase III · Incubación Tecnológica (Q3 2027)",
+      "release_scope": "Agronomía Digital PAC"
+    }
+  ],
+  "internal_governance_cores": [
+    {
+      "id": "AI-CORE_ATHENA",
+      "alias": "ATHENA",
+      "is_commercial_product": false,
+      "category": "Infraestructura Interna de Gobernanza, Auditoría y Control Criptográfico",
+      "role": "Centinela Epistemológico & Supervisión Humana HITL",
+      "domain": "Supervisión estricta de inferencias algorítmicas, veto por restricciones físicas y gobierno de la Bóveda Epistémica",
+      "compliance_framework": "Reglamento (UE) 2024/1689 (EU AI Act, Art. 14 HITL), ISO/IEC 42001 (Sistema de Gestión de IA)",
+      "color_hex": "#A855F7",
+      "key_functions": [
+        "Veto de inferencias que violen leyes físicas (Zero-Hallucination Guardrails)",
+        "Custodia de los 97 compendios de ciencia e ingeniería de referencia",
+        "Supervisión humana obligatoria en maniobras de alto riesgo"
+      ]
+    },
+    {
+      "id": "VERI-AUDIT_ASTRAEA",
+      "alias": "ASTRAEA",
+      "is_commercial_product": false,
+      "category": "Infraestructura Interna de Gobernanza, Auditoría y Control Criptográfico",
+      "role": "Auditor Forense Criptográfico & Custodia de Evidencia Digital",
+      "domain": "Sellado criptográfico de código, verificación de cadena de custodia y blindaje pericial judicial",
+      "compliance_framework": "Ley de Enjuiciamiento Civil (LEC Art. 335.2), ISO/IEC 27037 (Evidencia Digital), eIDAS",
+      "color_hex": "#818CF8",
+      "key_functions": [
+        "Firma digital y sellado SHA-256 de cada línea de código y reporte pericial",
+        "Pistas de auditoría inmutables conforme al Art. 12 del EU AI Act",
+        "Generación de dictámenes periciales visados para tribunales y arbitrajes"
+      ]
+    },
+    {
+      "id": "BRAND-CORE_FREYJA",
+      "alias": "FREYJA",
+      "is_commercial_product": false,
+      "category": "Infraestructura Interna de Gobernanza, Auditoría y Control Criptográfico",
+      "role": "Gobernanza de Identidad, Sistema de Diseño Suizo & Accesibilidad",
+      "domain": "Garantía de uniformidad visual, contraste estricto WCAG AAA y ergonomía cognitiva de software de misión crítica",
+      "compliance_framework": "WCAG 2.2 Nivel AAA, ISO 9241-110 (Ergonomía de Interacción Hombre-Sistema)",
+      "color_hex": "#EC4899",
+      "key_functions": [
+        "Sentinel de identidad visual bimodal Obsidian Void / Paper Pure",
+        "Verificación algorítmica de ratio de contraste > 7.0:1 en toda la flota",
+        "Supervisión de tipografía técnica (Space Grotesk, Inter, JetBrains Mono)"
+      ]
+    },
+    {
+      "id": "LOGOS-CORE_APOLO",
+      "alias": "APOLO",
+      "is_commercial_product": false,
+      "category": "Infraestructura Interna de Gobernanza, Auditoría y Control Criptográfico",
+      "role": "Validación Cuantitativa, Modelado DCF Bancable & Comunicación Científica",
+      "domain": "Traducción de modelos físicos a flujos de caja descontados (DCF), CapEx/OpEx y difusión de ciencia abierta",
+      "compliance_framework": "Normas Internacionales IFRS 13, Taxonomía Europea de Finanzas Sostenibles, Estándar EBU R128 (-14 LUFS)",
+      "color_hex": "#AF52DE",
+      "key_functions": [
+        "Auditoría de viabilidad bancable Tier-1 para fondos de inversión",
+        "Simulaciones estocásticas Monte Carlo de rentabilidad y LCOE",
+        "Coordinación de metadatos DOI permanentes en Zenodo / CERN"
+      ]
+    },
+    {
+      "id": "NEXUS-CORE_HERMES",
+      "alias": "HERMES",
+      "is_commercial_product": false,
+      "category": "Infraestructura Interna de Gobernanza, Auditoría y Control Criptográfico",
+      "role": "Pasarela IoT Industrial Segura & Bus de Malla OT/IT",
+      "domain": "Orquestación multi-núcleo distribuida, captura de telemetría de campo y túnel seguro sin fuga de datos",
+      "compliance_framework": "IEC 62443 (Ciberseguridad Industrial), TLS 1.3, Protocolo Zero-Leakage",
+      "color_hex": "#5E5CE6",
+      "key_functions": [
+        "Comunicación cifrada de sub-segundo (< 50 ms) entre sensores y modelos",
+        "Normalización de protocolos de campo (BACnet/SC, Modbus RTU, LoRaWAN, MQTT)",
+        "Aislamiento de redes OT críticas frente a amenazas externas"
+      ]
+    }
+  ],
+  "future_pipeline_2027_2028": [
+    {
+      "id": "THERMO-CORE_JANUS",
+      "alias": "JANUS",
+      "quarter": "Q1 2027",
+      "domain": "Termodinámica CPD & District Heating"
+    },
+    {
+      "id": "BIO-CORE_PHOENIX",
+      "alias": "PHOENIX",
+      "quarter": "Q2 2027",
+      "domain": "Regeneración Ecológica Post-Incendio (Paralelo a Prometheus)"
+    },
+    {
+      "id": "AERO-CORE_AEOLUS",
+      "alias": "AEOLUS",
+      "quarter": "Q3 2027",
+      "domain": "Microclima Eólico & Calidad del Aire"
+    },
+    {
+      "id": "GEO-CORE_GAIA",
+      "alias": "GAIA",
+      "quarter": "Q4 2027",
+      "domain": "Geotecnia Ambiental & Interferometría InSAR"
+    },
+    {
+      "id": "PURIF-CORE_NEREUS",
+      "alias": "NEREUS",
+      "quarter": "Q1 2028",
+      "domain": "Tratamiento de Efluentes Industriales & Membranas MBR"
+    },
+    {
+      "id": "SONO-CORE_ECHO",
+      "alias": "ECHO",
+      "quarter": "Q2 2028",
+      "domain": "Modelado Acústico 3D & Confort Sonoro Urbano"
+    },
+    {
+      "id": "EPIDEM-CORE_ASCLEPIUS",
+      "alias": "ASCLEPIUS",
+      "quarter": "Q3 2028",
+      "domain": "Epidemiología Basada en Aguas Residuales (WBE)"
+    }
+  ]
+}
