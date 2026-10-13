@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kelvinjfloresy.github.io/yggdrasil-portal/sitemap.xml
