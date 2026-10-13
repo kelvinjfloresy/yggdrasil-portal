@@ -140,9 +140,9 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_solar_helios.png" width="240" alt="SOLAR-CORE HELIOS" />
     </td>
     <td>
-      <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas & Baterías BESS</strong><br>
-      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años y programa las baterías para verter energía en las horas de precio más alto.<br>
-      📊 <strong>Rendimiento Bancable:</strong> Planta de 4.95 MWp (Fuentejara, Andalucía): rentabilidad auditada del <strong>12.4% de TIR</strong> y certificación de cero afección a Red Natura 2000.
+      <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas, PINN & Baterías BESS (TD3)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años, audita servidumbres ambientales/aeronáuticas y entrena agentes Deep RL (TD3) para arbitraje de baterías LFP en OMIE y banda secundaria aFRR de REE.<br>
+      📊 <strong>Validación Operativa Dual:</strong> <strong>Caso 1 (Real Auditado):</strong> Parque Solar Fuentejara (<strong>500 kWp</strong>, Comunitat Valenciana, PR 81.5%, 840 MWh/año, EIA Ley 21/2013 y PM₁₀ RD 102/2011) · <strong>Caso 2 (Utility-Scale):</strong> Planta Solar Jarama-Sur (<strong>4.95 MWp</strong>, Madrid D3 CTE, 8.540 módulos n-TOPCon 580 Wp, 8.420 MWh/año, AESA RD 384/2023 y Red Natura 2000).
     </td>
   </tr>
   <tr>
