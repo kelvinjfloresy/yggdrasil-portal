@@ -182,9 +182,33 @@
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-cyan-400/30 text-[11px] font-mono text-cyan-300 font-bold">
-            RD 3/2023 · RD 487/2022
+            RD 3/2023 · RD 487/2022 · Orden DCA/1079/2026
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Indicadores Clave -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-cyan-400 uppercase font-bold">Caso 1 · Sector Hospitalario</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">DMA-04</div>
+        <div class="text-[10px] text-slate-400 mt-1">10 nudos · 1.250 m red · 4 puntos muertos eliminados (&gt;72h)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-brand-green uppercase font-bold">Smart-Flushing IoT</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">-64.3% agua</div>
+        <div class="text-[10px] text-slate-300 mt-1">Ahorro en purgas vs timer BMS ciego · 0 brotes Legionella</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-cyan-300 uppercase font-bold">Arquitectura Neuronal</div>
+        <div class="text-2xl font-mono font-bold text-cyan-300 mt-1">&lt; 1 ms PINN</div>
+        <div class="text-[10px] text-slate-400 mt-1">Surrogate PyTorch (&lt;1 ms) + HygieiaPIGNNTwin (Kirchhoff + RL)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-brand-gold uppercase font-bold">Conformidad Normativa</div>
+        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">100% SINAC v3</div>
+        <div class="text-[10px] text-brand-gold/80 mt-1">● RD 3/2023 · RD 487/2022 · Orden DCA/1079/2026</div>
       </div>
     </div>
 
@@ -223,7 +247,7 @@
           <div>T(t) = Tamb + (T0 - Tamb) · e^(-k_term · t)</div>
         </div>
         <p class="text-xs text-slate-400 leading-relaxed">
-          Donde <em>C</em> es la concentración de cloro libre (consigna RD 3/2023 entre 0.2 y 1.0 mg/L), <em>k</em> es el coeficiente cinético global (pared y seno del agua) y <em>T(t)</em> modela la pérdida térmica en ramales terminales para evitar la proliferación de <em>Legionella pneumophila</em> (&lt; 50 °C).
+          Donde <em>C</em> es la concentración de cloro libre (consigna RD 3/2023 entre 0.2 y 1.0 mg/L), <em>k</em> es el coeficiente cinético global (pared y seno del agua) y <em>T(t)</em> modela la pérdida térmica en ramales terminales para evitar la proliferación de <em>Legionella pneumophila</em> (&lt; 50 °C), resolviendo la Paradoja THMs vs Patógenos (Chick-Watson) sin rebasar 100 µg/L de trihalometanos.
         </p>
       </div>
 
@@ -266,6 +290,9 @@
             <strong class="text-brand-gold">Real Decreto 487/2022:</strong> Requisitos sanitarios para la prevención y el control de la legionelosis en instalaciones con recirculación.
           </li>
           <li class="p-2 rounded bg-brand-void border border-brand-border">
+            <strong class="text-brand-gold">Orden DCA/1079/2026:</strong> Protocolos oficiales de saneamiento temporal de emergencia, trenes de potabilización móvil y fotodesinfección UV-LED (400 J/m²).
+          </li>
+          <li class="p-2 rounded bg-brand-void border border-brand-border">
             <strong class="text-brand-gold">PERTE Digitalización del Ciclo del Agua:</strong> Conforme a las bases reguladoras de ayudas europeas NextGenerationEU.
           </li>
         </ul>
@@ -306,7 +333,7 @@
             <ul class="space-y-2.5 text-xs text-slate-300 font-mono">
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-300 shrink-0 mt-0.5"></i>
-                <span><strong>Motor EPANET 2.2 / WNTR:</strong> Transporte convectivo de cloro libre y decaimiento en pared/seno en código abierto.</span>
+                <span><strong>Motor EPANET 2.2 &amp; PINN Surrogate:</strong> Transporte convectivo e inferencia neuronal informada por la física (<1 ms) en PyTorch.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-300 shrink-0 mt-0.5"></i>
@@ -355,8 +382,8 @@
                 <span><strong>Telemetría IoT/SCADA en Tiempo Real:</strong> Conexión continua a analizadores de cloro amperométricos, turbidímetros y sondas PT100 vía Modbus/MQTT.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i data-lucide="droplet" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-                <span><strong>Smart-Flushing Automatizado:</strong> Actuación autónoma sobre electroválvulas ahorrando hasta un 64.3% de agua de purga.</span>
+                <i data-lucide="network" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                <span><strong>HygieiaPIGNNTwin (Grafo DMA-04 &amp; PPO RL):</strong> Gemelo digital espacial con leyes de Kirchhoff y actuación autónoma Smart-Flushing (ahorro del 64.3% de agua de purga).</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="file-check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
@@ -382,8 +409,37 @@
 
   </main>
 
-  <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
-    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+  <footer class="border-t border-brand-border bg-brand-surface py-8 text-xs font-mono text-slate-400">
+    <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="../assets/yggdrasil_emblem_dark.svg" alt="Yggdrasil" class="w-6 h-6 object-contain">
+        <span class="text-slate-300 font-bold font-montserrat">YGGDRASIL ENVIRONMENTAL SYSTEMS</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono">
+        <a href="https://www.linkedin.com/in/kelvinflores-ingenieria/" target="_blank" class="text-cyan-300 hover:text-cyan-200 flex items-center gap-1.5 transition-colors">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span>Kelvin Flores</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="https://www.linkedin.com/company/yggdrasil-environmental-systems" target="_blank" class="text-cyan-300 hover:text-cyan-200 flex items-center gap-1.5 transition-colors">
+          <i data-lucide="building-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span>Yggdrasil Systems</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="https://github.com/kelvinjfloresy" target="_blank" class="text-slate-300 hover:text-brand-green flex items-center gap-1.5 transition-colors">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>GitHub</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="https://doi.org/10.5281/zenodo.23321969" target="_blank" class="text-slate-300 hover:text-cyan-300 flex items-center gap-1.5 transition-colors">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span>DOI: 10.5281/zenodo.23321969</span>
+        </a>
+      </div>
+      <div class="text-[11px] text-slate-500 text-center md:text-right">
+        Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF 7] | Lead Systems Architect
+      </div>
+    </div>
   </footer>
 
   <script>lucide.createIcons();</script>
