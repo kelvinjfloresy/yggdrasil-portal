@@ -26,7 +26,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Arquitectura-ISO%2023247%20Nivel%202%20(Digital%20Shadow)-00D2FF?style=flat-square" />
   <img src="https://img.shields.io/badge/Inteligencia%20Artificial-EU%20AI%20Act%20(Art.%2014%20HITL)-7928CA?style=flat-square" />
-  <img src="https://img.shields.io/badge/Validez%20Judicial-LEC%20Art.%20335.2-10B981?style=flat-square" />
+  <img src="https://img.shields.io/badge/Auditor%C3%ADa-ISO%2045001%20%7C%2014001-10B981?style=flat-square" />
   <img src="https://img.shields.io/badge/Custodia%20Digital-ISO%2FIEC%2027037-F59E0B?style=flat-square" />
   <img src="https://img.shields.io/badge/Estado%20Operativo-Producción%20Activa%20·%20Live-00F5A0?style=flat-square" />
   <img src="https://img.shields.io/badge/Cualificación-MECES%203%20%7C%20EQF%207-3B82F6?style=flat-square" />
@@ -125,7 +125,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <strong>PYRO-CORE: PROMETHEUS — Peritaje Satelital de Incendios & Restauración de Urgencia</strong><br>
       🌍 <strong>En el mundo real:</strong> Mide con satélites Sentinel-2 la pérdida exacta de suelo tras un incendio y calcula el presupuesto de diques y fajinas antes de que las lluvias arrastren la montaña.<br>
       📊 <strong>Caso Real & Cifras:</strong> En el Gran Incendio de Niebla (Huelva, 3.200 ha), diagnosticó una pérdida de suelo de 48.2 t/ha y presupuestó <strong>4.73 millones de euros</strong> bajo tarifas TRAGSA.<br>
-      📜 <strong>Normativa:</strong> Ley 43/2003 de Montes · Ley de Enjuiciamiento Civil (LEC Art. 335.2) · Directiva Europea de Suelos.
+      📜 <strong>Normativa:</strong> Ley 43/2003 de Montes · Directiva Europea de Suelos · Estándar Forense ISO/IEC 27037.
     </td>
   </tr>
 </table>
@@ -210,7 +210,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
   "Jamás le vamos a ganar a la naturaleza;   Ecuaciones analíticas puras (Saint-Venant, Navier-Stokes,
   la tecnología existe para salvaguardarla." cinéticas químicas). La IA opera como acelerador matricial.
 
-  3. SUPERVISIÓN HUMANA OBLIGATORIA (HITL)  4. BLINDAJE JURÍDICO & FORENSE (LEC 335.2)
+  3. SUPERVISIÓN HUMANA OBLIGATORIA (HITL)  4. INTEGRIDAD TÉCNICA & FORENSE (ISO/IEC 27037)
   Exclusivamente soporte a la decisión.      Depósito inmutable en CERN/Zenodo (DOI oficial). Sellado
   Ninguna compuerta o válvula se mueve sin  criptográfico SHA-256 bajo estándar forense ISO/IEC 27037.
   intervención y firma de un facultativo.
@@ -227,13 +227,12 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
     </td>
     <td valign="middle">
       <strong>Kelvin Jesús Flores Yarihuamán</strong><br>
-      <em>Lead Systems Architect · Director Técnico & Perito Judicial en Computación Ambiental</em>
+      <em>Lead Systems Architect · Director Técnico de Computación Ambiental</em>
       <br><br>
-      🎓 <strong>Nivel de Cualificación Oficial:</strong> MECES Nivel 3 · EQF Level 7 (Máster Oficial Universitario Homologado)<br>
-      🛡️ <strong>Auditorías & Cumplimiento:</strong> Auditor Líder ISO 14001 / ISO 45001 · Estándar Forense Digital ISO/IEC 27037 · EU AI Act (Art. 14 HITL)<br>
-      ⚖️ <strong>Actuación Pericial:</strong> Habilitado para Dictámenes Técnicos y Defensa Colegiada ante Tribunales de Justicia (LEC Art. 335.2)
+      🎓 <strong>Nivel de Cualificación Oficial:</strong> MECES Nivel 3 · EQF Level 7<br>
+      🛡️ <strong>Auditorías & Cumplimiento:</strong> Auditor Líder ISO 14001 / ISO 45001 · Estándar Forense Digital ISO/IEC 27037 · EU AI Act (Art. 14 HITL)
       <br><br>
-      📬 <strong>Contacto Institucional:</strong> <a href="mailto:yggdrasil.environmental@gmail.com">yggdrasil.environmental@gmail.com</a> &nbsp;|&nbsp; 📱 <strong>WhatsApp:</strong> +34 642 022 669 &nbsp;|&nbsp; 💼 <a href="https://www.linkedin.com/in/kelvin-flores-yarihuaman/"><strong>Perfil Oficial de LinkedIn</strong></a>
+      📬 <strong>Contacto Institucional:</strong> <a href="mailto:yggdrasil.environmental@gmail.com">yggdrasil.environmental@gmail.com</a> &nbsp;|&nbsp; 💼 <a href="https://www.linkedin.com/in/kelvin-flores-yarihuaman/"><strong>Perfil Oficial de LinkedIn</strong></a>
     </td>
   </tr>
 </table>
@@ -245,6 +244,23 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
 * 🌐 **Portal Web en Vivo:** [kelvinjfloresy.github.io/yggdrasil-portal](https://kelvinjfloresy.github.io/yggdrasil-portal/)
 * 📄 **Guía Ejecutiva de Soluciones y Gemelos Paramétricos (PDF):** [`GUIA_EJECUTIVA_YGGDRASIL_CORES.pdf`](GUIA_EJECUTIVA_YGGDRASIL_CORES.pdf)
 * 📊 **Dossier Público Completo (HTML Interactivo):** [`DOSSIER_EJECUTIVO_CORES_PUBLICO.html`](DOSSIER_EJECUTIVO_CORES_PUBLICO.html)
+
+---
+
+## ⚖️ Avisos Legales, Propiedad Intelectual & Licencias
+
+### 🏛️ Propiedad Intelectual & Marcas
+**Yggdrasil Environmental Systems™** y la constelación de núcleos ciberfísicos asociados (**OSIRIS, HYGIEIA, PROMETHEUS, HELIOS, DAEDALUS, OUROBOROS, JANUS, TALOS, THEMIS, CERES, ATHENA, APOLO, FREYJA, ASTRAEA**) constituyen desarrollos científicos, algoritmos y marcas protegidas. Todos los derechos reservados.
+
+### 🛡️ Descargo de Responsabilidad (Legal Disclaimer)
+Las plataformas, gemelos digitales y modelos matemáticos proporcionados constituyen exclusivamente **Sistemas de Soporte a la Decisión Técnica (Decision Support Systems - DSS)**. No sustituyen la supervisión o firma facultativa de profesionales de ingeniería, geología o protección civil. En cumplimiento estricto del **Reglamento (UE) 2024/1689 (EU AI Act, Artículo 14)**, ninguna compuerta, válvula o intervención en infraestructura física crítica debe ejecutarse de forma desatendida, requiriendo siempre intervención y validación humana obligatoria (**Human-in-the-Loop · HITL**).
+
+### 📜 Modelo de Licenciamiento
+* **Evaluación Técnica & Investigación Académica (Open-Core):** El material público, maquetas de interfaz y especificaciones pueden ser evaluados con fines académicos y de investigación técnica citando los identificadores de objeto digital (**DOI oficiales en CERN/Zenodo**).
+* **Despliegue Comercial & Producción (Enterprise SLA):** La integración de modelos en tiempo real con sensores IoT/SCADA, clusters dedicados en GPU y conectores gubernamentales se rige bajo contrato mercantil y acuerdos de nivel de servicio (SLA).
+
+### 🔒 Privacidad & Confidencialidad
+Este repositorio y portal web cumplen con los principios de minimización de datos del **Reglamento General de Protección de Datos (RGPD · Reglamento UE 2016/679)**. No se realiza recolección encubierta de datos personales ni rastreo de identidad sin consentimiento expreso.
 
 ---
 
