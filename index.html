@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KY99SB8MCB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KY99SB8MCB');
+
+    // Event Tracking Inteligente para Yggdrasil
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Descargas de Guía Ejecutiva y Dossiers
+      document.querySelectorAll('a[href$=".pdf"], a[href*="GUIA_EJECUTIVA"], a[href*="DOSSIER"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var targetName = el.getAttribute('href') || 'documento';
+          gtag('event', 'download_pdf', {
+            'event_category': 'Descargas',
+            'event_label': targetName
+          });
+        });
+      });
+
+      // 2. Clics en Demos Live de Streamlit
+      document.querySelectorAll('a[href*="streamlit.app"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var demoName = el.href.includes('osiris') ? 'Demo OSIRIS' : (el.href.includes('hygieia') ? 'Demo HYGIEIA' : 'Streamlit Live');
+          gtag('event', 'click_demo_live', {
+            'event_category': 'Demos',
+            'event_label': demoName,
+            'demo_url': el.href
+          });
+        });
+      });
+
+      // 3. Contacto Institucional y LinkedIn
+      document.querySelectorAll('a[href^="mailto:"], a[href*="linkedin.com"], a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var channel = el.href.startsWith('mailto:') ? 'Email Corporativo' : (el.href.includes('linkedin') ? 'LinkedIn' : 'WhatsApp');
+          gtag('event', 'contact_interaction', {
+            'event_category': 'Contacto',
+            'event_label': channel
+          });
+        });
+      });
+    });
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yggdrasil Environmental Systems | Gemelos Digitales Paramétricos & Modelado Predictivo</title>
@@ -3514,6 +3561,12 @@
     function askAthena(key) {
       const entry = athenaKB[key];
       if (!entry) return;
+      if (typeof gtag === 'function') {
+        gtag('event', 'athena_copilot_query', {
+          'event_category': 'ATHENA Copilot',
+          'event_label': key
+        });
+      }
       displayAthenaMessage(entry.title, entry.text, entry.action);
     }
 

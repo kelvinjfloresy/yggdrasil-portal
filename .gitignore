@@ -15,3 +15,10 @@ assets/audio/*.wav
 
 # Local Python caches
 *.pyc
+
+# Uncommitted draft factsheets
+assets/dossiers/factsheet_apolo.*
+assets/dossiers/factsheet_astraea.*
+assets/dossiers/factsheet_athena.*
+assets/dossiers/factsheet_freyja.*
+assets/dossiers/factsheet_hermes.*
