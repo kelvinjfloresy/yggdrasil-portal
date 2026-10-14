@@ -2051,7 +2051,7 @@
     <!-- ================= SECCIÓN: BENCHMARK TÉCNICO COMPARADO ================= -->
     <section id="benchmark-tecnico" class="py-16 border-t border-brand-border/60 theme-border">
       
-      <div class="max-w-4xl mx-auto text-center mb-12">
+      <div class="max-w-4xl mx-auto text-center mb-10">
         <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-cyan px-3 py-1 rounded bg-brand-surface border border-brand-border theme-bg-card theme-border">
           Auditoría Técnica Comparada · Benchmark Empírico
         </span>
@@ -2059,214 +2059,214 @@
           Matriz de Rendimiento: Paradigma Convencional vs. Yggdrasil OS
         </h2>
         <p class="mt-2 text-sm text-slate-400 theme-text-muted">
-          Comparativa de desempeño entre metodologías tradicionales de ingeniería civil/ambiental y los gemelos digitales de operadores neuronales e ingesta telemétrica continua.
+          Comparativa de desempeño entre metodologías tradicionales de ingeniería civil/ambiental y nuestros gemelos digitales de <strong>Caja Gris</strong> (ecuaciones físico-matemáticas exactas aceleradas por operadores neuronales).
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 w-full">
         
         <!-- CARD 1: OSIRIS vs HEC-RAS / Iber -->
-        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between">
+        <div class="p-5 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between h-full">
           <div>
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border/60">
-              <div class="flex items-center gap-3">
-                <span class="p-2.5 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-                  <i data-lucide="waves" class="w-6 h-6"></i>
+            <div class="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-brand-border/60">
+              <div class="flex items-center gap-2.5">
+                <span class="p-2 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shrink-0">
+                  <i data-lucide="waves" class="w-5 h-5"></i>
                 </span>
                 <div>
-                  <span class="text-[11px] font-mono uppercase text-cyan-400 font-bold">HIDRODINÁMICA & AVENIDAS 2D</span>
-                  <h3 class="text-lg font-montserrat font-bold text-slate-100 theme-text-main">OSIRIS FNO vs. HEC-RAS 2D / Iber</h3>
+                  <span class="text-[10px] font-mono uppercase text-cyan-400 font-bold block">HIDRODINÁMICA & AVENIDAS 2D</span>
+                  <h3 class="text-base font-montserrat font-bold text-slate-100 theme-text-main leading-tight">OSIRIS FNO vs. HEC-RAS / Iber</h3>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 font-mono text-[10px] font-bold">
-                393.750× Speedup
+              <span class="px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 font-mono text-[10px] font-bold shrink-0">
+                393.750×
               </span>
             </div>
 
             <!-- Side-by-side Table -->
-            <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-2.5 font-mono text-xs">
               <div class="p-3 rounded-xl bg-brand-void/70 border border-red-500/20">
                 <div class="text-[10px] uppercase text-red-400 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
-                  <span>Métodos Numéricos Tradicionales (Iber / HEC-RAS)</span>
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Métodos Tradicionales (Iber / HEC-RAS)</span>
                 </div>
-                <ul class="text-[11px] text-slate-400 space-y-1">
-                  <li>• <strong class="text-slate-300">Latencia:</strong> 4.2 horas de cómputo en cluster multicore por cada escenario de lluvia.</li>
-                  <li>• <strong class="text-slate-300">Capacidad Operativa:</strong> Aviso en diferido tras el pico de avenida. En cuencas mediterráneas con Tc &lt; 2 h, la catástrofe ocurre antes de que la simulación termine.</li>
-                  <li>• <strong class="text-slate-300">Incertidumbre:</strong> Inviable calcular ensambles estocásticos en tiempo real (máx. 1 escenario estático).</li>
+                <ul class="text-[11px] text-slate-400 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-slate-300">Latencia:</strong> 4.2 horas de cómputo por escenario de lluvia.</li>
+                  <li>• <strong class="text-slate-300">Operativa:</strong> Aviso en diferido tras el pico de avenida; en cuencas rápidas (Tc &lt; 2 h) la riada llega antes que el cálculo.</li>
+                  <li>• <strong class="text-slate-300">Incertidumbre:</strong> Inviable correr ensambles estocásticos en vivo.</li>
                 </ul>
               </div>
 
               <div class="p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/40">
                 <div class="text-[10px] uppercase text-brand-green font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-                  <span>Yggdrasil OSIRIS (Fourier Neural Operator 2D)</span>
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Yggdrasil OSIRIS (Saint-Venant 2D + FNO)</span>
                 </div>
-                <ul class="text-[11px] text-slate-200 space-y-1">
-                  <li>• <strong class="text-cyan-300">Latencia:</strong> <strong class="text-brand-green">38.4 ms</strong> de inferencia continua GPU/CPU sin malla fija.</li>
-                  <li>• <strong class="text-cyan-300">Capacidad Operativa:</strong> <strong class="text-brand-green">146 minutos de tiempo de anticipación crítica</strong> para evacuación y protección civil.</li>
-                  <li>• <strong class="text-cyan-300">Incertidumbre:</strong> Evaluación de 100.000 miembros Monte Carlo en 64 minutos para mapas de riesgo paramétrico probabilístico.</li>
+                <ul class="text-[11px] text-slate-200 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-cyan-300">Latencia:</strong> <strong class="text-brand-green">38.4 ms</strong> de inferencia continua GPU/CPU.</li>
+                  <li>• <strong class="text-cyan-300">Operativa:</strong> <strong class="text-brand-green">146 min de anticipación crítica</strong> para evacuación y protección civil.</li>
+                  <li>• <strong class="text-cyan-300">Incertidumbre:</strong> 100.000 miembros Monte Carlo para mapas de riesgo probabilístico.</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>Directiva Europea 2007/60/CE & RD 903/2010</span>
-            <a href="cores/osiris.html" class="text-cyan-400 hover:underline flex items-center gap-1 font-bold">Ver Dossier Hydro →</a>
+            <span>Dir. 2007/60/CE · RD 903/2010</span>
+            <a href="cores/osiris.html" class="text-cyan-400 hover:underline flex items-center gap-1 font-bold shrink-0">Dossier Hydro →</a>
           </div>
         </div>
 
         <!-- CARD 2: HYGIEIA vs Toma de Muestras Manual -->
-        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between">
+        <div class="p-5 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between h-full">
           <div>
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border/60">
-              <div class="flex items-center gap-3">
-                <span class="p-2.5 rounded-2xl bg-brand-green/20 text-brand-green border border-brand-green/30">
-                  <i data-lucide="droplets" class="w-6 h-6"></i>
+            <div class="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-brand-border/60">
+              <div class="flex items-center gap-2.5">
+                <span class="p-2 rounded-xl bg-brand-green/20 text-brand-green border border-brand-green/30 shrink-0">
+                  <i data-lucide="droplets" class="w-5 h-5"></i>
                 </span>
                 <div>
-                  <span class="text-[11px] font-mono uppercase text-brand-green font-bold">CALIDAD SANITARIA & LEGIONELLA</span>
-                  <h3 class="text-lg font-montserrat font-bold text-slate-100 theme-text-main">HYGIEIA vs. Analítica Manual en Frasco</h3>
+                  <span class="text-[10px] font-mono uppercase text-brand-green font-bold block">CALIDAD SANITARIA & LEGIONELLA</span>
+                  <h3 class="text-base font-montserrat font-bold text-slate-100 theme-text-main leading-tight">HYGIEIA vs. Analítica Manual</h3>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] font-bold">
-                Vigilancia 24/7
+              <span class="px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] font-bold shrink-0">
+                24/7 Live
               </span>
             </div>
 
-            <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-2.5 font-mono text-xs">
               <div class="p-3 rounded-xl bg-brand-void/70 border border-red-500/20">
                 <div class="text-[10px] uppercase text-red-400 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
-                  <span>Protocolo Clásico de Inspección Sanitaria</span>
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Inspección Sanitaria Clásica en Frasco</span>
                 </div>
-                <ul class="text-[11px] text-slate-400 space-y-1">
-                  <li>• <strong class="text-slate-300">Frecuencia:</strong> Muestreo puntual manual con frasco cada 15 a 30 días en grifos centinela.</li>
-                  <li>• <strong class="text-slate-300">Tiempo de Cultivo:</strong> 10 a 14 días de incubación en placa para confirmar colonias de <em>Legionella pneumophila</em>.</li>
-                  <li>• <strong class="text-slate-300">Vulnerabilidad:</strong> Durante 14 días el hospital opera a ciegas ante bajadas de cloro libre o formación de biopelícula.</li>
+                <ul class="text-[11px] text-slate-400 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-slate-300">Frecuencia:</strong> Muestreo puntual manual cada 15 a 30 días en grifos centinela.</li>
+                  <li>• <strong class="text-slate-300">Cultivo:</strong> 10 a 14 días de incubación en placa para confirmar <em>Legionella</em>.</li>
+                  <li>• <strong class="text-slate-300">Vulnerabilidad:</strong> Durante 14 días el hospital opera a ciegas ante caídas de cloro libre.</li>
                 </ul>
               </div>
 
               <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/40">
                 <div class="text-[10px] uppercase text-brand-green font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-                  <span>Yggdrasil HYGIEIA (Gemelo Hidráulico EPANET 24/7)</span>
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Yggdrasil HYGIEIA (EPANET 2.2 / WNTR 24/7)</span>
                 </div>
-                <ul class="text-[11px] text-slate-200 space-y-1">
-                  <li>• <strong class="text-emerald-300">Frecuencia:</strong> Monitorización continua cada 60 segundos en todos los anillos hidráulicos y retornos de ACS.</li>
-                  <li>• <strong class="text-emerald-300">Tiempo de Alerta:</strong> <strong class="text-brand-green">Inmediato (&lt; 1 segundo)</strong> ante descenso de residual desinfectante (&lt; 0.2 mg/L).</li>
-                  <li>• <strong class="text-emerald-300">Blindaje Legal:</strong> Trazabilidad auditable inmutable que exime al complejo de sanciones sanitarias (hasta 600.000 €).</li>
+                <ul class="text-[11px] text-slate-200 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-emerald-300">Frecuencia:</strong> Simulación cinética cada 60 s en todos los anillos y retornos ACS.</li>
+                  <li>• <strong class="text-emerald-300">Alerta:</strong> <strong class="text-brand-green">Inmediata (&lt; 1 s)</strong> ante caída de desinfectante (&lt; 0.2 mg/L).</li>
+                  <li>• <strong class="text-emerald-300">Ahorro &amp; Ley:</strong> -64.3% de agua purgada y trazabilidad SINAC v3 (RD 3/2023).</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>Conforme a RD 3/2023 & RD 487/2022</span>
-            <a href="cores/hygieia.html" class="text-brand-green hover:underline flex items-center gap-1 font-bold">Ver Dossier Aqua →</a>
+            <span>RD 3/2023 &amp; RD 487/2022</span>
+            <a href="cores/hygieia.html" class="text-brand-green hover:underline flex items-center gap-1 font-bold shrink-0">Dossier Aqua →</a>
           </div>
         </div>
 
         <!-- CARD 3: PROMETHEUS vs Peritaje de Campo -->
-        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between">
+        <div class="p-5 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between h-full">
           <div>
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border/60">
-              <div class="flex items-center gap-3">
-                <span class="p-2.5 rounded-2xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
-                  <i data-lucide="flame" class="w-6 h-6"></i>
+            <div class="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-brand-border/60">
+              <div class="flex items-center gap-2.5">
+                <span class="p-2 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30 shrink-0">
+                  <i data-lucide="flame" class="w-5 h-5"></i>
                 </span>
                 <div>
-                  <span class="text-[11px] font-mono uppercase text-purple-400 font-bold">FORENSE AMBIENTAL POST-INCENDIO</span>
-                  <h3 class="text-lg font-montserrat font-bold text-slate-100 theme-text-main">PROMETHEUS vs. Peritaje Analógico</h3>
+                  <span class="text-[10px] font-mono uppercase text-purple-400 font-bold block">FORENSE AMBIENTAL POST-INCENDIO</span>
+                  <h3 class="text-base font-montserrat font-bold text-slate-100 theme-text-main leading-tight">PROMETHEUS vs. Campo Analógico</h3>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono text-[10px] font-bold">
-                < 48 Horas
+              <span class="px-2 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono text-[10px] font-bold shrink-0">
+                &lt; 48 Horas
               </span>
             </div>
 
-            <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-2.5 font-mono text-xs">
               <div class="p-3 rounded-xl bg-brand-void/70 border border-red-500/20">
                 <div class="text-[10px] uppercase text-red-400 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 shrink-0"></i>
                   <span>Peritaje Forestal Topográfico Tradicional</span>
                 </div>
-                <ul class="text-[11px] text-slate-400 space-y-1">
-                  <li>• <strong class="text-slate-300">Plazos:</strong> 60 a 90 días de trabajo de campo con cuadrillas y GPS portátiles para delimitar perímetro.</li>
-                  <li>• <strong class="text-slate-300">Pérdida de Suelo:</strong> Estimación empírica aproximada sin discretización píxel a píxel de la pendiente LiDAR.</li>
-                  <li>• <strong class="text-slate-300">Presupuestos:</strong> Semanas de redacción manual de pliegos técnicos, retrasando la solicitud de fondos de emergencia.</li>
+                <ul class="text-[11px] text-slate-400 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-slate-300">Plazos:</strong> 60 a 90 días de trabajo de campo con cuadrillas y GPS para perímetro.</li>
+                  <li>• <strong class="text-slate-300">Erosión:</strong> Estimación empírica sin discretización píxel a píxel de pendiente LiDAR.</li>
+                  <li>• <strong class="text-slate-300">Licitación:</strong> Semanas de redacción manual de pliegos, llegando tarde a lluvias otoñales.</li>
                 </ul>
               </div>
 
               <div class="p-3 rounded-xl bg-purple-950/30 border border-purple-500/40">
                 <div class="text-[10px] uppercase text-purple-300 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-                  <span>Yggdrasil PROMETHEUS (Satelital dNBR + RUSLE Píxel 10 m)</span>
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Yggdrasil PROMETHEUS (dNBR + RUSLE 10 m)</span>
                 </div>
-                <ul class="text-[11px] text-slate-200 space-y-1">
-                  <li>• <strong class="text-purple-300">Plazos:</strong> <strong class="text-purple-200">< 48 horas post-ignición</strong> con ráster Sentinel-2 calibrado espectralmente.</li>
-                  <li>• <strong class="text-purple-300">Pérdida de Suelo:</strong> Modelo RUSLE acoplado con MDE 5 m (48.2 t/ha·año en Niebla auditadas).</li>
-                  <li>• <strong class="text-purple-300">Presupuestos:</strong> Desglose paramétrico con cuadros oficiales TRAGSA listo para licitación de emergencia (4,73 M€).</li>
+                <ul class="text-[11px] text-slate-200 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-purple-300">Plazos:</strong> <strong class="text-purple-200">&lt; 48 h post-ignición</strong> con ráster multiespectral Sentinel-2.</li>
+                  <li>• <strong class="text-purple-300">Erosión:</strong> Ecuación física RUSLE con MDE 5 m (48.2 t/ha·año en Niebla).</li>
+                  <li>• <strong class="text-purple-300">Licitación:</strong> Presupuesto automático con tarifas oficiales TRAGSA (4,73 M€).</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>Ley 43/2003 de Montes & DOI 10.5281/zenodo.22727839</span>
-            <a href="cores/prometheus.html" class="text-purple-400 hover:underline flex items-center gap-1 font-bold">Ver Dossier Pyro →</a>
+            <span>Ley 43/2003 · ISO/IEC 27037</span>
+            <a href="cores/prometheus.html" class="text-purple-400 hover:underline flex items-center gap-1 font-bold shrink-0">Dossier Pyro →</a>
           </div>
         </div>
 
         <!-- CARD 4: DAEDALUS vs BMS Convencional -->
-        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between">
+        <div class="p-5 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border shadow-xl flex flex-col justify-between h-full">
           <div>
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border/60">
-              <div class="flex items-center gap-3">
-                <span class="p-2.5 rounded-2xl bg-blue-500/20 text-brand-blue border border-brand-blue/30">
-                  <i data-lucide="building-2" class="w-6 h-6"></i>
+            <div class="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-brand-border/60">
+              <div class="flex items-center gap-2.5">
+                <span class="p-2 rounded-xl bg-blue-500/20 text-brand-blue border border-brand-blue/30 shrink-0">
+                  <i data-lucide="building-2" class="w-5 h-5"></i>
                 </span>
                 <div>
-                  <span class="text-[11px] font-mono uppercase text-brand-blue font-bold">AUTOMATIZACIÓN EDIFICIOS TERCIARIOS</span>
-                  <h3 class="text-lg font-montserrat font-bold text-slate-100 theme-text-main">DAEDALUS BACS vs. BMS Convencional</h3>
+                  <span class="text-[10px] font-mono uppercase text-brand-blue font-bold block">AUTOMATIZACIÓN TERCIARIA &amp; CAE</span>
+                  <h3 class="text-base font-montserrat font-bold text-slate-100 theme-text-main leading-tight">DAEDALUS BACS vs. BMS Clásico</h3>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 font-mono text-[10px] font-bold">
-                BACS Clase A
+              <span class="px-2 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 font-mono text-[10px] font-bold shrink-0">
+                Clase A
               </span>
             </div>
 
-            <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-2.5 font-mono text-xs">
               <div class="p-3 rounded-xl bg-brand-void/70 border border-red-500/20">
                 <div class="text-[10px] uppercase text-red-400 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 shrink-0"></i>
                   <span>Sistemas BMS Tradicionales (Clase C o D)</span>
                 </div>
-                <ul class="text-[11px] text-slate-400 space-y-1">
-                  <li>• <strong class="text-slate-300">Control:</strong> Relojes horarios estáticos y consignas fijas sin compensación de ocupación ni inercia térmica.</li>
-                  <li>• <strong class="text-slate-300">Eficiencia:</strong> Consumo energético un 25% a 35% superior al óptimo teórico; sin modulación por CO₂.</li>
-                  <li>• <strong class="text-slate-300">Financiero:</strong> Imposible acreditar ahorros verificables ante el Ministerio para monetizar Certificados CAE.</li>
+                <ul class="text-[11px] text-slate-400 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-slate-300">Control:</strong> Relojes horarios estáticos y consignas fijas sin inercia térmica.</li>
+                  <li>• <strong class="text-slate-300">Eficiencia:</strong> Derroche del 25% al 35% climatizando zonas sin ocupación.</li>
+                  <li>• <strong class="text-slate-300">Financiero:</strong> Imposible certificar ahorros ante el MITECO para cobrar CAEs.</li>
                 </ul>
               </div>
 
               <div class="p-3 rounded-xl bg-blue-950/30 border border-blue-500/40">
                 <div class="text-[10px] uppercase text-blue-300 font-bold flex items-center gap-1.5 mb-1">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-                  <span>Yggdrasil DAEDALUS (ISO 52120-1 BACS Clase A)</span>
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 shrink-0"></i>
+                  <span>Yggdrasil DAEDALUS (ISO 52120-1 Clase A)</span>
                 </div>
-                <ul class="text-[11px] text-slate-200 space-y-1">
-                  <li>• <strong class="text-blue-300">Control:</strong> Modulación continua multivariable (BACnet/SC & Modbus RTU) adaptada a ASHRAE 55 e IDA 1.</li>
-                  <li>• <strong class="text-blue-300">Eficiencia:</strong> <strong class="text-brand-green">28.4% de reducción de consumo térmico y eléctrico</strong> auditado en 4.900 m².</li>
-                  <li>• <strong class="text-blue-300">Financiero:</strong> <strong class="text-brand-gold">Monetización automática en el mercado de CAEs (RD 36/2023)</strong> generando hasta 125 €/MWh.</li>
+                <ul class="text-[11px] text-slate-200 space-y-1 leading-relaxed">
+                  <li>• <strong class="text-blue-300">Control:</strong> Modulación multivariable BACnet/SC &amp; Modbus RTU (RITE / ASHRAE 55).</li>
+                  <li>• <strong class="text-blue-300">Eficiencia:</strong> <strong class="text-brand-green">-28.4% de consumo energético</strong> auditado (148.6 MWh/año).</li>
+                  <li>• <strong class="text-blue-300">Financiero:</strong> <strong class="text-brand-gold">Liquidación directa de Certificados CAE (RD 36/2023)</strong>.</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>Certificación Oficial BACS Clase A & RD 36/2023</span>
-            <a href="cores/daedalus.html" class="text-brand-blue hover:underline flex items-center gap-1 font-bold">Ver Dossier Cyber →</a>
+            <span>ISO 52120-1 · RD 36/2023 CAE</span>
+            <a href="cores/daedalus.html" class="text-brand-blue hover:underline flex items-center gap-1 font-bold shrink-0">Dossier Cyber →</a>
           </div>
         </div>
 
@@ -2407,42 +2407,42 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 w-full mb-8">
         
         <!-- 1. Misión -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl">
+        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl h-full">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <span class="p-3 rounded-2xl bg-brand-green/20 text-brand-green border border-brand-green/40">
+              <span class="p-2.5 rounded-2xl bg-brand-green/20 text-brand-green border border-brand-green/40 shrink-0">
                 <i data-lucide="target" class="w-6 h-6"></i>
               </span>
               <div>
-                <span class="text-xs font-mono uppercase text-brand-green font-bold">PROPÓSITO ESTRATÉGICO</span>
-                <h3 class="text-xl font-montserrat font-extrabold text-slate-100 theme-text-main">Nuestra Misión</h3>
+                <span class="text-[10px] font-mono uppercase text-brand-green font-bold block">PROPÓSITO ESTRATÉGICO</span>
+                <h3 class="text-lg font-montserrat font-extrabold text-slate-100 theme-text-main">Nuestra Misión</h3>
               </div>
             </div>
-            <p class="text-sm text-slate-300 theme-text-sub leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-300 theme-text-sub leading-relaxed">
               Diseñar, modelar y desplegar gemelos digitales paramétricos deterministas de alta fidelidad biofísica que anticipen catástrofes climáticas, vigilen la salud pública hidrosanitaria y optimicen infraestructuras críticas en tiempo real. Unir el rigor analítico de la ingeniería europea con aceleración neuronal de frontera, protegiendo vidas humanas y activos territoriales sin margen para el error.
             </p>
           </div>
           <div class="mt-6 pt-3 border-t border-brand-border text-xs font-mono text-brand-green">
-            Ingeniería Pericial al Servicio de la Vida
+            Ingeniería al Servicio de la Vida
           </div>
         </div>
 
         <!-- 2. Visión -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl">
+        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl h-full">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <span class="p-3 rounded-2xl bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40">
+              <span class="p-2.5 rounded-2xl bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 shrink-0">
                 <i data-lucide="compass" class="w-6 h-6"></i>
               </span>
               <div>
-                <span class="text-xs font-mono uppercase text-brand-cyan font-bold">HORIZONTE TECNOLÓGICO</span>
-                <h3 class="text-xl font-montserrat font-extrabold text-slate-100 theme-text-main">Nuestra Visión</h3>
+                <span class="text-[10px] font-mono uppercase text-brand-cyan font-bold block">HORIZONTE TECNOLÓGICO</span>
+                <h3 class="text-lg font-montserrat font-extrabold text-slate-100 theme-text-main">Nuestra Visión</h3>
               </div>
             </div>
-            <p class="text-sm text-slate-300 theme-text-sub leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-300 theme-text-sub leading-relaxed">
               Consolidar a Yggdrasil como el estándar europeo de referencia en gemelos paramétricos e inteligencia ambiental auditable. Demostrar al mundo que los sistemas críticos no pueden depender de 'cajas negras' probabilísticas ni de IA no supervisada, consolidando un ecosistema donde la computación respeta las leyes de la física y cada decisión está custodiada bajo supervisión humana experta (Human-in-the-Loop).
             </p>
           </div>
@@ -2452,29 +2452,29 @@
         </div>
 
         <!-- 3. Valores Fundamentales -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl">
+        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl h-full">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <span class="p-3 rounded-2xl bg-amber-500/20 text-brand-gold border border-brand-gold/40">
+              <span class="p-2.5 rounded-2xl bg-amber-500/20 text-brand-gold border border-brand-gold/40 shrink-0">
                 <i data-lucide="scale" class="w-6 h-6"></i>
               </span>
               <div>
-                <span class="text-xs font-mono uppercase text-brand-gold font-bold">CULTURA & DEONTOLOGÍA</span>
-                <h3 class="text-xl font-montserrat font-extrabold text-slate-100 theme-text-main">Valores Fundamentales</h3>
+                <span class="text-[10px] font-mono uppercase text-brand-gold font-bold block">CULTURA & DEONTOLOGÍA</span>
+                <h3 class="text-lg font-montserrat font-extrabold text-slate-100 theme-text-main">Valores Fundamentales</h3>
               </div>
             </div>
             <div class="space-y-2 text-xs text-slate-300 theme-text-sub font-mono">
               <div class="p-2 rounded-lg bg-brand-void border border-brand-border">
-                <strong class="text-brand-gold font-sans block text-[13px] mb-0.5">Determinismo Físico Inviolable</strong>
-                Cero alucinaciones; los algoritmos se subordinan a las leyes exactas de la termodinámica, Saint-Venant y la biofísica.
+                <strong class="text-brand-gold font-sans block text-[12px] mb-0.5">Determinismo Físico Inviolable</strong>
+                Cero alucinaciones; la matemática y la física gobiernan sobre cualquier inferencia estadística.
               </div>
               <div class="p-2 rounded-lg bg-brand-void border border-brand-border">
-                <strong class="text-brand-gold font-sans block text-[13px] mb-0.5">Integridad Pericial & Rigor Técnico</strong>
-                Responsabilidad civil y técnica avalada bajo cualificación oficial [MECES 3 / EQF 7].
+                <strong class="text-brand-gold font-sans block text-[12px] mb-0.5">Rigor Técnico &amp; Cualificación</strong>
+                Ingeniería avalada bajo nivel oficial [MECES 3 · EQF Level 7].
               </div>
               <div class="p-2 rounded-lg bg-brand-void border border-brand-border">
-                <strong class="text-brand-gold font-sans block text-[13px] mb-0.5">Transparencia Radical (Caja Gris)</strong>
-                Trazabilidad inmutable de cada cálculo mediante sellado SHA-256 y cumplimiento forense ISO/IEC 27037.
+                <strong class="text-brand-gold font-sans block text-[12px] mb-0.5">Transparencia Radical (Caja Gris)</strong>
+                Física explícita + IA aceleradora con sellado SHA-256 e ISO/IEC 27037.
               </div>
             </div>
           </div>
@@ -2484,18 +2484,18 @@
         </div>
 
         <!-- 4. Compromiso con el Servicio Público -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl">
+        <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border theme-bg-card theme-border flex flex-col justify-between shadow-xl h-full">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <span class="p-3 rounded-2xl bg-purple-500/20 text-purple-400 border border-purple-500/40">
+              <span class="p-2.5 rounded-2xl bg-purple-500/20 text-purple-400 border border-purple-500/40 shrink-0">
                 <i data-lucide="heart-handshake" class="w-6 h-6"></i>
               </span>
               <div>
-                <span class="text-xs font-mono uppercase text-purple-400 font-bold">RESPONSABILIDAD SOCIAL & TERRITORIO</span>
-                <h3 class="text-xl font-montserrat font-extrabold text-slate-100 theme-text-main">Compromiso Público</h3>
+                <span class="text-[10px] font-mono uppercase text-purple-400 font-bold block">RESPONSABILIDAD SOCIAL & TERRITORIO</span>
+                <h3 class="text-lg font-montserrat font-extrabold text-slate-100 theme-text-main">Compromiso Público</h3>
               </div>
             </div>
-            <p class="text-sm text-slate-300 theme-text-sub leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-300 theme-text-sub leading-relaxed">
               Ponemos la computación planetaria de frontera y la teledetección satelital al servicio de la defensa civil y la resiliencia ciudadana. La tecnología más avanzada debe proteger a las poblaciones vulnerables antes de que llegue la riada, erradicar patógenos del agua de consumo hospitalario y blindar la viabilidad económica de las infraestructuras, garantizando un pacto intergeneracional de respeto absoluto a las leyes de la naturaleza.
             </p>
           </div>
@@ -2504,6 +2504,50 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Banner Destacado: Doctrina de Caja Gris (Física + Matemática Soberana / IA como Acelerador) -->
+      <div class="w-full p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-sky-950/40 via-brand-surface to-emerald-950/30 border-2 border-sky-400/40 shadow-2xl theme-bg-card theme-border">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div class="flex items-start gap-4 max-w-4xl">
+            <div class="p-3.5 rounded-2xl bg-sky-500/20 text-sky-300 border border-sky-400/40 shrink-0 mt-0.5">
+              <i data-lucide="cpu" class="w-7 h-7"></i>
+            </div>
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/40 font-bold uppercase">
+                  DOCTRINA DE CAJA GRIS (GREY-BOX PHYSICS + AI)
+                </span>
+                <span class="text-xs font-mono text-brand-green font-semibold">
+                  ● Cero Cajas Negras · Cero Alucinaciones
+                </span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-montserrat font-extrabold text-slate-100 theme-text-main">
+                La Física y la Matemática Mandan; la Inteligencia Artificial es el Acelerador
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 theme-text-sub leading-relaxed">
+                A diferencia de las IAs generativas o de <em>"Caja Negra"</em> que operan por aproximación estadística ciega, <strong>Yggdrasil es una arquitectura de Caja Gris</strong>: el núcleo soberano está gobernado por las ecuaciones clásicas de conservación de masa, energía y momento (<em>Saint-Venant 2D, Navier-Stokes, cinética de EPANET, transposición de Perez/Faiman, ecuación RUSLE y fluencia de Arrhenius</em>). La Inteligencia Artificial (Operadores Neuronales FNO y redes PINN) actúa <strong>exclusivamente como un acelerador matemático en GPU (&lt; 38.4 ms)</strong> sometido a un <em>Centinela Físico</em>. Si la IA se apaga, el motor analítico clásico sigue resolviendo con exactitud determinista.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2.5 w-full lg:w-auto shrink-0 font-mono text-center">
+            <div class="p-3 rounded-2xl bg-brand-void/90 border border-sky-500/30">
+              <div class="text-[10px] text-slate-400 uppercase">Base Soberana</div>
+              <div class="text-sm font-bold text-sky-300 mt-0.5">Física Exacta</div>
+              <div class="text-[10px] text-slate-500">EDPs &amp; Termodinámica</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-brand-void/90 border border-brand-green/30">
+              <div class="text-[10px] text-slate-400 uppercase">Rol de la IA</div>
+              <div class="text-sm font-bold text-brand-green mt-0.5">Acelerador GPU</div>
+              <div class="text-[10px] text-slate-500">FNO / PINN (&lt;38.4 ms)</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-brand-void/90 border border-amber-500/30">
+              <div class="text-[10px] text-slate-400 uppercase">Fallo Seguro</div>
+              <div class="text-sm font-bold text-amber-300 mt-0.5">100% Analítico</div>
+              <div class="text-[10px] text-slate-500">Fallback Determinista</div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -2519,12 +2563,12 @@
           Doctrina Tecnológica & Gobernanza
         </h2>
         <p class="mt-1 text-sm text-slate-400 theme-text-muted">
-          Los fundamentos metodológicos inviolables que rigen cada modelo, cálculo pericial y algoritmo del ecosistema Yggdrasil.
+          Los fundamentos metodológicos inviolables que rigen cada modelo, cálculo técnico y algoritmo del ecosistema Yggdrasil.
         </p>
       </div>
 
       <!-- Axioma Supremo de Existencia -->
-      <div class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-void via-brand-surface to-brand-void border-2 border-brand-green/40 shadow-2xl relative overflow-hidden mb-8 theme-bg-card theme-border">
+      <div class="w-full p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-void via-brand-surface to-brand-void border-2 border-brand-green/40 shadow-2xl relative overflow-hidden mb-8 theme-bg-card theme-border">
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 relative z-10">
           <div class="p-3.5 rounded-2xl bg-brand-green/20 text-brand-green border border-brand-green/40 shrink-0">
             <i data-lucide="shield-alert" class="w-7 h-7"></i>
@@ -2549,7 +2593,7 @@
       </div>
 
       <!-- Los 3 Cánones de Ingeniería -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
         
         <!-- Canon 1: Primacía Física -->
         <div class="p-5 rounded-2xl bg-brand-surface border border-sky-500/30 flex flex-col justify-between theme-bg-card theme-border">
@@ -2564,11 +2608,11 @@
               Primacía Física (Doctrina Caja Gris)
             </h4>
             <p class="text-xs text-slate-300 theme-text-sub leading-relaxed">
-              Los motores resuelven la física analítica exacta (Saint-Venant, Navier-Stokes, Arrhenius). La IA opera únicamente como acelerador cinético subrogado (&lt;38 ms) acotado por restricciones físicas inviolables (cero alucinaciones).
+              La física y la matemática mandan (Saint-Venant, Navier-Stokes, Perez/Faiman, Arrhenius). La IA opera únicamente como acelerador cinético en GPU (&lt;38.4 ms) acotado por leyes de conservación inviolables (cero alucinaciones).
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-sky-500/20 text-[11px] font-mono text-sky-400/80">
-            Modelos 100% Deterministas
+            Física Soberana + IA Aceleradora
           </div>
         </div>
 
@@ -2585,7 +2629,7 @@
               Custodia Probatoria & Integridad
             </h4>
             <p class="text-xs text-slate-300 theme-text-sub leading-relaxed">
-              Todo desarrollo y reporte pericial se sella criptográficamente mediante hash SHA-256 e interoperabilidad ISO/IEC 27037. Se mantiene pista de auditoría inmutable de cada inferencia conforme al Art. 12 del EU AI Act.
+              Todo desarrollo y reporte técnico se sella criptográficamente mediante hash SHA-256 e interoperabilidad ISO/IEC 27037. Se mantiene pista de auditoría inmutable de cada inferencia conforme al Art. 12 del EU AI Act.
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-purple-500/20 text-[11px] font-mono text-purple-400/80">
@@ -2606,7 +2650,7 @@
               Supervisión Humana Obligatoria (HITL)
             </h4>
             <p class="text-xs text-slate-300 theme-text-sub leading-relaxed">
-              Los sistemas operan como soporte a la decisión (DSS). Conforme al Art. 14 del Reglamento (UE) 2024/1689 (EU AI Act), la decisión crítica y la firma pericial pertenecen al facultativo competente (MECES 3 / EQF 7).
+              Los sistemas operan como soporte a la decisión (DSS). Conforme al Art. 14 del Reglamento (UE) 2024/1689 (EU AI Act), la decisión crítica y la firma técnica pertenecen al facultativo competente (MECES 3 / EQF 7).
             </p>
           </div>
           <div class="mt-3 pt-2.5 border-t border-emerald-500/20 text-[11px] font-mono text-emerald-400/80">
@@ -3640,6 +3684,12 @@
         askAthena('perfil_valor');
       } else if (query.includes('titul') || query.includes('meces') || query.includes('eqf') || query.includes('master') || query.includes('colegio') || query.includes('kelvin') || query.includes('cv')) {
         askAthena('titulacion');
+      } else if (query.includes('caja gris') || query.includes('grey') || query.includes('fisica') || query.includes('física') || query.includes('matem') || query.includes('acelerad') || query.includes('alucina')) {
+        displayAthenaMessage(
+          "Doctrina de Caja Gris · Física Soberana + IA Aceleradora",
+          "Yggdrasil NO es una 'Caja Negra' probabilística que pueda inventar datos o sufrir alucinaciones. Operamos bajo una arquitectura de Caja Gris (Grey-Box): el núcleo soberano son las ecuaciones físico-matemáticas exactas (Saint-Venant 2D, Navier-Stokes, cinética de EPANET, Perez/Faiman, RUSLE y Arrhenius). La Inteligencia Artificial (Operadores Neuronales FNO y redes PINN) actúa exclusivamente como un acelerador computacional en GPU (< 38.4 ms) vigilado por un Centinela Físico. Si la IA se apaga, el motor analítico clásico sigue resolviendo con exactitud matemática total.",
+          { text: "Ver Doctrina de Caja Gris ↗", url: "#mision-vision" }
+        );
       } else if (query.includes('contact') || query.includes('telefon') || query.includes('whatsapp') || query.includes('email') || query.includes('correo') || query.includes('precio') || query.includes('contratar')) {
         askAthena('contacto');
       } else {
@@ -3654,13 +3704,22 @@
     // 10. GLOSARIO TÉCNICO & NORMATIVO DE TRADUCCIÓN HUMANA
     const GLOSSARY_DATA = [
       {
+        id: "caja_gris",
+        term: "Caja Gris (Grey-Box AI)",
+        category: "Arquitectura Físico-Matemática",
+        categoryColor: "text-sky-400 bg-sky-950/30 border-sky-500/30",
+        fullname: "Doctrina de Caja Gris: Primacía Físico-Matemática con Aceleración Neuronal",
+        humano: "Significa que nuestros sistemas NO son una 'caja negra' de IA que adivina o inventa resultados. La física y la matemática clásica mandan siempre; la Inteligencia Artificial solo actúa como un motor turbo en tarjeta gráfica (GPU) para resolver las ecuaciones en milisegundos.",
+        impacto: "Garantiza cero alucinaciones y respaldo analítico 100% determinista: si la IA se desconecta, la física matemática sigue funcionando con exactitud total."
+      },
+      {
         id: "meces",
         term: "MECES 3 / EQF Level 7",
         category: "Cualificación & Titulación",
         categoryColor: "text-amber-400 bg-amber-950/30 border-amber-500/30",
         fullname: "Marco Español de Cualificaciones (Nivel 3) / European Qualifications Framework (Level 7)",
         humano: "Nivel oficial MECES 3 / EQF Level 7. Es el máximo escalafón de cualificación profesional técnica en España y la Unión Europea previo al Doctorado.",
-        impacto: "Habilita legalmente la firma de proyectos de ingeniería, dirección técnica de arquitectura y emisión de peritajes judiciales vinculantes."
+        impacto: "Acredita la solvencia técnica superior para la dirección de proyectos de ingeniería ambiental, ciencia de datos y arquitectura de sistemas."
       },
       {
         id: "fno",
