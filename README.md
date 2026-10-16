@@ -141,8 +141,8 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
     </td>
     <td>
       <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas, PINN & Baterías BESS (TD3)</strong><br>
-      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años, audita servidumbres ambientales/aeronáuticas y entrena agentes Deep RL (TD3) para arbitraje de baterías LFP en OMIE y banda secundaria aFRR de REE.<br>
-      📊 <strong>Validación Operativa Dual:</strong> <strong>Caso 1 (Real Auditado):</strong> Parque Solar Fuentejara (<strong>500 kWp</strong>, Comunitat Valenciana, PR 81.5%, 840 MWh/año, EIA Ley 21/2013 y PM₁₀ RD 102/2011) · <strong>Caso 2 (Utility-Scale):</strong> Planta Solar Jarama-Sur (<strong>4.95 MWp</strong>, Madrid D3 CTE, 8.540 módulos n-TOPCon 580 Wp, 8.420 MWh/año, AESA RD 384/2023 y Red Natura 2000).
+      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años, audita 116 normas ISO/IEC y servidumbres ambientales/aeronáuticas, y entrena agentes Deep RL (TD3) para arbitraje de baterías LFP en OMIE y banda secundaria aFRR/mFRR (P.O. 7.2/7.3 de REE).<br>
+      📊 <strong>Validación Operativa Dual:</strong> <strong>Caso 1 (Real Auditado):</strong> Parque Solar Fuentejara (<strong>500 kWp</strong>, Comunitat Valenciana, PR 81.5%, 840 MWh/año, EIA Ley 21/2013 y PM₁₀ RD 102/2011) · <strong>Caso 2 (Utility-Scale):</strong> Planta Solar Jarama-Sur (<strong>4.95 MWp</strong>, Madrid D3 CTE, 8.540 módulos n-TOPCon 580 Wp, 8.420 MWh/año, IEC 61724-1:2021, AESA RD 369/2023 y Red Natura 2000).
     </td>
   </tr>
   <tr>
@@ -150,9 +150,9 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_cyber_daedalus.png" width="240" alt="CYBER-CORE DAEDALUS" />
     </td>
     <td>
-      <strong>CYBER-CORE: DAEDALUS — Edificios Inteligentes & Monetización de Ahorros CAE</strong><br>
-      🌍 <strong>En el mundo real:</strong> Supervisa inteligentemente la climatización, ventilación e iluminación de grandes edificios y convierte los ahorros certificados en dinero en efectivo que paga el Estado.<br>
-      📊 <strong>Rendimiento Bancable:</strong> Edificio terciario de 4.900 m² en Madrid: <strong>148.600 kWh ahorrados al año</strong>, inversión amortizada en 8.4 meses vía CAE.
+      <strong>CYBER-CORE: DAEDALUS — Edificios Inteligentes BACS Clase A, Neural-MPC & Monetización CAE</strong><br>
+      🌍 <strong>En el mundo real:</strong> Supervisa la climatización, ventilación e iluminación de grandes edificios mediante física térmica ISO 52016-1 y redes neuronales (PINN 1.55M + Neural-MPC 1.59M params) sobre BACnet/SC (TLS 1.3), convirtiendo ahorros en Certificados CAE.<br>
+      📊 <strong>Rendimiento Bancable:</strong> Edificio terciario de 4.900 m² en Madrid (Zona D3): <strong>148.6 MWh/año ahorrados (-28.4%)</strong>, <strong>SRI 84% (Clase A EPBD)</strong>, +13 años de vida útil CRREM y amortización en 8.4 meses vía Ficha TER050 (RD 36/2023).
     </td>
   </tr>
   <tr>
@@ -160,9 +160,9 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_circular_ouroboros.png" width="240" alt="CIRCULAR-CORE OUROBOROS" />
     </td>
     <td>
-      <strong>CIRCULAR-CORE: OUROBOROS — Reciclaje Hospitalario & Residuo Cero (CSRD)</strong><br>
-      🌍 <strong>En el mundo real:</strong> Reorganiza la gestión de residuos hospitalarios para evitar mezclar basura común en bolsas de biopeligro, reduciendo drásticamente el canon de vertedero.<br>
-      📊 <strong>Rendimiento Bancable:</strong> Hospital CSMC Magdalena (Castellón): tasa de reciclaje del <strong>74.2%</strong> y <strong>42.600 euros al año ahorrados</strong> en tasas de vertedero.
+      <strong>CIRCULAR-CORE: OUROBOROS — Metabolismo Circular, Reciclaje Hospitalario/Industrial & CSRD</strong><br>
+      🌍 <strong>En el mundo real:</strong> Audita flujos másicos por código LER bajo ISO 59020:2024 y RD 764/2026 (MITECO) para evitar mezclar residuos valorizables en fracciones peligrosas o vertedero.<br>
+      📊 <strong>Rendimiento Bancable:</strong> Validado en <strong>Red Hospitalaria SERMAS de Madrid (La Paz, Gregorio Marañón, 12 de Octubre, Clínico San Carlos)</strong>, <strong>Hospital CSMC Magdalena (Castellón)</strong> y <strong>Planta RCD Levante</strong>: tasa de valorización del <strong>74.2%</strong>, <strong>42.600 €/año ahorrados</strong> en canon de vertedero (Ley 7/2022) y <strong>-70.4%</strong> de huella de carbono.
     </td>
   </tr>
 </table>
