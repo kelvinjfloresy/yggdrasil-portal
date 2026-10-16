@@ -169,7 +169,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
 
 ---
 
-### 🔬 Bloque 3: Pipeline de Innovación I+D (2027-2028)
+### 🔬 Bloque 3: Motores Deterministas en Incubación & Pipeline I+D (2027-2028)
 
 <table>
   <tr>
@@ -177,8 +177,8 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_thermo_janus.png" width="240" alt="THERMO-CORE JANUS" />
     </td>
     <td>
-      <strong>THERMO-CORE: JANUS — Climatización Pasiva & Confort Urbano</strong><br>
-      🌍 <strong>En el mundo real:</strong> Diseña el aislamiento pasivo y la orientación de edificios y plazas públicas para reducir el calor extremo sin disparar la factura de aire acondicionado.
+      <strong>THERMO-CORE: JANUS — Balance Térmico de Edificios Cero Emisiones (ZEB EPBD 2024) & Termodinámica Urbana</strong><br>
+      🌍 <strong>En el mundo real:</strong> Audita matemáticamente la envolvente térmica de edificios bajo la Directiva (UE) 2024/1275 (EPBD) y el CTE DB-HE1/HE0 en Zona Climática D3 (`balance_termico_epbd2024.py`: transmitancia de muros $U = 0.22\text{ W/m}^2\text{K}$, hermeticidad Blower Door $n_{50} = 0.85\text{ h}^{-1}$, consumo primario no renovable $C_{ep,\text{nren}} = 18.5\text{ kWh/m}^2\cdot\text{año}$ Clase A ZEB) e intercambios térmicos urbanos (`ISO 52016-1`).
     </td>
   </tr>
   <tr>
@@ -186,8 +186,8 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_tox_talos.png" width="240" alt="TOX-CORE TALOS" />
     </td>
     <td>
-      <strong>TOX-CORE: TALOS — Monitoreo de Integridad Estructural en Tanques Químicos (APQ)</strong><br>
-      🌍 <strong>En el mundo real:</strong> Supervisa tanques de plástico industrial (HDPE) con químicos corrosivos para alertar de deformaciones antes de roturas o vertidos.
+      <strong>TOX-CORE: TALOS — Dispersión Atmosférica (CALINE4/EMEP & Directiva UE 2024/2881) & Suelos Contaminados ACR (RD 9/2005)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Modela la dispersión gaussiana lineal de $\text{NO}_2$, $\text{PM}_{10}$ y $\text{PM}_{2.5}$ en corredores viarios y portuarios (`dispersion_caline_emep.py`: Enlace Intermodal de Veriña y Accesos al Puerto de El Musel en Gijón, BOE-A-2026-21156) y ejecuta Análisis Cuantitativo de Riesgos (ACR) en suelos contaminados (`acr_suelos_contaminados.py`: $HQ \le 1.0$, $ILCR \le 10^{-5}$ bajo RD 9/2005).
     </td>
   </tr>
   <tr>
@@ -195,8 +195,8 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       <img src="assets/branding/badge_urban_themis.png" width="240" alt="URBAN-CORE THEMIS" />
     </td>
     <td>
-      <strong>URBAN-CORE: THEMIS — Diagnóstico Satelital Territorial & Refugios Climáticos</strong><br>
-      🌍 <strong>En el mundo real:</strong> Diagnostica qué barrios sufren más estrés térmico para ubicar parques y sombras a menos de 10 minutos a pie de los vecinos más vulnerables.
+      <strong>URBAN-CORE: THEMIS — Acústica Ambiental Forense (Maekawa ISO 9613-2 / RD 1367/2007) & Restauración Urbana (Reg. UE 2024/1991)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Dimensiona pantallas acústicas por difracción de Maekawa (`acoustic_maekawa_engine.py`: barrera de $4.5\text{ m}$ con $\Delta L_z = -11.4\text{ dBA}$ en Acceso Puerto de El Musel GJ-10, Gijón BOE-A-2026-21156, Ley 37/2003) y audita el umbral obligatorio de dosel arbóreo urbano (`restauracion_urbana_ue2024.py`: $UTC = 11.6\% \ge 10\%$, Art. 8 Reglamento UE 2024/1991, mitigación LST $-2.5\ ^\circ\text{C}$ y proximidad 15 min One Health).
     </td>
   </tr>
 </table>

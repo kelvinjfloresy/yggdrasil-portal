@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOX-CORE: TALOS | Seguridad Química APQ-10, Fluencia Lenta & Parada Segura</title>
-  <meta name="description" content="Gemelo digital para instalaciones químicas de almacenamiento y trasiego de sustancias peligrosas. Modelado de fluencia reológica en polímeros y parada segura instrumentada en menos de 500 ms según RD 656/2017.">
+  <title>TOX-CORE: TALOS | Dispersión Atmosférica (CALINE4/EMEP & Directiva UE 2024/2881) & Suelos Contaminados ACR (RD 9/2005)</title>
+  <meta name="description" content="Motor determinista para dispersión atmosférica gaussiana lineal CALINE4 e inventario EMEP/EEA Tier 3 (RD 102/2011 y Directiva UE 2024/2881), acoplado a Análisis Cuantitativo de Riesgos (ACR) en suelos contaminados (RD 9/2005, HQ ≤ 1.0, ILCR ≤ 10⁻⁵).">
   <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,23 +87,23 @@
           <div class="flex flex-wrap items-center gap-2.5 mb-3">
             <span class="text-xs font-mono px-3 py-1 rounded bg-pink-500/20 text-pink-300 border border-pink-400/30 font-bold flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
-              <span>PIPELINE 2027 · Q2 2027 · EN REFACTORIZACIÓN NORMATIVA V2</span>
+              <span>BLOQUE 3 · MOTOR DETERMINISTA EN INCUBACIÓN (Q2 2027)</span>
             </span>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
-              Seguridad Química & Almacenamiento APQ
+              Dispersión Atmosférica &amp; Toxicología de Suelos (ACR)
             </span>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
-              RD 656/2017 (APQ-10) · Seveso III
+              RD 102/2011 · Directiva (UE) 2024/2881 · RD 9/2005
             </span>
           </div>
           <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
             TOX-CORE: TALOS
           </h1>
           <p class="text-base sm:text-xl text-pink-400 font-mono mt-2">
-            Seguridad Química APQ-10, Reología de Fluencia Lenta (Creep) & Parada Segura &lt;500 ms
+            Dispersión Atmosférica (CALINE4/EMEP RD 102/2011 &amp; Directiva UE 2024/2881) &amp; Suelos Contaminados ACR (RD 9/2005)
           </p>
           <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-            Gemelo ciberfísico para la prevención de accidentes mayores y garantía de integridad estructural en depósitos de reactivos químicos corrosivos. Supervisa la deformación plástica lenta (creep) de polímeros y comanda lazos de parada instrumentada de seguridad SIL-2 en menos de 500 ms.
+            Motor determinista dual en disco: <strong>1) Dispersión Atmosférica Gaussiana Lineal</strong> (<code>core/dispersion_caline_emep.py</code>), que acopla el inventario europeo de emisiones <strong>EMEP/EEA Tier 3</strong> con el modelo <strong>CALINE4</strong> de pluma gaussiana finita para auditar inmisión de NO₂, PM₁₀ y PM₂.₅ frente al <strong>RD 102/2011</strong> y la nueva <strong>Directiva (UE) 2024/2881</strong>; y <strong>2) Análisis Cuantitativo de Riesgos en Suelos Contaminados</strong> (<code>core/acr_suelos_contaminados.py</code>), que cuantifica el Cociente de Peligro Sistémico (<strong>HQ ≤ 1.0</strong>) y el Riesgo Incremental de Cáncer (<strong>ILCR ≤ 10⁻⁵</strong>) bajo el <strong>Real Decreto 9/2005</strong> y metodología US EPA RAGS.
           </p>
         </div>
         <div class="flex-shrink-0 self-start md:self-center">
@@ -116,20 +116,20 @@
     <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-brand-surface/90 border border-pink-500/30 shadow-xl">
       <div class="flex items-center gap-3 mb-6 pb-3 border-b border-brand-border">
         <span class="p-2.5 rounded-xl bg-pink-500/10 text-pink-400 border border-pink-500/30">
-          <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          <i data-lucide="wind" class="w-6 h-6"></i>
         </span>
         <div>
-          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
-          <p class="text-xs font-mono text-pink-400">Seguridad química industrial, fin del riesgo de rotura de tanques y parada de emergencia</p>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo &amp; Resolución Práctica</h2>
+          <p class="text-xs font-mono text-pink-400">Calidad del aire viaria/portuaria (NO₂, PM₂.₅), umbrales 2030 UE 2024/2881 y ACR toxicológico de suelos (RD 9/2005)</p>
         </div>
       </div>
 
       <!-- Callout Práctico Mundo Real -->
       <div class="mb-6 p-4 rounded-2xl bg-pink-950/40 border border-pink-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
-        <div class="p-2.5 rounded-xl bg-pink-500/20 text-pink-300 shrink-0"><i data-lucide="shield-alert" class="w-5 h-5"></i></div>
+        <div class="p-2.5 rounded-xl bg-pink-500/20 text-pink-300 shrink-0"><i data-lucide="wind" class="w-5 h-5"></i></div>
         <div>
           <strong class="text-pink-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
-          Mide la deformación microscópica de tanques de ácidos y químicos peligrosos en fábricas: avisa meses antes de que el plástico reviente por fatiga y, si detecta una fuga, corta las válvulas en menos de medio segundo (500 ms) para evitar intoxicaciones o vertidos letales a ríos.
+          Modela cómo el viento dispersa los gases y partículas (NO₂, PM₁₀, PM₂.₅) de grandes carreteras y accesos portuarios (como el Enlace de Veriña / El Musel en Gijón) hacia los colegios y barrios cercanos, y calcula en suelos industriales si la presencia de hidrocarburos o metales pesados supera el umbral de riesgo para la salud humana (RD 9/2005).
         </div>
       </div>
 
@@ -138,11 +138,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-pink-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Los depósitos de reactivos corrosivos (ácidos, bases) sufren deformación plástica imperceptible a simple vista por fluencia lenta (creep), colapsando repentinamente y provocando vertidos químicos catastróficos.
+              La nueva Directiva (UE) 2024/2881 reduce a la mitad los límites permitidos de NO₂ (de 40 a 20 µg/m³) y PM₂.₅ (a 10 µg/m³), mientras antiguos suelos industriales bloquean desarrollos urbanísticos por falta de ACR.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
-            Riesgo: Colapso de tanque APQ
+            Riesgo: Infracción UE 2024/2881 &amp; RD 9/2005
           </div>
         </div>
 
@@ -150,11 +150,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve TALOS</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Calcula en continuo el factor de agotamiento del material polimérico según Findley y comanda lazos de parada instrumentada (SIS) con desconexión neumática en 420 ms frente a anomalías de presión o nivel.
+              Ejecuta dispersión gaussiana <strong>CALINE4 + EMEP Tier 3</strong> por clases de estabilidad Pasquill-Gifford y evalúa dosis de exposición crónica (<strong>CDI</strong>), riesgo sistémico (<strong>HQ ≤ 1.0</strong>) y carcinogénico (<strong>ILCR ≤ 10⁻⁵</strong>).
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
-            Corte seguro en 420 ms (&lt; 500 ms)
+            CALINE4/EMEP · HQ ≤ 1.0 &amp; ILCR ≤ 10⁻⁵
           </div>
         </div>
 
@@ -162,11 +162,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Indicadores Técnicos</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Reducción del 85.6% del Número de Prioridad de Riesgo (NPR) en matriz AMFE / FMEA, con acreditación formal de nivel de integridad SIL-2 según UNE-EN 61511.
+              Validado en el <strong>Enlace Intermodal de Veriña y Accesos al Puerto de El Musel (Gijón, BOE-A-2026-21156, IMD 24.500 veh/día, 19.5% pesados)</strong> y en matrices edáficas con Benceno, Benzo(a)pireno, TPH y Arsénico.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
-            -85.6% NPR · Nivel SIL-2
+            Veriña / El Musel · Benceno, BaP, TPH, As
           </div>
         </div>
 
@@ -174,11 +174,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-pink-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Instrucción Técnica Complementaria ITC MIE APQ-10 (Real Decreto 656/2017), Directiva Seveso III para establecimientos industriales y Ley de Prevención de Riesgos Laborales.
+              Real Decreto 102/2011 de Calidad del Aire, nueva Directiva (UE) 2024/2881 (límites 2030), Real Decreto 9/2005 de Suelos Contaminados (NGR y ACR) y Ley 7/2022.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-pink-500/30 text-[11px] font-mono text-pink-300 font-bold">
-            RD 656/2017 APQ-10 · Seveso III
+            RD 102/2011 · UE 2024/2881 · RD 9/2005
           </div>
         </div>
       </div>
@@ -187,89 +187,89 @@
     <!-- Indicadores Clave -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Reducción de Riesgo</div>
-        <div class="text-2xl font-mono font-bold text-pink-400 mt-1">-85.6% NPR</div>
-        <div class="text-[10px] text-slate-400 mt-1">Análisis Bow-Tie & AMFE/FMEA</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Límites 2030 UE 2024/2881</div>
+        <div class="text-2xl font-mono font-bold text-pink-400 mt-1">20 / 10 µg/m³</div>
+        <div class="text-[10px] text-slate-400 mt-1">NO₂ ≤ 20 µg/m³ · PM₂.₅ ≤ 10 µg/m³ anual</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Tiempo de Respuesta SIS</div>
-        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">420 ms</div>
-        <div class="text-[10px] text-brand-green mt-1">● Conforme a SIL-2 (&lt; 500 ms)</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Caso Real Viario/Portuario</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">El Musel</div>
+        <div class="text-[10px] text-brand-green mt-1">● Enlace Veriña (BOE-A-2026-21156) · 24.500 veh/día</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Integridad Mecánica</div>
-        <div class="text-2xl font-mono font-bold text-brand-green mt-1">Creep &lt; 1.5%</div>
-        <div class="text-[10px] text-slate-400 mt-1">Polietileno PE100 / PRFV a 20 años</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Umbral Toxicológico ACR</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">HQ ≤ 1.0</div>
+        <div class="text-[10px] text-slate-400 mt-1">ILCR ≤ 10⁻⁵ (RD 9/2005 &amp; US EPA RAGS)</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Marco Regulatorio</div>
-        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">APQ-10</div>
-        <div class="text-[10px] text-slate-400 mt-1">Real Decreto 656/2017</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Naturaleza del Motor</div>
+        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">Determinista</div>
+        <div class="text-[10px] text-slate-400 mt-1">0 archivos .pt · CALINE4/EMEP + ACR RD 9/2005</div>
       </div>
     </div>
 
     <!-- Grid de Ficha Técnica -->
     <div class="grid lg:grid-cols-3 gap-8 mb-12">
       
-      <!-- Bloque 1: Fluidodinámica Transitoria & Reología -->
+      <!-- Bloque 1: Dispersión Gaussiana CALINE4 & Toxicología ACR -->
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
           <i data-lucide="activity" class="w-5 h-5 text-pink-400"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Transitorios & Reología</h3>
+          <h3 class="font-montserrat font-bold text-slate-100">Pluma Gaussiana &amp; Riesgo ACR</h3>
         </div>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          Ondas de sobrepresión elástica y deformación viscoelástica temporal:
+          Dispersión de fuente lineal finita y dosis toxicológica multicapa (<code>core/dispersion_caline_emep.py</code> + <code>core/acr_suelos_contaminados.py</code>):
         </p>
         <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-pink-400 space-y-1 mb-3">
-          <div>ΔP_ariete = ρ · c_onda · Δv</div>
-          <div>c_onda = √[ (K/ρ) / (1 + (K/E)·(D/e)) ]</div>
-          <div>ε(t) = σ/E_1 + (σ/η_1)·t + (σ/E_2)·[1 - e^(-t/τ)]</div>
+          <div>C(x,y,z) = [q / (2π·u·σ_y·σ_z)] · exp(-y² / 2σ_y²) · [exp(-(z-H)²/2σ_z²) + exp(-(z+H)²/2σ_z²)]</div>
+          <div>HQ = ∑ (CDI_i / RfD_i) ≤ 1.0  (Riesgo Sistémico No Carcinogénico)</div>
+          <div>ILCR = ∑ (CDI_i · SF_i) ≤ 10⁻⁵  (Riesgo Incremental de Cáncer)</div>
         </div>
         <p class="text-xs text-slate-400 leading-relaxed">
-          Donde <em>c_onda</em> es la celeridad elástica de la onda de choque en tuberías plásticas, <em>K</em> el módulo de compresibilidad del reactivo y el modelo reológico de Burgers evalúa la fluencia lenta a 20 y 50 años para evitar rupturas catastróficas por fatiga química.
+          Donde <em>q</em> es la tasa de emisión lineal EMEP/EEA Tier 3 (g/m·s), <em>σ_y, σ_z</em> son los coeficientes de dispersión turbulenta de Pasquill-Gifford y <em>CDI</em> integra las vías de ingestión accidental, contacto dérmico e inhalación de vapores.
         </p>
       </div>
 
-      <!-- Bloque 2: Caso de Estudio Real -->
+      <!-- Bloque 2: Doble Caso de Estudio Real -->
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
           <i data-lucide="shield-alert" class="w-5 h-5 text-brand-gold"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Almacenamiento Químico APQ-10</h3>
+          <h3 class="font-montserrat font-bold text-slate-100">Doble Validación Real Auditada</h3>
         </div>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          <strong>Parque de reactivos corrosivos (Ácido sulfúrico 98% e Hipoclorito):</strong>
+          <strong>1) Enlace de Veriña / Puerto de El Musel (Gijón) &amp; 2) Suelos Industriales RD 9/2005:</strong>
         </p>
         <ul class="space-y-2 text-xs text-slate-300">
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Amortiguación del golpe de ariete reduciendo los picos de presión en un 68% mediante lazo hidroneumático.</span>
+            <span><strong>Dispersión Atmosférica (BOE-A-2026-21156):</strong> IMD = 24.500 veh/día (19.5% pesados, brisa marina 4.2 m/s Clase D); contraste dual de NO₂, PM₁₀ y PM₂.₅ frente a RD 102/2011 y Directiva (UE) 2024/2881.</span>
           </li>
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Cierre instantáneo instrumentado de electroválvulas en 420 ms ante detección de caída de presión diferencial.</span>
+            <span><strong>Toxicología Edáfica ACR (RD 9/2005):</strong> Evaluación de Benceno, Benzo(a)pireno, Hidrocarburos Totales del Petróleo (TPH) y Arsénico frente a Niveles Genéricos de Referencia (NGR).</span>
           </li>
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Cero incidentes con pérdida de contención química en cubetos tras 24 meses de monitorización continua.</span>
+            <span>Dictamen cuantitativo de aceptabilidad del emplazamiento (HQ ≤ 1.0 e ILCR ≤ 10⁻⁵) y objetivos de remediación.</span>
           </li>
         </ul>
       </div>
 
-      <!-- Bloque 3: Normativa & Seguridad Funcional -->
+      <!-- Bloque 3: Normativa & Seguridad Ambiental -->
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
           <i data-lucide="scale" class="w-5 h-5 text-brand-green"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & Seguridad Funcional</h3>
+          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal &amp; Toxicológico</h3>
         </div>
         <ul class="space-y-2.5 text-xs text-slate-300">
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">RD 656/2017 (APQ-10):</strong> Reglamento de Almacenamiento de Productos Químicos e Instrucción Técnica para recipientes móviles y fijos.
+            <strong class="text-brand-gold">Directiva (UE) 2024/2881 y RD 102/2011:</strong> Nuevos estándares europeos de calidad del aire ambiente (horizonte 2030: NO₂ ≤ 20 µg/m³, PM₂.₅ ≤ 10 µg/m³).
           </li>
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">Directiva Seveso III (2012/18/UE):</strong> Prevención y gestión de riesgos inherentes a los accidentes graves con sustancias peligrosas.
+            <strong class="text-brand-gold">Real Decreto 9/2005 (Anexos III, V y VIII):</strong> Relación de actividades potencialmente contaminantes del suelo, NGR y criterios de Análisis Cuantitativo de Riesgos (ACR).
           </li>
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">UNE-EN 61508 / 61511:</strong> Arquitectura de Seguridad Funcional para Sistemas Instrumentados de Seguridad con nivel SIL-2 verificado.
+            <strong class="text-brand-gold">Ley 7/2022 &amp; US EPA RAGS:</strong> Responsabilidad en suelos contaminados y metodología internacional de evaluación toxicológica de exposición humana.
           </li>
         </ul>
       </div>

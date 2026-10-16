@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THERMO-CORE: JANUS | Recuperación de Calor de CPD & Redes de Distrito</title>
-  <meta name="description" content="Gemelo digital termodinámico para valorización del calor residual de centros de proceso de datos (CPD), bombeo de calor de alta temperatura (COP > 4.5) e inyección en redes de distrito conforme a RITE RD 178/2021.">
+  <title>THERMO-CORE: JANUS | Balance Térmico de Edificios Cero Emisiones (ZEB EPBD 2024) & Termodinámica Urbana</title>
+  <meta name="description" content="Motor determinista para auditoría de envolvente térmica de Edificios de Cero Emisiones (ZEB) bajo Directiva (UE) 2024/1275 (EPBD) y CTE DB-HE1/HE0 en Zona Climática D3 (U=0.22 W/m²K, n50=0.85 h⁻¹, Cep,nren=18.5 kWh/m²·año Clase A).">
   <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,23 +87,23 @@
           <div class="flex flex-wrap items-center gap-2.5 mb-3">
             <span class="text-xs font-mono px-3 py-1 rounded bg-orange-500/20 text-orange-400 border border-orange-400/30 font-bold flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
-              <span>PIPELINE 2027 · Q1 2027 · EN MODELADO TÉCNICO</span>
+              <span>BLOQUE 3 · MOTOR DETERMINISTA EN INCUBACIÓN (Q1 2027)</span>
             </span>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
-              Termodinámica de Data Centers & Redes de Calor
+              Edificios Cero Emisiones (ZEB) &amp; Termodinámica Urbana
             </span>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
-              RITE RD 178/2021 · Directiva (UE) 2023/1791
+              Directiva (UE) 2024/1275 (EPBD) · CTE DB-HE1 / HE0
             </span>
           </div>
           <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
             THERMO-CORE: JANUS
           </h1>
           <p class="text-base sm:text-xl text-orange-400 font-mono mt-2">
-            Termodinámica Híbrida & Recuperación de Calor Residual en CPD para Redes de Distrito
+            Balance Térmico de Edificios Cero Emisiones (ZEB EPBD 2024) &amp; Termodinámica Urbana (CTE DB-HE)
           </p>
           <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-            Arquitectura ciberfísica para la valorización exergética del calor disipado por servidores en centros de datos. Modela ciclos de compresión con bombas de calor de alto COP para inyectar agua a 65–70 °C en redes urbanas de calefacción, reduciendo la factura térmica y el PUE del CPD.
+            Motor termodinámico determinista puro (<code>core/balance_termico_epbd2024.py</code> + <code>physics/sentinel_sidecar.py</code>) para el cálculo de balances energéticos en edificación, transmitancias térmicas de envolvente, puentes térmicos lineales y hermeticidad al paso del aire bajo la refundición de la <strong>Directiva (UE) 2024/1275 (EPBD)</strong> y el <strong>Código Técnico de la Edificación (CTE DB-HE1 y DB-HE0)</strong>, acoplado a la física radiativa y convectiva del entorno urbano (<strong>ISO 13790 / ISO 52016-1</strong>).
           </p>
         </div>
         <div class="flex-shrink-0 self-start md:self-center">
@@ -119,8 +119,8 @@
           <i data-lucide="flame" class="w-6 h-6"></i>
         </span>
         <div>
-          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
-          <p class="text-xs font-mono text-orange-400">Recuperación de calor en CPDs, reducción de PUE e integración en distritos urbanos</p>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo &amp; Resolución Práctica</h2>
+          <p class="text-xs font-mono text-orange-400">Auditoría ZEB EPBD 2024, transmitancia global K, hermeticidad Blower Door n50 y confort térmico urbano</p>
         </div>
       </div>
 
@@ -129,7 +129,7 @@
         <div class="p-2.5 rounded-xl bg-orange-500/20 text-orange-300 shrink-0"><i data-lucide="flame" class="w-5 h-5"></i></div>
         <div>
           <strong class="text-orange-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
-          Aprovecha el calor que expulsan los servidores de los centros de datos para calentar el agua de las calefacciones y duchas de los barrios y hospitales vecinos, ahorrando millones en gas natural y bajando las emisiones de CO2 de la ciudad.
+          Audita matemáticamente los cerramientos, ventanas, puentes térmicos e infiltraciones de aire de un edificio para certificarlo como <strong>Edificio de Cero Emisiones (ZEB Clase A)</strong> bajo la nueva Directiva Europea 2024/1275 y el CTE DB-HE, evitando rechazos de licencia de obra y penalizaciones por derroche energético.
         </div>
       </div>
 
@@ -138,11 +138,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Los data centers gastan fortunas enfriando racks con torres de refrigeración que disipan calor residual al aire, desperdiciando energía mientras los barrios adyacentes queman gas fósil para calefacción.
+              Los edificios con puentes térmicos no auditados o infiltraciones excesivas incumplen los límites severos del CTE DB-HE1 en zonas continentales (D3) y quedan fuera del estándar europeo de Edificio de Cero Emisiones (ZEB).
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
-            Pérdida térmica total a la atmósfera
+            Incumplimiento CTE DB-HE1 / EPBD
           </div>
         </div>
 
@@ -150,11 +150,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve JANUS</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Modela el bombeo térmico exergético elevando el calor a 65–70 °C con bombas de compresión de alta eficiencia (COP &gt; 4.5) para abastecer redes urbanas de calefacción de distrito (District Heating).
+              Ejecuta el balance térmico horario/estacional (<code>balance_termico_epbd2024.py</code>) verificando transmitancia de muros (<strong>U = 0.22 W/m²K</strong>), cubierta (<strong>U = 0.19 W/m²K</strong>) y ensayo Blower Door (<strong>n₅₀ = 0.85 h⁻¹</strong>).
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
-            COP &gt; 4.5 a 65–70 °C
+            U_muro 0.22 W/m²K · n50 = 0.85 h⁻¹
           </div>
         </div>
 
@@ -162,11 +162,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Indicadores Técnicos</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Optimización del PUE del centro de datos hasta 1.15 (frente al 1.42 de referencia estándar), garantizando recuperación continua y estabilidad térmica de servidores según estándares ASHRAE TC 9.9.
+              Consumo de energía primaria no renovable auditado en <strong>C_ep,nren = 18.5 kWh/m²·año</strong> en Zona Climática D3 (Meseta Central), logrando <strong>Calificación Energética Clase A (ZEB)</strong> con desvío &lt; 2.1% frente a ISO 13790.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
-            PUE 1.15 · ASHRAE TC 9.9
+            18.5 kWh/m²·año · Clase A ZEB
           </div>
         </div>
 
@@ -174,11 +174,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-orange-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Cumplimiento de la Directiva (UE) 2023/1791 de Eficiencia Energética, Reglamento RITE RD 178/2021 y directivas de gases refrigerantes F-Gas con HFO de nulo ODP.
+              Refundición de la Directiva (UE) 2024/1275 (EPBD), Código Técnico de la Edificación CTE DB-HE1 / DB-HE0, UNE-EN ISO 13790 / ISO 52016-1, UNE-EN ISO 9972 (Blower Door) y RITE RD 178/2021.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-orange-500/30 text-[11px] font-mono text-orange-300 font-bold">
-            Directiva 2023/1791 · RITE
+            Directiva (UE) 2024/1275 · CTE DB-HE
           </div>
         </div>
       </div>
@@ -187,70 +187,70 @@
     <!-- Indicadores Clave -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Eficiencia Térmica COP</div>
-        <div class="text-2xl font-mono font-bold text-orange-400 mt-1">COP &gt; 4.5</div>
-        <div class="text-[10px] text-orange-300 mt-1">Elevación térmica a 65 °C</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Transmitancia Muros (Zona D3)</div>
+        <div class="text-2xl font-mono font-bold text-orange-400 mt-1">0.22 W/m²K</div>
+        <div class="text-[10px] text-orange-300 mt-1">Límite CTE DB-HE1 ≤ 0.27 · Cubierta 0.19 W/m²K</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Eficacia PUE del CPD</div>
-        <div class="text-2xl font-mono font-bold text-brand-green mt-1">1.15 PUE</div>
-        <div class="text-[10px] text-brand-green mt-1">● Frente a 1.42 de referencia tradicional</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Hermeticidad Blower Door</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">n₅₀ = 0.85 h⁻¹</div>
+        <div class="text-[10px] text-brand-green mt-1">● UNE-EN ISO 9972 · Estándar Passivhaus / ZEB</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Reducción de Huella</div>
-        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">-65% CO2</div>
-        <div class="text-[10px] text-slate-400 mt-1">1.280 tCO2e/año evitadas en gas natural</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Consumo Primario No Renovable</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">18.5 kWh/m²·a</div>
+        <div class="text-[10px] text-slate-400 mt-1">Calificación Energética Clase A (ZEB EPBD 2024)</div>
       </div>
       <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
-        <div class="text-[11px] font-mono text-slate-400 uppercase">Normativa RITE</div>
-        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">RD 178/2021</div>
-        <div class="text-[10px] text-slate-400 mt-1">Aprovechamiento obligatorio de efluentes</div>
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Naturaleza del Motor</div>
+        <div class="text-2xl font-mono font-bold text-brand-gold mt-1">Determinista</div>
+        <div class="text-[10px] text-slate-400 mt-1">0 archivos .pt · Física analítica ISO 52016-1</div>
       </div>
     </div>
 
     <!-- Grid de Ficha Técnica -->
     <div class="grid lg:grid-cols-3 gap-8 mb-12">
       
-      <!-- Bloque 1: Termodinámica & Balances Entálpicos -->
+      <!-- Bloque 1: Termodinámica de Envolvente & EPBD -->
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
           <i data-lucide="flame" class="w-5 h-5 text-orange-400"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Balances Entálpicos & PUE</h3>
+          <h3 class="font-montserrat font-bold text-slate-100">Física de Envolvente &amp; CTE DB-HE</h3>
         </div>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          Termodinámica de ciclo de bomba de calor y reutilización:
+          Ecuaciones de transferencia térmica por transmisión, ventilación y balance ZEB (<code>core/balance_termico_epbd2024.py</code>):
         </p>
         <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-orange-400 space-y-1 mb-3">
-          <div>COP_real = η_Carnot · [ T_cond / (T_cond - T_evap) ] &gt; 4.5</div>
-          <div>PUE = E_total_CPD / E_IT ; ERF = E_reutilizado / E_total_CPD</div>
-          <div>Q_util = m_ref · (h_descarga - h_liquido)</div>
+          <div>H_tr = ∑(U_i · A_i) + ∑(Ψ_k · L_k)  [W/K]</div>
+          <div>H_ve = ρ_a · c_a · (q_v,mec + q_v,inf(n_50))  [W/K]</div>
+          <div>Q_H,nd = (H_tr + H_ve)·(T_int - T_ext)·Δt - η_H,gn·(Q_int + Q_sol)</div>
         </div>
         <p class="text-xs text-slate-400 leading-relaxed">
-          Donde <em>ERF</em> es el Energy Reuse Factor estandarizado por ISO/IEC 30134-6, modelando el acoplamiento directo entre el circuito secundario de refrigeración líquida a nivel de rack y el intercambiador de la red de distrito.
+          Donde <em>H_tr</em> integra las transmitancias superficiales <em>U_i</em> y los puentes térmicos lineales <em>Ψ_k</em> (frentes de forjado, jambas y dinteles), mientras el <strong>Sidecar Centinela</strong> (<code>physics/sentinel_sidecar.py</code>) verifica el cumplimiento del Primer y Segundo Principio de la Termodinámica.
         </p>
       </div>
 
       <!-- Bloque 2: Caso de Estudio Real -->
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
-          <i data-lucide="server" class="w-5 h-5 text-brand-green"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Data Center Terciario de 1.2 MW</h3>
+          <i data-lucide="building-2" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-montserrat font-bold text-slate-100">Auditoría Edificio ZEB (Zona D3)</h3>
         </div>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          <strong>Infraestructura de computación de alta densidad:</strong>
+          <strong>Edificio de Cero Emisiones (ZEB) en Zona Climática D3 (Meseta Central):</strong>
         </p>
         <ul class="space-y-2 text-xs text-slate-300">
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Captura de 850 kW térmicos a 35 °C y elevación a 65 °C sin penalizar el rendimiento de los procesadores.</span>
+            <span>Transmitancia de muros exteriores <strong>U = 0.22 W/m²K</strong> (inferior al límite normativo de 0.27 W/m²K) y cubierta <strong>U = 0.19 W/m²K</strong> (≤ 0.22 W/m²K).</span>
           </li>
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Inyección continua en el anillo térmico municipal para calefacción y agua caliente sanitaria (ACS).</span>
+            <span>Ensayo de permeabilidad al aire <strong>Blower Door n₅₀ = 0.85 h⁻¹</strong> a 50 Pa (UNE-EN ISO 9972) con recuperación entálpica cruzada.</span>
           </li>
           <li class="flex items-start gap-2">
             <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Retorno de inversión (Payback) modelado en 3.4 años mediante la monetización del calor exportado.</span>
+            <span>Consumo de energía primaria no renovable <strong>C_ep,nren = 18.5 kWh/m²·año</strong> (Clase A ZEB) e integración bioclimática urbana (<code>Propuesta_THERMO.docx</code>).</span>
           </li>
         </ul>
       </div>
@@ -259,17 +259,17 @@
       <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
         <div class="flex items-center gap-2 mb-4">
           <i data-lucide="scale" class="w-5 h-5 text-brand-gold"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal & Directivas</h3>
+          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal &amp; Directivas</h3>
         </div>
         <ul class="space-y-2.5 text-xs text-slate-300">
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">Directiva (UE) 2023/1791 (EED):</strong> Artículo 11 que exige a los centros de datos &gt;500 kW publicar planes de aprovechamiento del calor residual.
+            <strong class="text-brand-gold">Directiva (UE) 2024/1275 (EPBD):</strong> Refundición de Eficiencia Energética de los Edificios y estándar obligatorio de Edificio de Cero Emisiones (ZEB).
           </li>
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">Real Decreto 178/2021 (RITE):</strong> Exigencia de recuperación energética y prohibición de disipar calores residuales viables económicamente.
+            <strong class="text-brand-gold">CTE DB-HE1 y DB-HE0 (RD 732/2019):</strong> Limitación de la demanda y del consumo energético y control de transmitancias por zona climática.
           </li>
           <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">Reglamento F-Gas (UE) 2024/573:</strong> Empleo exclusivo de hidrofluoroolefinas (HFO) de ultrabajo potencial de calentamiento (GWP &lt; 1).
+            <strong class="text-brand-gold">UNE-EN ISO 13790 / ISO 52016-1 &amp; RITE:</strong> Cálculo de necesidades energéticas de calefacción y refrigeración y Reglamento RD 178/2021.
           </li>
         </ul>
       </div>
