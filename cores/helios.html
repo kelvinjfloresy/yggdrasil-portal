@@ -50,6 +50,20 @@
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .glossary-term {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: rgba(255, 214, 10, 0.7);
+      text-decoration-thickness: 1.5px;
+      cursor: help;
+      transition: all 0.15s ease;
+    }
+    .glossary-term:hover {
+      text-decoration-color: #FFD60A;
+      color: #FFD60A !important;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
 
@@ -69,6 +83,11 @@
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
+        <!-- Botón Glosario -->
+        <button onclick="openGlossaryModal()" class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-green/50 text-xs font-mono text-slate-300 hover:text-brand-green transition-colors flex items-center gap-1.5" title="Glosario de Acrónimos & Traducción Humana">
+          <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-green"></i>
+          <span>Glosario</span>
+        </button>
         <!-- Botón DOI CERN/Zenodo Oficial Activo -->
         <a href="https://doi.org/10.5281/zenodo.23506041" target="_blank" class="hidden sm:inline-flex px-3 py-1.5 rounded-lg bg-brand-surface border border-amber-500/40 text-xs font-mono text-amber-300 hover:border-amber-400 transition-colors items-center gap-1.5" title="Registro Oficial CERN/Zenodo DOI: 10.5281/zenodo.23506041">
           <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
@@ -116,10 +135,10 @@
             SOLAR-CORE: HELIOS
           </h1>
           <p class="text-base sm:text-xl text-yellow-400 font-mono mt-2">
-            Ingeniería Solar Fotovoltaica n-TOPCon, EIA Preventiva, Deep RL BESS & Arbitraje OMIE
+            Ingeniería Solar Fotovoltaica <span class="glossary-term" data-glossary="topcon">n-TOPCon</span>, EIA Preventiva, Deep RL <span class="glossary-term" data-glossary="bess">BESS</span> &amp; Arbitraje <span class="glossary-term" data-glossary="omie">OMIE</span>
           </p>
           <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-            Gemelo digital paramétrico para el diseño fotovoltaico, evaluación ambiental preventiva (Ley 21/2013 / RED III), inferencia neuronal física (PINN) y optimización electroquímica de baterías LFP mediante Deep Reinforcement Learning (TD3). Erradica el riesgo por precios cero/negativos en OMIE y vertidos forzosos (<em>curtailment</em>) en nudos de REE.
+            Gemelo digital paramétrico de <span class="glossary-term" data-glossary="caja_gris">Caja Gris</span> para el diseño fotovoltaico, evaluación ambiental preventiva (Ley 21/2013 / RED III), inferencia neuronal física (<span class="glossary-term" data-glossary="pinn">PINN</span>) y optimización electroquímica de baterías LFP (<span class="glossary-term" data-glossary="bess">BESS</span>) mediante Deep Reinforcement Learning (<span class="glossary-term" data-glossary="td3">TD3</span>). Erradica el riesgo por precios cero/negativos en <span class="glossary-term" data-glossary="omie">OMIE</span> y vertidos forzosos (<em>curtailment</em>) en nudos de REE.
           </p>
         </div>
         <div class="flex-shrink-0 self-start md:self-center">
@@ -166,11 +185,11 @@
           <div>
             <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve HELIOS</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Acopla simulación física determinista (Perez 1990 + Faiman + PVGIS SARAH-2) con redes neuronales PINN y agentes Deep RL (TD3) para <em>Revenue Stacking</em> de baterías LFP y blindaje ambiental preventivo.
+              Acopla simulación física determinista (Perez 1990 + Faiman + <span class="glossary-term" data-glossary="pvgis">PVGIS SARAH-2</span>) con redes neuronales <span class="glossary-term" data-glossary="pinn">PINN</span> y agentes Deep RL (<span class="glossary-term" data-glossary="td3">TD3</span>) para <em>Revenue Stacking</em> de baterías LFP (<span class="glossary-term" data-glossary="bess">BESS</span>) y blindaje ambiental preventivo.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
-            PINN (~11.4M) + Deep RL TD3 (~5.96M)
+            <span class="glossary-term" data-glossary="pinn">PINN</span> (~11.4M) + Deep RL <span class="glossary-term" data-glossary="td3">TD3</span> (~5.96M)
           </div>
         </div>
 
@@ -538,9 +557,158 @@
 
   <!-- Footer -->
   <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
-    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <span>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7]</span>
+      <span>•</span>
+      <button onclick="openGlossaryModal()" class="text-brand-green hover:underline font-bold inline-flex items-center gap-1">
+        <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+        <span>Glosario de Acrónimos &amp; Conceptos</span>
+      </button>
+    </div>
   </footer>
 
-  <script>lucide.createIcons();</script>
+  <!-- Modal Glosario -->
+  <div id="glossary-modal" class="fixed inset-0 z-50 hidden bg-brand-void/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-4xl rounded-3xl bg-brand-surface border-2 border-amber-500/40 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden my-auto">
+      <div class="p-5 sm:p-6 bg-brand-void/90 border-b border-brand-border flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-montserrat font-extrabold text-slate-100">Glosario Técnico &amp; Traducción Ejecutiva · HELIOS</h3>
+            <p class="text-xs font-mono text-amber-400">Explicación clara de conceptos fotovoltaicos, IA física y mercado eléctrico</p>
+          </div>
+        </div>
+        <button onclick="closeGlossaryModal()" class="p-2 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border text-slate-400 hover:text-slate-100 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-3 max-h-[65vh]" id="glossary-items-container"></div>
+      <div class="p-4 bg-brand-void/90 border-t border-brand-border flex justify-end">
+        <button onclick="closeGlossaryModal()" class="px-4 py-2 rounded-xl bg-amber-400 text-slate-950 font-mono font-bold text-xs">Cerrar Glosario</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Floating Tooltip -->
+  <div id="global-tech-tooltip" class="fixed z-50 hidden w-80 p-3.5 rounded-2xl bg-[#0B121F]/98 border-2 border-amber-400/60 shadow-2xl pointer-events-none backdrop-blur-xl">
+    <div id="tooltip-title" class="font-montserrat font-bold text-xs text-amber-300 mb-1 pb-1 border-b border-brand-border"></div>
+    <div id="tooltip-humano" class="text-[11px] text-slate-200 leading-snug mb-1.5 font-sans"></div>
+    <div id="tooltip-valor" class="text-[10px] font-mono text-brand-green"></div>
+  </div>
+
+  <script>
+    const GLOSSARY_DATA = [
+      {
+        id: "caja_gris",
+        term: "Caja Gris (Grey-Box AI)",
+        category: "Arquitectura Físico-Matemática",
+        fullname: "Doctrina de Caja Gris: Primacía Físico-Matemática con Aceleración Neuronal",
+        humano: "Significa que nuestros sistemas NO son una 'caja negra' de IA que adivina o inventa resultados. La física y la matemática clásica mandan siempre; la IA solo actúa como acelerador en tarjeta gráfica (GPU).",
+        impacto: "Garantiza cero alucinaciones y respaldo analítico 100% determinista."
+      },
+      {
+        id: "topcon",
+        term: "n-TOPCon Bifacial",
+        category: "Ingeniería Solar Fotovoltaica",
+        fullname: "Tunnel Oxide Passivated Contact (Células Fotovoltaicas Tipo-N Bifaciales)",
+        humano: "Tecnología de paneles solares de última generación que capta luz tanto por la cara frontal como por el reflejo del suelo en la cara trasera (albedo), soportando mejor el calor extremo.",
+        impacto: "Incrementa la producción eléctrica entre un 5% y un 12% adicional por hectárea con menor degradación anual certificada bajo IEC 61215."
+      },
+      {
+        id: "pinn",
+        term: "PINN",
+        category: "Inteligencia Artificial Física",
+        fullname: "Physics-Informed Neural Network (Red Neuronal Informada por la Física)",
+        humano: "Red neuronal que integra dentro de su propia función matemática las leyes de la termodinámica y radiación solar (Perez/Faiman), impidiendo que la IA invente resultados físicamente imposibles.",
+        impacto: "Acelera simulaciones energéticas y térmicas de horas a menos de 1 milisegundo con una fidelidad auditada de R² = 0.9912."
+      },
+      {
+        id: "bess",
+        term: "BESS (LFP)",
+        category: "Almacenamiento Energético",
+        fullname: "Battery Energy Storage System (Baterías de Litio-Ferrofosfato)",
+        humano: "Contenedores industriales de baterías que acumulan la electricidad solar cuando los precios del mercado están a cero y la inyectan en horas punta nocturnas.",
+        impacto: "Multiplica el retorno de inversión (TIR > 12%) de parques solares y evita pérdidas por vertidos de energía obligados (curtailment)."
+      },
+      {
+        id: "td3",
+        term: "Deep RL (TD3)",
+        category: "Control & Arbitraje Energético",
+        fullname: "Twin Delayed Deep Deterministic Policy Gradient (Aprendizaje por Refuerzo Profundo)",
+        humano: "Algoritmo de toma de decisiones que aprende cuándo cargar o descargar las baterías combinando precios del mercado OMIE y reservas de red REE sin degradar prematuramente las celdas.",
+        impacto: "Maximiza los ingresos del parque solar (Revenue Stacking) protegiendo la salud química (SOH) de la batería."
+      },
+      {
+        id: "omie",
+        term: "OMIE / REE",
+        category: "Mercado Eléctrico",
+        fullname: "Operador del Mercado Ibérico de Energía & Red Eléctrica de España",
+        humano: "La bolsa de contratación donde se fija el precio horario de la electricidad en la península ibérica y el gestor técnico de las redes de alta tensión.",
+        impacto: "Permite almacenar energía en las horas de precio cero y venderla en los picos más rentables."
+      },
+      {
+        id: "pvgis",
+        term: "PVGIS SARAH-2",
+        category: "Telemetría Satelital Europea",
+        fullname: "Photovoltaic Geographical Information System (Joint Research Centre - Comisión Europea)",
+        humano: "Base de datos satelital oficial de la Comisión Europea que suministra series históricas verificadas de radiación solar, temperatura y viento en cualquier coordenada.",
+        impacto: "Aporta respaldo oficial de la Unión Europea para que bancos y fondos financien parques solares."
+      }
+    ];
+
+    function openGlossaryModal() {
+      const modal = document.getElementById('glossary-modal');
+      const container = document.getElementById('glossary-items-container');
+      if (modal && container) {
+        container.innerHTML = GLOSSARY_DATA.map(item => `
+          <div class="p-4 rounded-2xl bg-brand-void/80 border border-brand-border">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+              <span class="font-montserrat font-extrabold text-amber-300 text-sm">${item.term}</span>
+              <span class="text-[11px] font-mono text-slate-400">${item.fullname}</span>
+            </div>
+            <p class="text-xs text-slate-200 leading-relaxed mb-2"><strong class="text-brand-green">Definición Ejecutiva:</strong> ${item.humano}</p>
+            <div class="text-[11px] font-mono text-amber-400">Valor: ${item.impacto}</div>
+          </div>
+        `).join('');
+        modal.classList.remove('hidden');
+        lucide.createIcons();
+      }
+    }
+
+    function closeGlossaryModal() {
+      const modal = document.getElementById('glossary-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      const tooltip = document.getElementById('global-tech-tooltip');
+      const titleEl = document.getElementById('tooltip-title');
+      const humanoEl = document.getElementById('tooltip-humano');
+      const valorEl = document.getElementById('tooltip-valor');
+
+      document.querySelectorAll('.glossary-term').forEach(el => {
+        const termId = el.getAttribute('data-glossary');
+        const data = GLOSSARY_DATA.find(d => d.id === termId);
+        if (!data) return;
+        el.addEventListener('mouseenter', () => {
+          titleEl.innerText = data.fullname;
+          humanoEl.innerHTML = `<strong class="text-brand-green block mb-0.5">Traducción Ejecutiva:</strong> ${data.humano}`;
+          valorEl.innerText = `Valor: ${data.impacto}`;
+          tooltip.classList.remove('hidden');
+          const rect = el.getBoundingClientRect();
+          let top = rect.bottom + 8;
+          let left = Math.max(10, Math.min(window.innerWidth - 330, rect.left + (rect.width / 2) - 160));
+          if (top + 150 > window.innerHeight) top = rect.top - 150;
+          tooltip.style.top = `${top}px`;
+          tooltip.style.left = `${left}px`;
+        });
+        el.addEventListener('mouseleave', () => tooltip.classList.add('hidden'));
+        el.addEventListener('click', () => { tooltip.classList.add('hidden'); openGlossaryModal(); });
+      });
+    });
+  </script>
 </body>
 </html>
