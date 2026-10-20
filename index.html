@@ -26,7 +26,7 @@
       // 2. Clics en Demos Live de Streamlit
       document.querySelectorAll('a[href*="streamlit.app"]').forEach(function(el) {
         el.addEventListener('click', function() {
-          var demoName = el.href.includes('osiris') ? 'Demo OSIRIS' : (el.href.includes('hygieia') ? 'Demo HYGIEIA' : 'Streamlit Live');
+          var demoName = el.href.includes('osiris') ? 'Demo OSIRIS' : (el.href.includes('hygieia') ? 'Demo HYGIEIA' : (el.href.includes('helios') ? 'Demo HELIOS' : 'Streamlit Live'));
           gtag('event', 'click_demo_live', {
             'event_category': 'Demos',
             'event_label': demoName,
@@ -319,6 +319,17 @@
                 </div>
                 <span class="shrink-0 text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800/80 text-purple-300 font-bold">DOI Zenodo</span>
               </a>
+
+              <a href="cores/helios.html" class="dropdown-item flex items-center justify-between p-2 rounded-xl group/link">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="text-base shrink-0">☀️</span>
+                  <div class="min-w-0">
+                    <div class="text-xs font-bold text-slate-100 group-hover/link:text-amber-300 transition-colors item-title truncate">SOLAR · HELIOS</div>
+                    <div class="text-[10px] text-slate-400 font-mono item-desc truncate">n-TOPCon PINN &amp; BESS Arbitraje OMIE</div>
+                  </div>
+                </div>
+                <span class="shrink-0 text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950/60 border border-amber-500/60 text-amber-300 font-bold">Live · &lt;1 ms</span>
+              </a>
             </div>
 
             <!-- Grupo 2: Calendario 2026 -->
@@ -328,17 +339,6 @@
             </div>
             
             <div class="space-y-1 mb-3">
-              <a href="cores/helios.html" class="dropdown-item flex items-center justify-between p-2 rounded-xl group/link">
-                <div class="flex items-center gap-2.5 min-w-0">
-                  <span class="text-base shrink-0">⚡</span>
-                  <div class="min-w-0">
-                    <div class="text-xs font-bold text-slate-200 group-hover/link:text-amber-300 transition-colors item-title truncate">SOLAR · HELIOS</div>
-                    <div class="text-[10px] text-slate-400 font-mono item-desc truncate">BESS & Arbitraje Mayorista OMIE</div>
-                  </div>
-                </div>
-                <span class="shrink-0 text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950/50 border border-amber-800/80 text-amber-300 font-medium">Sem 2 · 21-27 Oct</span>
-              </a>
-
               <a href="cores/osiris.html" class="dropdown-item flex items-center justify-between p-2 rounded-xl group/link">
                 <div class="flex items-center gap-2.5 min-w-0">
                   <span class="text-base shrink-0">🌊</span>
@@ -592,7 +592,7 @@
             Portafolio de Gemelos Digitales Paramétricos
           </h2>
           <p class="mt-2 text-sm text-slate-400 theme-text-muted max-w-4xl leading-relaxed">
-            Ecosistema de gemelos paramétricos y modelos deterministas estructurado estrictamente por hitos cronológicos reales. Las dos plataformas en producción activa operan en la nube pública; las cuatro siguientes suites se despliegan semanalmente según el calendario oficial de cierre 2026.
+            Ecosistema de gemelos paramétricos y modelos deterministas estructurado estrictamente por hitos cronológicos reales. Los cuatro núcleos en producción activa operan en la nube pública con registro oficial CERN/Zenodo (DOI); las siguientes suites se despliegan semanalmente según el calendario oficial de cierre 2026.
           </p>
         </div>
       </div>
@@ -605,16 +605,16 @@
           </span>
           <div>
             <h3 class="text-xl font-montserrat font-bold text-slate-100 theme-text-main flex items-center gap-2">
-              <span>Sistemas en Producción Activa & Auditados</span>
+              <span>Sistemas en Producción Activa &amp; Auditados</span>
               <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/40 animate-pulse">
-                ● 3 CORES EN LÍNEA & AUDITADOS
+                ● 4 CORES EN LÍNEA &amp; AUDITADOS
               </span>
             </h3>
-            <p class="text-xs font-mono text-cyan-400">Despliegues verificados en Streamlit Cloud y Dictámenes Periciales Auditados con Registro Oficial Zenodo (DOI)</p>
+            <p class="text-xs font-mono text-cyan-400">Despliegues verificados en Streamlit Cloud, Repositorios Open-Core y Dictámenes con Registro Oficial Zenodo (DOI)</p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           <!-- Card OSIRIS -->
           <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-cyan-500/50 shadow-2xl theme-bg-card theme-border relative overflow-hidden group hover:border-cyan-400 transition-all flex flex-col justify-between">
@@ -814,6 +814,81 @@
             </div>
           </div>
 
+          <!-- Card HELIOS -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-amber-400/50 shadow-2xl theme-bg-card theme-border relative overflow-hidden group hover:border-amber-300 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono font-bold border border-amber-400/40 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                  <span>OPERATIVO EN LA NUBE · LIVE</span>
+                </span>
+                <a href="https://doi.org/10.5281/zenodo.23506041" target="_blank" class="text-xs font-mono text-amber-300 hover:underline">DOI: 10.5281/zenodo.23506041</a>
+              </div>
+
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-2xl font-montserrat font-extrabold text-slate-100 theme-text-main group-hover:text-amber-300 transition-colors">
+                    SOLAR-CORE: HELIOS
+                  </h4>
+                  <div class="text-sm font-mono text-amber-400 mt-1">Gemelo Fotovoltaico n-TOPCon, PINN (&lt;1 ms) &amp; Deep RL BESS (OMIE)</div>
+                </div>
+                <img src="assets/branding/emblem_solar_helios.svg" alt="Emblema Oficial HELIOS" class="w-14 h-14 rounded-2xl object-contain drop-shadow-[0_0_15px_rgba(255,214,10,0.4)] flex-shrink-0">
+              </div>
+
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 theme-text-sub leading-relaxed">
+                Gemelo digital paramétrico para parques fotovoltaicos e hibridación de baterías LFP. Acopla física determinista de Perez/Faiman con red neuronal PINN (11.41M params, R² = 0.9912), evaluación ambiental preventiva (Ley 21/2013) y arbitraje en OMIE/REE.
+              </p>
+
+              <div class="mt-3.5 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-xs">
+                <div class="flex items-center gap-1.5 mb-2 pb-1.5 border-b border-amber-500/20">
+                  <span class="text-sm">🌍</span>
+                  <strong class="text-amber-300 font-semibold text-xs tracking-wide">En el mundo real:</strong>
+                </div>
+                <div class="space-y-1.5 text-[11px] leading-snug">
+                  <div class="flex items-start gap-2">
+                    <span class="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono font-bold text-[9px] uppercase tracking-wider shrink-0 mt-0.5">¿Por qué?</span>
+                    <span class="text-slate-300">A mediodía la energía solar cae a 0 € en OMIE y colisiones ambientales bloquean licencias.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono font-bold text-[9px] uppercase tracking-wider shrink-0 mt-0.5">¿Para qué?</span>
+                    <span class="text-slate-100 font-medium">Almacena en baterías LFP cuando la luz vale 0 € para vender en pico nocturno y blinda la EIA.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono font-bold text-[9px] uppercase tracking-wider shrink-0 mt-0.5">¿Cómo?</span>
+                    <span class="text-slate-300">Física Perez/Faiman (IEC 61724-1) + IA PINN/TD3 conectada en vivo a PVGIS JRC y REE.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 p-3 rounded-xl bg-brand-void/90 border border-amber-500/30 text-xs font-mono text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <strong class="text-brand-green">Casos Validados:</strong> Fuentejara 500 kWp (CV) + Jarama-Sur 4.95 MWp (Madrid D3).
+                </div>
+                <span class="text-amber-400 font-bold">PINN R²=0.9912 · 116 ISO/IEC</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-brand-border flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <a href="cores/helios.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-brand-card hover:bg-brand-void border border-amber-500/40 text-xs font-mono font-bold text-amber-300 hover:text-amber-200 transition-all shadow">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>Ficha Técnica ↗</span>
+                </a>
+                <a href="assets/dossiers/WHITE_PAPER_SOLAR_CORE_HELIOS_OPEN_CORE.pdf" target="_blank" download class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-brand-surface hover:bg-brand-void border border-brand-border text-xs font-mono text-slate-300 hover:text-amber-300 transition-all" title="Descargar White Paper Oficial (PDF)">
+                  <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i>
+                  <span>White Paper</span>
+                </a>
+                <a href="https://github.com/Yggdrasil-Environmental-Systems/SOLAR-CORE-HELIOS" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl bg-brand-surface hover:bg-brand-void border border-brand-border text-xs font-mono text-slate-300 hover:text-white transition-all" title="Repositorio GitHub Open-Core">
+                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+              <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-brand-void text-xs font-mono font-bold shadow-lg shadow-amber-400/20 transition-all">
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+                <span>Abrir Streamlit Live Cloud ↗</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -867,12 +942,15 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           
-          <!-- Semana 2: HELIOS -->
-          <div class="p-6 rounded-2xl bg-brand-void border-2 border-yellow-500/40 hover:border-yellow-400 transition-all flex flex-col justify-between group shadow-lg">
+          <!-- Semana 2: HELIOS (COMPLETADO Y EN LÍNEA) -->
+          <div class="p-6 rounded-2xl bg-brand-void border-2 border-brand-green/50 hover:border-brand-green transition-all flex flex-col justify-between group shadow-lg relative">
+            <div class="absolute -top-3 right-4 px-2 py-0.5 rounded bg-brand-green text-slate-950 font-mono text-[9px] font-extrabold uppercase tracking-widest shadow">
+              PUBLICADO · EN LÍNEA [LIVE]
+            </div>
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">
-                  SEMANA 2 · 21 - 27 OCT
+                <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/40">
+                  SEMANA 2 · COMPLETADO
                 </span>
                 <img src="assets/branding/emblem_solar_helios.svg" alt="Emblema HELIOS" class="w-11 h-11 rounded-xl object-contain drop-shadow-[0_0_10px_rgba(255,214,10,0.3)]">
               </div>
@@ -881,7 +959,7 @@
               </h4>
               <div class="text-xs font-mono text-yellow-400 mt-1">n-TOPCon, PINN &amp; Deep RL <span class="glossary-term" data-glossary="bess">BESS</span> (<span class="glossary-term" data-glossary="omie">OMIE</span>)</div>
               <p class="mt-3 text-xs text-slate-300 leading-relaxed">
-                Ingeniería fotovoltaica n-TOPCon con red neuronal PINN (11.4M params) y agente Deep RL TD3 (5.96M params) para almacenamiento <span class="glossary-term" data-glossary="bess">BESS</span>. Cumple 116 normas ISO/IEC, AESA (RD 369/2023) y P.O. 12.2/3.2/7.2/7.3 de REE.
+                Desplegado en producción en Streamlit Cloud con registro CERN/Zenodo (<code>10.5281/zenodo.23506041</code>) y repositorio GitHub Open-Core. Cumple 116 normas ISO/IEC, AESA (RD 369/2023) y P.O. de REE.
               </p>
               <div class="mt-3 p-2.5 rounded-lg bg-yellow-950/30 border border-yellow-500/20 text-xs">
                 <div class="flex items-center gap-1.5 mb-2 pb-1 border-b border-yellow-500/20">
@@ -904,14 +982,15 @@
                 </div>
               </div>
               <div class="mt-3 p-2 rounded-lg bg-brand-surface text-[11px] font-mono text-slate-400">
-                <strong class="text-yellow-400">Hito Dual:</strong> Fuentejara 500 kWp (CV) + Jarama-Sur 4.95 MWp (Madrid D3).
+                <strong class="text-brand-green">En Producción:</strong> Fuentejara 500 kWp (CV) + Jarama-Sur 4.95 MWp (Madrid D3) · DOI: 10.5281/zenodo.23506041.
               </div>
             </div>
-            <div class="mt-5 pt-3 border-t border-brand-border">
-              <a href="cores/helios.html" class="inline-flex items-center gap-1.5 text-xs font-mono text-yellow-400 font-bold hover:underline">
-                <span>Ficha Técnica de Ingeniería</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            <div class="mt-5 pt-3 border-t border-brand-border flex items-center justify-between">
+              <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-brand-green font-bold hover:underline">
+                <span>Abrir Streamlit Live</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
+              <a href="cores/helios.html" class="text-[11px] font-mono text-yellow-400 hover:underline">Ficha Técnica →</a>
             </div>
           </div>
 
@@ -1556,6 +1635,10 @@
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
             🚰 HYGIEIA [Live]
           </button>
+          <button onclick="setCockpitTab('helios')" id="cp-helios-btn" class="px-3.5 py-2 rounded-xl text-xs font-mono font-semibold text-slate-400 hover:text-amber-300 transition-all flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            ☀️ HELIOS [Live]
+          </button>
           <button onclick="setCockpitTab('prometheus')" id="cp-prometheus-btn" class="px-3.5 py-2 rounded-xl text-xs font-mono font-semibold text-slate-400 hover:text-slate-200 transition-all">
             🔥 PROMETHEUS
           </button>
@@ -1564,9 +1647,6 @@
           </button>
           <button onclick="setCockpitTab('ouroboros')" id="cp-ouroboros-btn" class="px-3.5 py-2 rounded-xl text-xs font-mono font-semibold text-slate-400 hover:text-slate-200 transition-all">
             🔄 OUROBOROS
-          </button>
-          <button onclick="setCockpitTab('helios')" id="cp-helios-btn" class="px-3.5 py-2 rounded-xl text-xs font-mono font-semibold text-slate-400 hover:text-slate-200 transition-all">
-            ☀️ HELIOS
           </button>
         </div>
       </div>
@@ -1990,58 +2070,34 @@
           </div>
         </div>
 
-        <!-- ================= VIEWPORT 6: HELIOS SOLAR ================= -->
-        <div id="cp-view-helios" class="cockpit-view-panel hidden p-6 sm:p-10 bg-brand-surface theme-bg-card">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-brand-border gap-4">
-            <div class="flex items-center gap-3">
-              <span class="p-2.5 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
-                <i data-lucide="sun" class="w-6 h-6"></i>
-              </span>
-              <div>
-                <h3 class="font-montserrat font-bold text-lg text-slate-100 theme-text-main">SOLAR-CORE: HELIOS Control Center</h3>
-                <div class="text-xs font-mono text-amber-400">Fuentejara (500 kWp, C. Valenciana) + Jarama-Sur (4.95 MWp, Madrid D3) · 116 Normas ISO/IEC · AESA RD 369/2023</div>
-              </div>
+        <!-- ================= VIEWPORT 6: HELIOS LIVE STREAMLIT ================= -->
+        <div id="cp-view-helios" class="cockpit-view-panel hidden relative">
+          <div class="p-3 bg-brand-void/90 border-b border-brand-border/60 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-slate-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+              <span>Entorno en Producción: <strong class="text-slate-200">Fuentejara (500 kWp, CV) + Jarama-Sur (4.95 MWp, Madrid D3) · PINN &lt; 1 ms (R²=0.9912)</strong></span>
             </div>
-            <a href="cores/helios.html" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-brand-card text-amber-400 border border-amber-500/40 hover:bg-brand-void transition-colors">
-              Ver Ficha Técnica
-            </a>
+            <div class="flex items-center gap-3 text-[11px]">
+              <a href="https://doi.org/10.5281/zenodo.23506041" target="_blank" class="text-amber-300 hover:underline">DOI: 10.5281/zenodo.23506041</a>
+              <span>·</span>
+              <a href="https://github.com/Yggdrasil-Environmental-Systems/SOLAR-CORE-HELIOS" target="_blank" class="text-cyan-300 hover:underline">GitHub Repo ↗</a>
+            </div>
           </div>
 
           <!-- Ingesta en Vivo: Mercado Mayorista OMIE / Red Eléctrica de España -->
-          <div class="mt-4 p-3 rounded-xl bg-brand-void border border-amber-500/30 flex flex-wrap items-center justify-between gap-3 text-xs font-mono theme-bg-surface theme-border">
+          <div class="px-4 py-2.5 bg-brand-void border-b border-brand-border/60 flex flex-wrap items-center justify-between gap-3 text-xs font-mono theme-bg-surface">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-              <span class="text-amber-300 font-semibold">Mercado Mayorista España (OMIE / REE en Tiempo Real):</span>
+              <span class="text-amber-300 font-semibold text-[11px]">Mercado Mayorista España (OMIE / REE en Tiempo Real):</span>
             </div>
             <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-300">
-              <span>Precio Spot Actual: <strong id="helios-live-price" class="text-amber-300 font-bold text-sm">-- €/MWh</strong></span>
+              <span>Precio Spot Actual: <strong id="helios-live-price" class="text-amber-300 font-bold">-- €/MWh</strong></span>
               <span>Estrategia BESS: <strong id="helios-live-strategy" class="text-brand-green">Optimización Activa</strong></span>
               <span class="text-[10px] text-slate-500">Actualización Horaria REE</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
-            <div class="p-4 rounded-xl bg-brand-void/80 border border-brand-border theme-bg-surface theme-border">
-              <div class="text-[11px] font-mono text-slate-400 uppercase">Potencia Pico TopCon</div>
-              <div class="text-2xl font-mono font-bold text-slate-100 theme-text-main mt-1">4.95 MWp</div>
-              <div class="text-[10px] text-slate-500 mt-1">8.540 Módulos Bifaciales</div>
-            </div>
-            <div class="p-4 rounded-xl bg-brand-void/80 border border-brand-border theme-bg-surface theme-border">
-              <div class="text-[11px] font-mono text-slate-400 uppercase">Producción Anual PVGIS</div>
-              <div class="text-2xl font-mono font-bold text-amber-400 mt-1">8,420 MWh/a</div>
-              <div class="text-[10px] text-slate-500 mt-1">1.701 kWh/kWp PR: 82.4%</div>
-            </div>
-            <div class="p-4 rounded-xl bg-brand-void/80 border border-brand-border theme-bg-surface theme-border">
-              <div class="text-[11px] font-mono text-slate-400 uppercase">Buffer Red Natura 2000</div>
-              <div class="text-2xl font-mono font-bold text-brand-green mt-1">1,250 m</div>
-              <div class="text-[10px] text-brand-green mt-1">● Sin Afección DPH (Ley 21/2013)</div>
-            </div>
-            <div class="p-4 rounded-xl bg-brand-void/80 border border-brand-border theme-bg-surface theme-border">
-              <div class="text-[11px] font-mono text-slate-400 uppercase">Rentabilidad Financiera</div>
-              <div class="text-2xl font-mono font-bold text-brand-cyan mt-1">TIR 12.4%</div>
-              <div class="text-[10px] text-slate-500 mt-1">LCOE: 31.8 €/MWh | Payback: 6.8a</div>
-            </div>
-          </div>
+          <iframe id="iframe-helios" src="about:blank" data-src="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/?embed=true" class="cockpit-iframe" allowfullscreen loading="lazy"></iframe>
         </div>
 
       </div>
@@ -2747,6 +2803,10 @@
                 <span>PROMETHEUS: 10.5281/zenodo.22727839</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
+              <a href="https://doi.org/10.5281/zenodo.23506041" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-brand-void border border-brand-border hover:border-amber-400 text-xs font-mono text-amber-300 transition-colors">
+                <span>HELIOS: 10.5281/zenodo.23506041</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -2962,27 +3022,34 @@
 
         <!-- Core Production Platforms -->
         <div>
-          <h4 class="text-xs font-mono uppercase tracking-widest text-brand-green font-bold mb-3">03 · Active Public Platforms (Production & Deployment)</h4>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <h4 class="text-xs font-mono uppercase tracking-widest text-brand-green font-bold mb-3">03 · Active Public Platforms (Production &amp; Deployment)</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
             <div class="p-3.5 rounded-xl bg-brand-void/80 border border-cyan-500/30">
               <div class="font-montserrat font-bold text-slate-100 mb-1">HYDRO-CORE: OSIRIS</div>
-              <div class="text-[10px] font-mono text-cyan-400 mb-2">Flash-Flood Nowcasting (38.4 ms)</div>
+              <div class="text-[10px] font-mono text-cyan-400 mb-2">Flash-Flood Nowcasting (38.4 ms) · DOI: 10.5281/zenodo.22919526</div>
               <p class="text-slate-300 text-[11px] leading-relaxed">
                 2D Saint-Venant shallow-water solver accelerated via Fourier Neural Operators. Calibrated on the 29-O Mediterranean flash-flood event (Poyo basin, Valencia) providing up to 146 min of lead time for road closures and life preservation.
               </p>
             </div>
             <div class="p-3.5 rounded-xl bg-brand-void/80 border border-cyan-500/30">
               <div class="font-montserrat font-bold text-slate-100 mb-1">AQUA-CORE: HYGIEIA</div>
-              <div class="text-[10px] font-mono text-cyan-400 mb-2">Hospital Water & Legionella Guard</div>
+              <div class="text-[10px] font-mono text-cyan-400 mb-2">Hospital Water &amp; Legionella Guard · DOI: 10.5281/zenodo.23321969</div>
               <p class="text-slate-300 text-[11px] leading-relaxed">
                 Continuous disinfectant decay simulation via EPANET 2.2 / WNTR engines. Eradicates Legionella pneumophila risks under EU Drinking Water Directive 2020/2184 while cutting flush water waste by 64.3%.
               </p>
             </div>
             <div class="p-3.5 rounded-xl bg-brand-void/80 border border-red-500/30">
               <div class="font-montserrat font-bold text-slate-100 mb-1">PYRO-CORE: PROMETHEUS</div>
-              <div class="text-[10px] font-mono text-red-400 mb-2">Satellite Wildfire Forensic Peritaje</div>
+              <div class="text-[10px] font-mono text-red-400 mb-2">Satellite Wildfire Forensic Peritaje · DOI: 10.5281/zenodo.22727839</div>
               <p class="text-slate-300 text-[11px] leading-relaxed">
                 Copernicus Sentinel-2 dNBR/MIRBI spectral assessment coupled with Rothermel fire dynamics and official TRAGSA post-fire restoration engineering (compliant with ISO/IEC 27037 forensic standards and EU Soil Directive).
+              </p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-brand-void/80 border border-amber-500/30">
+              <div class="font-montserrat font-bold text-slate-100 mb-1">SOLAR-CORE: HELIOS</div>
+              <div class="text-[10px] font-mono text-amber-400 mb-2">n-TOPCon PINN (&lt;1 ms) &amp; BESS RL · DOI: 10.5281/zenodo.23506041</div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Grey-Box parametric PV twin coupling Perez/Faiman physics with a 11.41M-param Transformer PINN (R² = 0.9912) and TD3 BESS arbitrage across 116 ISO/IEC standards and EIA Ley 21/2013 (Fuentejara 500 kWp &amp; Jarama-Sur 4.95 MWp).
               </p>
             </div>
           </div>
@@ -3309,9 +3376,9 @@
       },
       helios: {
         title: "SOLAR-CORE: HELIOS — Simulación Fotovoltaica n-TOPCon, PINN & Deep RL BESS (TD3)",
-        desc: "Fuentejara 500 kWp (CV) + Jarama-Sur 4.95 MWp (Madrid D3) · 116 Normas ISO/IEC · AESA RD 369/2023",
-        latency: "PVGIS + PINN <1ms",
-        url: "cores/helios.html",
+        desc: "Fuentejara 500 kWp (CV) + Jarama-Sur 4.95 MWp (Madrid D3) · DOI: 10.5281/zenodo.23506041 · 116 Normas ISO/IEC",
+        latency: "PINN <1ms · Live",
+        url: "https://yggdrasil-solar-core-helios-kjfy.streamlit.app/",
         subpage: "cores/helios.html"
       }
     };
@@ -3355,9 +3422,15 @@
         activeB.classList.remove('text-slate-400');
       }
 
-      // Lazy load Hygieia iframe
+      // Lazy load Hygieia & Helios iframes
       if (tabKey === 'hygieia') {
         const ifr = document.getElementById('iframe-hygieia');
+        if (ifr && ifr.src.includes('about:blank')) {
+          ifr.src = ifr.getAttribute('data-src');
+        }
+      }
+      if (tabKey === 'helios') {
+        const ifr = document.getElementById('iframe-helios');
         if (ifr && ifr.src.includes('about:blank')) {
           ifr.src = ifr.getAttribute('data-src');
         }
@@ -3455,7 +3528,8 @@
     function initHeartbeatKeepAlive() {
       const endpoints = [
         'https://yggdrasil-hidro-core-osiris-poyo-nowcast-kjfy.streamlit.app/',
-        'https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/'
+        'https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/',
+        'https://yggdrasil-solar-core-helios-kjfy.streamlit.app/'
       ];
       endpoints.forEach(url => {
         try {
@@ -3595,6 +3669,11 @@
         text: "DAEDALUS audita y optimiza sistemas BACS Clase A conforme a la norma UNE-EN ISO 52120-1 (Directiva Europea de Eficiencia Energética en Edificios EPBD). Monitoriza en tiempo real vía BACnet/SC y Modbus RTU, certificando ahorros de energía primaria (148.6 MWh/año en edificios terciarios) monetizables mediante Certificados de Ahorro Energético (CAE, Real Decreto 36/2023).",
         action: { text: "Ver Ficha de DAEDALUS ↗", url: "cores/daedalus.html" }
       },
+      helios: {
+        title: "SOLAR-CORE HELIOS · Producción Live & DOI 10.5281/zenodo.23506041",
+        text: "HELIOS es el gemelo digital fotovoltaico de Caja Gris en producción activa en Streamlit Cloud. Acopla transposición de Perez (1990) y balance térmico de Faiman con la red neuronal física HELIOS-SOLAR-TRANSFORMER (11.41M params, R² = 0.9912, < 1 ms) y el agente Deep RL TD3 para arbitraje BESS en OMIE/REE. Validado en Parque Solar Fuentejara (500 kWp, CV) y Planta Solar Jarama-Sur (4.95 MWp, Madrid D3) bajo 116 normas ISO/IEC y Ley 21/2013.",
+        action: { text: "Abrir HELIOS Live Streamlit ↗", url: "https://yggdrasil-solar-core-helios-kjfy.streamlit.app/" }
+      },
       contacto: {
         title: "Contacto Directo con Dirección Técnica",
         text: "Puedes comunicarte de inmediato con Kelvin para oportunidades corporativas, licitaciones públicas, despliegues de gemelos paramétricos o auditorías técnicas vía correo directo (kelvin.jesus.flores@gmail.com / yggdrasil.environmental@gmail.com) o LinkedIn.",
@@ -3678,6 +3757,8 @@
         askAthena('osiris');
       } else if (query.includes('incendio') || query.includes('fuego') || query.includes('prometh') || query.includes('perita') || query.includes('niebla') || query.includes('tragsa')) {
         askAthena('incendio');
+      } else if (query.includes('helios') || query.includes('solar') || query.includes('fotovolta') || query.includes('bess') || query.includes('bateria') || query.includes('omie') || query.includes('pvgis')) {
+        askAthena('helios');
       } else if (query.includes('daedalus') || query.includes('cae') || query.includes('edificio') || query.includes('bacs') || query.includes('ahorro')) {
         askAthena('daedalus');
       } else if (query.includes('valor') || query.includes('perfil') || query.includes('competencia') || query.includes('habilidad') || query.includes('rrhh') || query.includes('recluta') || query.includes('experiencia') || query.includes('empresa') || query.includes('organiza')) {

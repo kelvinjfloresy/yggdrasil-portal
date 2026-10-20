@@ -18,6 +18,10 @@ jobs:
         run: |
           curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/" || true
 
+      - name: Ping SOLAR-CORE HELIOS (Streamlit Cloud)
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" --max-time 15 "https://yggdrasil-solar-core-helios-kjfy.streamlit.app/" || true
+
       - name: Health Log
         run: |
           echo "Health check executed successfully at $(date -u)"

@@ -21,6 +21,7 @@
   <a href="https://kelvinjfloresy.github.io/yggdrasil-portal/"><img src="https://img.shields.io/badge/🌐%20PORTAL%20OFICIAL-kelvinjfloresy.github.io%2Fyggdrasil--portal-00F5A0?style=for-the-badge&logo=googlechrome&logoColor=000" alt="Portal Oficial" /></a>
   <a href="https://yggdrasil-hidro-core-osiris-poyo-nowcast-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/💧%20DEMO%20LIVE-HYDRO--CORE%20OSIRIS-0284C7?style=for-the-badge&logo=streamlit&logoColor=fff" alt="OSIRIS Demo" /></a>
   <a href="https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/🧪%20DEMO%20LIVE-AQUA--CORE%20HYGIEIA-00F5A0?style=for-the-badge&logo=streamlit&logoColor=000" alt="HYGIEIA Demo" /></a>
+  <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/☀️%20DEMO%20LIVE-SOLAR--CORE%20HELIOS-F59E0B?style=for-the-badge&logo=streamlit&logoColor=000" alt="HELIOS Demo" /></a>
 </p>
 
 <p align="center">
@@ -49,9 +50,10 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
         ┌─────────────────────────────────────┼─────────────────────────────────────┐
         ▼                                     ▼                                     ▼
  🌊 BLOQUE 1: PRODUCCIÓN LIVE         ⚡ BLOQUE 2: SECUENCIAL 2026          🔬 BLOQUE 3: PIPELINE I+D
- • OSIRIS (Navier-Stokes / Inundación) • HELIOS (Solar / BESS Project Finance) • JANUS (Confort Pasivo)
- • HYGIEIA (Vigilancia Legionella)    • DAEDALUS (Smart Buildings / CAE)    • TALOS (Seguridad APQ)
- • PROMETHEUS (Incendios / Diques)    • OUROBOROS (Residuos / Alcance 3)     • THEMIS / CERES
+ • OSIRIS (Navier-Stokes / Inundación) • DAEDALUS (Smart Buildings / CAE)    • JANUS (Edificación ZEB EPBD)
+ • HYGIEIA (Vigilancia Legionella)    • OUROBOROS (Residuos / Alcance 3)     • TALOS (Aire & Suelos ACR)
+ • PROMETHEUS (Incendios / Diques)                                           • THEMIS / CERES
+ • HELIOS (Solar PINN / BESS OMIE)
 ```
 
 ---
@@ -128,6 +130,18 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       📜 <strong>Normativa:</strong> Ley 43/2003 de Montes · Directiva Europea de Suelos · Estándar Forense ISO/IEC 27037.
     </td>
   </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_solar_helios.png" width="240" alt="SOLAR-CORE HELIOS" /><br>
+      <code>DOI: 10.5281/zenodo.23506041</code>
+    </td>
+    <td>
+      <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas n-TOPCon, PINN (&lt;1 ms) & Baterías BESS (TD3)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años, audita 116 normas ISO/IEC y servidumbres ambientales/aeronáuticas, y entrena agentes Deep RL (TD3) para arbitraje de baterías LFP en OMIE y banda secundaria aFRR/mFRR (P.O. 7.2/7.3 de REE).<br>
+      📊 <strong>Validación Operativa Dual:</strong> <strong>Caso 1 (Real Auditado):</strong> Parque Solar Fuentejara (<strong>500 kWp</strong>, Comunitat Valenciana, PR 81.5%, 840 MWh/año, EIA Ley 21/2013 y PM₁₀ RD 102/2011) · <strong>Caso 2 (Utility-Scale):</strong> Planta Solar Jarama-Sur (<strong>4.95 MWp</strong>, Madrid D3 CTE, 8.540 módulos n-TOPCon 580 Wp, 8.420 MWh/año, PINN 11.41M params $R^2=0.9912$, IEC 61724-1:2021, AESA RD 369/2023 y Red Natura 2000).<br>
+      🔗 <strong>Enlaces Oficiales:</strong> <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/"><strong>Streamlit Live Cloud</strong></a> · <a href="https://doi.org/10.5281/zenodo.23506041"><strong>DOI: 10.5281/zenodo.23506041</strong></a> · <a href="https://github.com/Yggdrasil-Environmental-Systems/SOLAR-CORE-HELIOS"><strong>Repositorio GitHub Open-Core</strong></a>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -135,16 +149,6 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
 ### ⚡ Bloque 2: Núcleos en Despliegue Secuencial 2026
 
 <table>
-  <tr>
-    <td width="260" align="center">
-      <img src="assets/branding/badge_solar_helios.png" width="240" alt="SOLAR-CORE HELIOS" />
-    </td>
-    <td>
-      <strong>SOLAR-CORE: HELIOS — Plantas Solares Fotovoltaicas, PINN & Baterías BESS (TD3)</strong><br>
-      🌍 <strong>En el mundo real:</strong> Modela al céntimo cuánta energía limpia generará un parque solar a lo largo de 25 años, audita 116 normas ISO/IEC y servidumbres ambientales/aeronáuticas, y entrena agentes Deep RL (TD3) para arbitraje de baterías LFP en OMIE y banda secundaria aFRR/mFRR (P.O. 7.2/7.3 de REE).<br>
-      📊 <strong>Validación Operativa Dual:</strong> <strong>Caso 1 (Real Auditado):</strong> Parque Solar Fuentejara (<strong>500 kWp</strong>, Comunitat Valenciana, PR 81.5%, 840 MWh/año, EIA Ley 21/2013 y PM₁₀ RD 102/2011) · <strong>Caso 2 (Utility-Scale):</strong> Planta Solar Jarama-Sur (<strong>4.95 MWp</strong>, Madrid D3 CTE, 8.540 módulos n-TOPCon 580 Wp, 8.420 MWh/año, IEC 61724-1:2021, AESA RD 369/2023 y Red Natura 2000).
-    </td>
-  </tr>
   <tr>
     <td width="260" align="center">
       <img src="assets/branding/badge_cyber_daedalus.png" width="240" alt="CYBER-CORE DAEDALUS" />
