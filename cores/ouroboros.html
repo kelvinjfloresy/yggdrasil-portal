@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CIRCULAR-CORE: OUROBOROS | Metabolismo Material, Catálogo LER & CSRD</title>
-  <meta name="description" content="Gemelo digital para trazabilidad integral de residuos, codificación LER, descarbonización Scope 3 y reporte corporativo europeo conforme a EFRAG ESRS E5 y Ley 7/2022.">
+  <title>CIRCULAR-CORE: OUROBOROS | Metabolismo Material, Catálogo LER & Descarbonización CSRD</title>
+  <meta name="description" content="Gemelo digital de Caja Gris para trazabilidad integral de residuos, codificación LER/EWC, espectrometría NIR SAM, descarbonización Scope 1-2-3 y reporte corporativo auditado bajo EFRAG ESRS E5, ISO 59020 y Ley 7/2022.">
   <link rel="icon" type="image/svg+xml" href="../assets/yggdrasil_emblem_dark.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,9 +50,23 @@
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .glossary-term {
+      border-bottom: 1px dashed #30D158;
+      cursor: help;
+      transition: all 0.2s ease;
+    }
+    .glossary-term:hover {
+      color: #30D158;
+      border-bottom-color: #00F5A0;
+      background-color: rgba(48, 209, 88, 0.1);
+      border-radius: 2px;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-[#070B12] text-slate-100 antialiased selection:bg-brand-green selection:text-brand-void">
 
+  <!-- Header -->
   <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#070B12]/90 border-b border-brand-border">
     <div class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
       <div class="flex items-center gap-4">
@@ -67,15 +81,34 @@
         </div>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="../assets/dossiers/factsheet_ouroboros.pdf" download class="px-3 py-1.5 rounded-lg bg-emerald-400 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5">
+      <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
+        <!-- Botón Glosario -->
+        <button onclick="openGlossaryModal()" class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border hover:border-emerald-500/50 text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5" title="Glosario de Acrónimos & Traducción Humana">
+          <i data-lucide="book-open" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Glosario</span>
+        </button>
+        <!-- Botón DOI CERN/Zenodo Oficial Activo -->
+        <a href="https://doi.org/10.5281/zenodo.24114014" target="_blank" class="hidden sm:inline-flex px-3 py-1.5 rounded-lg bg-brand-surface border border-emerald-500/40 text-xs font-mono text-emerald-300 hover:border-emerald-400 transition-colors items-center gap-1.5" title="Registro Oficial CERN/Zenodo DOI: 10.5281/zenodo.24114014">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span>DOI: 10.5281/zenodo.24114014</span>
+        </a>
+        <a href="https://github.com/Yggdrasil-Environmental-Systems/CIRCULAR-CORE-OUROBOROS" target="_blank" class="hidden md:inline-flex px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs font-mono text-slate-300 hover:border-emerald-400 hover:text-emerald-300 transition-colors items-center gap-1.5" title="Repositorio Oficial Open-Core en GitHub">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>GitHub Repo</span>
+        </a>
+        <a href="../assets/dossiers/WHITE_PAPER_CIRCULAR_CORE_OUROBOROS_V1.pdf" target="_blank" download class="px-3 py-1.5 rounded-lg bg-brand-surface border border-emerald-400/50 text-emerald-300 text-xs font-mono font-bold hover:bg-emerald-500/10 transition-all flex items-center gap-1.5 shadow">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span>White Paper PDF</span>
+        </a>
+        <a href="../assets/dossiers/factsheet_ouroboros.pdf" download class="px-3 py-1.5 rounded-lg bg-emerald-400 text-slate-950 text-xs font-mono font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shadow">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>Descargar Factsheet PDF</span>
+          <span>Factsheet PDF</span>
         </a>
       </div>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="w-full max-w-[1760px] mx-auto px-4 sm:px-8 lg:px-12 py-8">
     
     <!-- Hero Banner -->
@@ -83,25 +116,28 @@
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div class="max-w-4xl">
           <div class="flex flex-wrap items-center gap-2.5 mb-3">
-            <span class="text-xs font-mono px-3 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-bold flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>SEMANA 4 (4 - 10 NOV 2026) · LANZAMIENTO PROGRAMADO</span>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/40 font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+              <span>OPERATIVO EN LA NUBE · PRODUCCIÓN [LIVE]</span>
             </span>
+            <a href="https://doi.org/10.5281/zenodo.24114014" target="_blank" class="text-xs font-mono px-3 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-bold hover:border-emerald-300 transition-colors">
+              DOI: 10.5281/zenodo.24114014 ↗
+            </a>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-void border border-brand-border text-slate-300">
-              Sector Residuos, Hospitales & CSRD
+              Sector Sanitario, Residuos Industriales &amp; CSRD
             </span>
             <span class="text-xs font-mono px-3 py-1 rounded bg-brand-green/20 text-brand-green border border-brand-green/30 font-bold">
-              Ley 7/2022 · EFRAG ESRS E5 · ISO 59020 · ISO 23247
+              Ley 7/2022 · RD 1055/2022 · EFRAG ESRS E1 &amp; E5 · ISO 59020 · ISO 14064-1 · EU AI Act Art. 14/15
             </span>
           </div>
           <h1 class="text-3xl sm:text-5xl font-montserrat font-extrabold text-slate-100">
             CIRCULAR-CORE: OUROBOROS
           </h1>
           <p class="text-base sm:text-xl text-emerald-400 font-mono mt-2">
-            Metabolismo Material, Catálogo Europeo de Residuos (LER) & Descarbonización Scope 3
+            Metabolismo Material, Catálogo LER/EWC, Espectrometría NIR &amp; Descarbonización Scope 1-2-3 (<span class="glossary-term" data-glossary="csrd">CSRD</span>)
           </p>
           <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-            Plataforma de gobernanza de economía circular y contabilidad gravimétrica de residuos. Audita flujos materiales según el Catálogo LER, erradica sobrecostes por mala segregación y automatiza el cumplimiento fiscal de la Ley 7/2022 y reportes CSRD.
+            Gemelo digital paramétrico de <span class="glossary-term" data-glossary="caja_gris">Caja Gris</span> para la gobernanza de economía circular, contabilidad gravimétrica de residuos y reporte corporativo auditado. Acopla análisis de flujo de materiales (MFA ISO 59020), clasificación ministerial LER/MITECO (HP1–HP15), triaje óptico espectral NIR SAM y red neuronal dual PyTorch (AnomalyNet + PINN-TCN) blindada con doble cápsula de ADN regulatorio y físico (ASTRAEA y ATHENA). Erradica sobrecostes de hasta un 800% por sobre-segregación y automatiza el cumplimiento fiscal de la Ley 7/2022.
           </p>
         </div>
         <div class="flex-shrink-0 self-start md:self-center">
@@ -117,8 +153,8 @@
           <i data-lucide="recycle" class="w-6 h-6"></i>
         </span>
         <div>
-          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo & Resolución Práctica</h2>
-          <p class="text-xs font-mono text-emerald-400">Trazabilidad de residuos LER, ahorro en vertedero y reporte corporativo CSRD</p>
+          <h2 class="text-xl font-montserrat font-bold text-slate-100">Propósito Operativo &amp; Resolución Práctica</h2>
+          <p class="text-xs font-mono text-emerald-400">Trazabilidad gravimétrica LER, triaje espectral NIR, exención fiscal Ley 7/2022 y descarbonización Scope 3</p>
         </div>
       </div>
 
@@ -126,8 +162,8 @@
       <div class="mb-6 p-4 rounded-2xl bg-emerald-950/40 border border-emerald-400/40 flex items-center gap-4 text-xs font-mono text-slate-200">
         <div class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-300 shrink-0"><i data-lucide="scale" class="w-5 h-5"></i></div>
         <div>
-          <strong class="text-emerald-300 text-sm font-montserrat font-bold block">¿Para qué sirve en el mundo real?</strong>
-          Pesa y clasifica digitalmente cada contenedor de residuos en fábricas y hospitales: evita tirar cartón o plástico en cubos de residuos peligrosos (que cuestan 8 veces más de destruir) y genera en 1 clic los certificados oficiales exigidos por los inspectores de la Ley 7/2022.
+          <strong class="text-emerald-300 text-sm font-montserrat font-bold block">🌍 ¿Para qué sirve en el mundo real? (Explicado fácil)</strong>
+          Pesa y clasifica digitalmente cada contenedor de residuos en fábricas y hospitales: evita tirar toallas de papel o cartón en cubos de residuos peligrosos (que cuestan 8 veces más de destruir y contaminan el triple), detecta errores humanos en tiempo real con Inteligencia Artificial y genera en 1 clic los certificados oficiales exigidos por los inspectores de la Ley 7/2022 y la directiva europea <span class="glossary-term" data-glossary="csrd">CSRD</span>.
         </div>
       </div>
 
@@ -136,7 +172,7 @@
           <div>
             <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-2">01 · El Problema Real</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              En hospitales e industrias se mezclan residuos asimilables en bolsas de biocontaminados o peligrosos, disparando hasta un 800% la factura de incineración y arriesgando multas por no desviar residuos de vertedero.
+              En hospitales e industrias se mezclan residuos asimilables (toallas de baño LER 20 03 01) en bolsas rojas de biocontaminados (LER 18 01 03*), disparando hasta un 800% la factura de incineración a 1.200 °C y arriesgando sanciones por no desviar residuos de vertedero.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-red-400">
@@ -148,103 +184,166 @@
           <div>
             <div class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider mb-2">02 · Qué Resuelve OUROBOROS</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Clasifica digitalmente cada corriente de residuo según el Catálogo LER, certifica tasas de valorización superiores al 70% y automatiza las deducciones fiscales de vertedero bajo la Ley 7/2022.
+              Acopla pesaje digital continuo (EN 45501 ≤0.5%), espectrometría óptica NIR SAM (900–1750 nm) y redes neuronales PyTorch (<span class="glossary-term" data-glossary="pinn">PINN-TCN</span> + AnomalyNet) para certificar tasas de valorización superiores al 70% y abatir un 70.4% de emisiones en Alcance 3.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-brand-green">
-            Tasa de valorización &gt; 70%
+            -70.4% Alcance 3 · &lt; 4 ms Dual-AI
           </div>
         </div>
 
         <div class="p-5 rounded-2xl bg-brand-void/80 border border-brand-border flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Validación Real</div>
+            <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-2">03 · Validación Multi-Sectorial</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Red Hospitalaria SERMAS Madrid & CSMC: 74.2% de valorización auditada, 42.600 €/año ahorrados en cánones de tratamiento y reducción del 70.4% en la huella de carbono y vertedero.
+              Auditado sobre <strong>6 protocolos de calibración</strong>: Protocolo ALPHA (3.501 kg, 23 unidades, 25 meses), Quirúrgico BETA (Decreto 83/1999), RCD Obras Civiles (89.7% valorización), Envases (RD 1055/2022), Granza HDPE EoW y Compost LIFE-BIOBEST Clase A.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-amber-300">
-            42.600 €/año ahorro · 74.2% reciclaje
+            6 Protocolos · 92.74% Raíz Aislada
           </div>
         </div>
 
         <div class="p-5 rounded-2xl bg-brand-void/80 border border-emerald-500/40 bg-gradient-to-br from-emerald-950/20 to-brand-void flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono font-bold text-emerald-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio & ISOs</div>
+            <div class="text-xs font-mono font-bold text-emerald-300 uppercase tracking-wider mb-2">04 · Marco Regulatorio &amp; ISOs</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Ley 7/2022, RD 764/2026 (MITECO), Directiva CSRD (ESRS E5), ISO 59020:2024 (Circularidad), ISO 14064 (GEI) e ISO 23247 (Gemelo Digital Paramétrico).
+              134 normas auditadas en Bóveda Criptográfica: Ley 7/2022, RD 1055/2022, RD 764/2026 MITECO, Directiva <span class="glossary-term" data-glossary="csrd">CSRD</span> (ESRS E1 y E5), ISO 59020:2024, ISO 14064-1:2019 e ISO/IEC 42001 (EU AI Act Art. 14/15).
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-emerald-500/30 text-[11px] font-mono text-emerald-300 font-bold">
-            Ley 7/2022 · ISO 59020 · CSRD ESRS E5
+            134 Normas · 81 BOE · 28 DOUE · 25 ISO
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Indicadores Clave -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-emerald-400 uppercase font-bold">&lt; 4 ms Latencia Dual-AI</div>
+        <div class="text-2xl font-mono font-bold text-slate-100 mt-1">0.40 ms · 3.87 ms</div>
+        <div class="text-[10px] text-slate-400 mt-1">Autoencoder (1.9k) + PINN-TCN (199k params)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-brand-green uppercase font-bold">-70.4% Alcance 3</div>
+        <div class="text-2xl font-mono font-bold text-brand-green mt-1">Autoclave D09</div>
+        <div class="text-[10px] text-slate-400 mt-1">+30% crédito reciclaje R03 (-83.2% global)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-amber-400 uppercase font-bold">134 Normas Auditadas</div>
+        <div class="text-2xl font-mono font-bold text-amber-400 mt-1">Doble ADN</div>
+        <div class="text-[10px] text-slate-400 mt-1">81 BOE · 28 DOUE · 25 ISO (ASTRAEA + ATHENA)</div>
+      </div>
+      <div class="p-4 rounded-xl bg-brand-surface border border-brand-border">
+        <div class="text-[11px] font-mono text-cyan-400 uppercase font-bold">92.74% Raíz Aislada</div>
+        <div class="text-2xl font-mono font-bold text-cyan-400 mt-1">MFA + NIR SAM</div>
+        <div class="text-[10px] text-cyan-300 mt-1">Sobre-segregación papelera vs biocontaminado</div>
+      </div>
+    </div>
+
+    <!-- ================= COCKPIT C6ISR INTERACTIVO EN VIVO (PRODUCCIÓN EN LA NUBE) ================= -->
+    <div class="mb-12" id="cockpit-c6isr-ouroboros">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div class="flex items-center gap-2">
+          <i data-lucide="play-circle" class="w-5 h-5 text-brand-green"></i>
+          <h2 class="text-lg font-montserrat font-bold text-slate-100">COCKPIT C6ISR INTERACTIVO EN VIVO</h2>
+          <span class="text-[10px] font-mono px-2.5 py-0.5 rounded bg-brand-green/20 text-brand-green border border-brand-green/40 font-bold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span>
+            STREAMLIT CLOUD · EN LÍNEA [LIVE]
+          </span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="https://github.com/Yggdrasil-Environmental-Systems/CIRCULAR-CORE-OUROBOROS" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 hover:underline flex items-center gap-1">
+            <i data-lucide="github" class="w-3.5 h-3.5"></i>
+            <span>Repositorio GitHub Open-Core</span>
+          </a>
+          <a href="https://yggdrasil-aqua-core-ouroboros-kjfy.streamlit.app/" target="_blank" class="text-xs font-mono text-emerald-400 hover:underline flex items-center gap-1 font-bold">
+            <span>Abrir Cockpit C6ISR en Pantalla Completa (Streamlit Cloud)</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-emerald-500/40 bg-brand-void overflow-hidden shadow-2xl relative">
+        <iframe src="https://yggdrasil-aqua-core-ouroboros-kjfy.streamlit.app/?embed=true" class="w-full h-[850px] border-none" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- ================= DETALLE TÉCNICO & MATRIZ DE CALIBRACIÓN MULTI-SECTORIAL ================= -->
     <div class="grid lg:grid-cols-3 gap-8 mb-12">
       
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
-        <div class="flex items-center gap-2 mb-4">
-          <i data-lucide="recycle" class="w-5 h-5 text-emerald-400"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Análisis de Flujos de Masa</h3>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="recycle" class="w-5 h-5 text-emerald-400"></i>
+            <h3 class="font-montserrat font-bold text-slate-100">Análisis de Flujos de Masa (MFA) &amp; Dulong-Boie</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            El motor determinista modela la conservación gravimétrica estricta (ISO 59020 / EN 45501 Clase III):
+          </p>
+          <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-emerald-400 space-y-1 mb-3">
+            <div>Σ min(t) = Σ mR03-R05 + Σ mD01-D10 + mevap + ΔS</div>
+            <div>|Δm| / min ≤ 0.5% (Tolerancia balanza)</div>
+            <div>LHVar = LHVdry (1 - W) - 2.442 W (Poder calorífico)</div>
+            <div>V = π (d/2)² Δh (Volumetría cilíndrica)</div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Impide discrepancias de masa (Δm ≠ 0) y ajusta la humedad real de cada fracción para liquidar con precisión el impuesto de vertedero (40 €/t) y de incineración (15 €/t) bajo la Ley 7/2022.
+          </p>
         </div>
-        <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          El motor modela la conservación gravimétrica y los factores de emisión según el GHG Protocol:
-        </p>
-        <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-emerald-400 space-y-1 mb-3">
-          <div>∑ M_entrada = ∑ M_salida + dM_stock/dt</div>
-          <div>Tasa_Valorización = (M_reciclado + M_compost) / M_total &gt; 70%</div>
-          <div>Emisiones_Scope3 = ∑ (M_residuo_i · EF_tratamiento_i)</div>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-emerald-400">
+          EN 45501 Clase III · Cierre de masa ≤ 0.5%
         </div>
-        <p class="text-xs text-slate-400 leading-relaxed">
-          Incorpora la matriz de penalización fiscal de la Ley 7/2022 (impuesto sobre depósito de residuos en vertederos de hasta 40 €/t e impuesto sobre envases de plástico no reutilizables de 0,45 €/kg).
-        </p>
       </div>
 
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
-        <div class="flex items-center gap-2 mb-4">
-          <i data-lucide="building" class="w-5 h-5 text-brand-green"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Validación Hospitalaria (SERMAS &amp; CSMC) e Industrial</h3>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="scan" class="w-5 h-5 text-brand-green"></i>
+            <h3 class="font-montserrat font-bold text-slate-100">Espectrometría NIR SAM &amp; End-of-Waste</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Mapeo espectral en 22 longitudes de onda del infrarrojo cercano (900–1750 nm) con clasificador Spectral Angle Mapper (SAM):
+          </p>
+          <div class="p-3 rounded-lg bg-brand-void font-mono text-[11px] text-cyan-300 space-y-1 mb-3">
+            <div>θSAM = arccos[ (u · v) / (||u|| ||v||) ]</div>
+            <div>θ = 0.016 rad (99.0% similitud angular)</div>
+            <div>Detección barrera multicapa EVOH/PA (1420/1680 nm)</div>
+            <div>Expulsión neumática a R01 · Pureza R03 &gt; 98.8%</div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Asegura la certificación de Fin de Condición de Residuo (EoW) bajo la Orden Ministerial BOE-A-2026-21300 y desbloquea la exención del impuesto al plástico virgen (0,45 €/kg).
+          </p>
         </div>
-        <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          <strong>Red Hospitalaria SERMAS Madrid, CSMC Magdalena &amp; RCD Levante:</strong>
-        </p>
-        <ul class="space-y-2 text-xs text-slate-300">
-          <li class="flex items-start gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Validado en la <strong>Red Hospitalaria SERMAS de Madrid</strong> (Hospital Universitario La Paz, Gregorio Marañón, 12 de Octubre y Clínico San Carlos), <strong>Hospital CSMC Magdalena (Castellón)</strong> y <strong>Planta de Áridos RCD Levante</strong>.</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span><strong>1.420 t/año</strong> auditadas con trazabilidad LER y tasa de valorización del <strong>74.2%</strong> (&gt;70% legal).</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-            <span>Ahorro fiscal auditado de <strong>42.600 €/año</strong> en cánones de vertedero e incineración (Ley 7/2022) y <strong>-70.4%</strong> de huella de carbono y vertedero.</span>
-          </li>
-        </ul>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-brand-green">
+          Orden BOE-A-2026-21300 · Exención 0,45 €/kg
+        </div>
       </div>
 
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border">
-        <div class="flex items-center gap-2 mb-4">
-          <i data-lucide="shield-check" class="w-5 h-5 text-brand-gold"></i>
-          <h3 class="font-montserrat font-bold text-slate-100">Marco Legal, ISOs & Reporte</h3>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="cpu" class="w-5 h-5 text-brand-gold"></i>
+            <h3 class="font-montserrat font-bold text-slate-100">Red Neuronal Dual PyTorch &amp; Doble ADN</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Arquitectura desacoplada en dos redes complementarias (200.984 parámetros) protegidas por disyuntores físicos:
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li class="p-2 rounded bg-brand-void border border-brand-border">
+              <strong class="text-emerald-400">OuroborosAnomalyNet (1.964 p, 0.40 ms):</strong> Autoencoder no supervisado que aísla purgas anómalas de almacén vía error de reconstrucción MSE (P85).
+            </li>
+            <li class="p-2 rounded bg-brand-void border border-brand-border">
+              <strong class="text-cyan-400">OuroborosCircularForecaster (199.020 p, 3.87 ms):</strong> WaveNet TCN causal con BiGRU y Cross-Attention para proyecciones probabilísticas P10-P50-P90 sin cruce de cuantiles.
+            </li>
+          </ul>
+          <p class="text-xs text-slate-400 leading-relaxed mt-2">
+            Disyuntor anti-alucinación: clampa masas negativas (m &lt; 0), intensidades &lt; 0.80 kg CO2e/kg o créditos irreales &gt; -1.50 kg CO2e/kg con sellado SHA-256 (ISO/IEC 27037).
+          </p>
         </div>
-        <ul class="space-y-2.5 text-xs text-slate-300">
-          <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">Ley 7/2022 & RD 764/2026:</strong> Residuos, suelos contaminados y factores oficiales de huella de carbono MITECO.
-          </li>
-          <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">ISO 59020:2024 & ISO 14064:</strong> Evaluación de circularidad de flujos y cuantificación de emisiones Scope 1, 2 y 3.
-          </li>
-          <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">CSRD (ESRS E5) & ISO 23247:</strong> Reporte de recursos corporativos y arquitectura de Gemelo Digital Paramétrico (Art. 14 AI Act).
-          </li>
-          <li class="p-2 rounded bg-brand-void border border-brand-border">
-            <strong class="text-brand-gold">RD 1055/2022 & LER 2000/532/CE:</strong> Envases (RAP), eco-modulación y Catálogo Europeo de Residuos.
-          </li>
-        </ul>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-brand-gold">
+          EU AI Act Art. 14/15 · Doble Cápsula ADN
+        </div>
       </div>
 
     </div>
@@ -256,10 +355,10 @@
           Modelos de Adopción Tecnológica
         </span>
         <h2 class="mt-2 text-xl sm:text-2xl font-montserrat font-bold text-slate-100">
-          Edición Comunitaria (Open-Core) vs. Edición Enterprise (CSRD & Ley 7/2022)
+          Edición Comunitaria (Open-Core) vs. Edición Enterprise (CSRD, eSIR &amp; Fiscalidad Verde)
         </h2>
         <p class="text-xs text-slate-400 mt-1 max-w-3xl">
-          Matrices de factores de emisión LCA en código abierto, junto a pesaje continuo RFID, integración ministerial e-SIR y blindaje fiscal frente al canon de vertedero.
+          Ecosistema modular de ciencia abierta con pesos neuronales PyTorch, matrices estequiométricas y bóveda normativa, junto a telemetría RFID 24/7 y pasaporte digital ministerial.
         </p>
       </div>
 
@@ -269,82 +368,80 @@
           <div>
             <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
               <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
-                EDICIÓN COMUNITARIA · OPEN-CORE
+                EDICIÓN COMUNITARIA · OPEN-CORE (V1)
               </span>
-              <span class="text-[11px] font-mono text-slate-400">Investigación & LCA</span>
+              <span class="text-[11px] font-mono text-emerald-400 font-bold">DISPONIBLE AHORA</span>
             </div>
             <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
-              Balances de Masa & Factores de Emisión
+              Investigación, Balances MFA &amp; Descarbonización Scope 1-2-3
             </h3>
             <p class="text-xs text-slate-400 mb-4 leading-relaxed">
-              Diseñada para auditores ambientales, consultores de huella de carbono y universidades que requieren calcular inventarios de ciclo de vida (ISO 59020, ISO 14040/44 e ISO 14064).
+              Diseñada para auditores ambientales, consultores de sostenibilidad, investigadores universitarios y jefes de planta que requieren validar inventarios de ciclo de vida (ISO 59020, ISO 14040/44 e ISO 14064-1).
             </p>
             <ul class="space-y-2.5 text-xs text-slate-300 font-mono">
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span><strong>Catálogo LER Vectorizado:</strong> Clasificación europea de residuos y factores estequiométricos de carbono en Python.</span>
+                <span><strong>Catálogo LER/EWC Vectorizado:</strong> Clasificación ministerial de residuos (HP1–HP15) y factores estequiométricos de carbono en Python.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span><strong>Dataset Hospitalario SERMAS & Magdalena:</strong> Series históricas de pesaje y valorización material con hash SHA-256 verificado.</span>
+                <span><strong>Modelos Neuronales PyTorch:</strong> OuroborosAnomalyNet (1.9k params) y OuroborosCircularForecaster (199k params) con pesos abiertos.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span><strong>Cuadernos de Balance LCA:</strong> Hojas de cálculo reproducibles de emisiones de alcance 3 (Scope 3 GHG).</span>
+                <span><strong>Doble Armadura de ADN:</strong> 134 normas regulatorias (ASTRAEA) y 4 invariantes físicos (ATHENA) con hash SHA-256 verificado.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="info" class="w-4 h-4 text-slate-500 shrink-0 mt-0.5"></i>
-                <span class="text-slate-400">Sin pesaje continuo en básculas IoT, sin integración telemática e-SIR y sin auditoría tributaria de canon de vertedero.</span>
+                <span class="text-slate-400">Sin pesaje continuo en básculas IoT, sin integración telemática e-SIR y sin auditoría tributaria en tiempo real.</span>
               </li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
-            <a href="https://github.com/kelvinjfloresy" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:underline font-bold">
+          <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between flex-wrap gap-2">
+            <a href="https://github.com/Yggdrasil-Environmental-Systems/CIRCULAR-CORE-OUROBOROS" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:underline font-bold">
               <i data-lucide="github" class="w-4 h-4"></i>
               <span>Repositorio en GitHub</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-500">Licencia CC-BY-NC 4.0</span>
+            <a href="https://doi.org/10.5281/zenodo.24114014" target="_blank" class="text-[11px] font-mono text-slate-400 hover:text-emerald-300">
+              DOI: 10.5281/zenodo.24114014
+            </a>
           </div>
         </div>
 
         <!-- Tarjeta Enterprise -->
         <div class="p-6 rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-void border-2 border-emerald-500/60 shadow-xl flex flex-col justify-between relative">
           <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-emerald-500 text-slate-950 font-mono text-[9px] font-extrabold uppercase tracking-wider">
-            CSRD & FISCALIDAD VERDE
+            CSRD &amp; FISCALIDAD VERDE
           </div>
           <div>
             <div class="flex items-center justify-between mb-3 pb-2 border-b border-brand-border">
               <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                EDICIÓN ENTERPRISE · CSRD & e-SIR
+                EDICIÓN ENTERPRISE · CSRD &amp; e-SIR (V2)
               </span>
-              <span class="text-[11px] font-mono text-emerald-300">Hospitales & Grandes Industrias</span>
+              <span class="text-[11px] font-mono text-emerald-300">Hospitales &amp; Grandes Industrias</span>
             </div>
             <h3 class="font-montserrat font-bold text-slate-100 text-base mb-1">
-              Pesaje RFID 24/7, Integración e-SIR & Optimización Fiscal
+              Pesaje RFID 24/7, Integración e-SIR &amp; Optimización Fiscal
             </h3>
             <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-              Desplegada para direcciones de compras, jefaturas de sostenibilidad corporativa y complejos hospitalarios obligados a reportar CSRD y Ley 7/2022.
+              Desplegada para direcciones de compras, jefaturas de sostenibilidad corporativa y complejos hospitalarios obligados a reportar bajo la Directiva <span class="glossary-term" data-glossary="csrd">CSRD</span> y la Ley 7/2022.
             </p>
             <ul class="space-y-2.5 text-xs text-slate-200 font-mono">
               <li class="flex items-start gap-2">
                 <i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span><strong>Ingestión Telemática RFID / IoT:</strong> Validación estequiométrica digital de códigos LER en muelle de carga con supervisión humana (Art. 14 EU AI Act).</span>
+                <span><strong>Pesos TITAN Industriales (NVIDIA L4):</strong> OuroborosDeepLatentAE (276k params) y OuroborosDeepPINNForecaster (1.51M params, 7 cuantiles).</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="file-check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
-                <span><strong>Interoperabilidad Ministerial e-SIR:</strong> Generación y validación de esquemas XML/EDIFACT para documentos de control y seguimiento de residuos peligrosos.</span>
+                <span><strong>Interoperabilidad Ministerial e-SIR (MITECO RD 764/2026):</strong> Generación telemática de esquemas E3L v3.0, validación de 10 dígitos NIMA y control biunívoco LER→R/D.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="coins" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i>
-                <span><strong>Optimización Canon Vertedero & Plástico (Ley 7/2022):</strong> Ahorro fiscal auditado mediante segregación certificada y exención de 0,45 €/kg.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="cloud-lightning" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
-                <span><strong>Telemetría Oficial Madrid (AEMET & REE ESIOS):</strong> Alcance 2 horario dinámico y alertas térmicas preventivas automáticas (Decreto 83/1999 CAM).</span>
+                <span><strong>Motor Fiscal Ley 7/2022 &amp; SCRAP:</strong> Liquidación automática de canon de vertedero (40 €/t), canon de incineración (15 €/t) e impuesto al plástico no reutilizable (0,45 €/kg).</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="shield" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
-                <span><strong>Reportes Oficiales CSRD (ESRS E5):</strong> Memorias de sostenibilidad auditables con sellado SHA-256 y SLA 99.9%.</span>
+                <span><strong>Reportes Oficiales CSRD (ESRS E1 &amp; E5):</strong> Tablas de aseguramiento limitado para auditorías Big 4 con sellado criptográfico ISO/IEC 27037.</span>
               </li>
             </ul>
           </div>
@@ -362,10 +459,135 @@
 
   </main>
 
+  <!-- Modal Glosario Interactivo -->
+  <div id="glossary-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-brand-surface border border-emerald-500/40 rounded-3xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-brand-border flex items-center justify-between bg-brand-card">
+        <div class="flex items-center gap-3">
+          <span class="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </span>
+          <div>
+            <h3 class="font-montserrat font-bold text-lg text-slate-100">Glosario Técnico &amp; Traducción Humana</h3>
+            <p class="text-xs font-mono text-emerald-400">Conceptos clave explicados sin tecnicismos para comités de dirección y auditores</p>
+          </div>
+        </div>
+        <button onclick="closeGlossaryModal()" class="p-2 rounded-xl bg-brand-surface hover:bg-brand-border text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto space-y-4" id="glossary-items-container">
+        <!-- Renderizado dinámico -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Tooltip Flotante Global -->
+  <div id="global-tech-tooltip" class="fixed z-50 hidden max-w-xs p-3 rounded-xl bg-brand-card border border-emerald-500/40 shadow-2xl text-xs font-mono pointer-events-none transition-opacity duration-150">
+    <div id="tooltip-title" class="font-bold text-emerald-300 mb-1 border-b border-emerald-500/20 pb-1"></div>
+    <div id="tooltip-humano" class="text-slate-200 text-[11px] leading-snug mb-1.5"></div>
+    <div id="tooltip-valor" class="text-[10px] text-brand-green"></div>
+  </div>
+
   <footer class="border-t border-brand-border bg-brand-surface py-8 text-center text-xs font-mono text-slate-400">
-    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos & IA Ambiental</div>
+    <div>Yggdrasil Environmental Systems · Dirección Técnica: Kelvin Jesús Flores Yarihuamán [MECES 3 · EQF Level 7] | Especialista en Análisis de Datos &amp; IA Ambiental</div>
   </footer>
 
-  <script>lucide.createIcons();</script>
+  <script>
+    const GLOSSARY_DATA = [
+      {
+        id: "caja_gris",
+        term: "Caja Gris (Grey-Box AI)",
+        category: "Arquitectura Físico-Matemática",
+        fullname: "Doctrina de Caja Gris: Primacía Físico-Matemática con Aceleración Neuronal",
+        humano: "Significa que nuestros sistemas NO son una 'caja negra' de IA que adivina o inventa resultados. La física y la química mandan siempre; la Inteligencia Artificial solo actúa como un acelerador para resolver las ecuaciones en milisegundos.",
+        impacto: "Garantiza cero alucinaciones y respaldo analítico 100% determinista: si la IA se desconecta, el balance de masa sigue cuadrando con exactitud total."
+      },
+      {
+        id: "csrd",
+        term: "CSRD",
+        category: "Normativa Europea & ESG",
+        fullname: "Corporate Sustainability Reporting Directive (Directiva UE 2022/2464)",
+        humano: "Ley europea de reporte obligatorio que exige a medianas y grandes empresas certificar digitalmente sus residuos, consumos y huella de carbono con rigor pericial.",
+        impacto: "Evita multas medioambientales de hasta cientos de miles de euros y garantiza el acceso a contratos públicos y créditos bancarios."
+      },
+      {
+        id: "pinn",
+        term: "PINN",
+        category: "Inteligencia Artificial Física",
+        fullname: "Physics-Informed Neural Network (Red Neuronal Informada por la Física)",
+        humano: "Red neuronal que integra dentro de su propia función matemática las leyes de conservación de masa y termodinámica, impidiendo que la IA invente resultados imposibles.",
+        impacto: "Acelera proyecciones de descarbonización de horas a menos de 4 milisegundos con cero cruce de cuantiles."
+      },
+      {
+        id: "ler",
+        term: "Código LER / EWC",
+        category: "Clasificación de Residuos",
+        fullname: "Lista Europea de Residuos (Decisión 2014/955/UE)",
+        humano: "El DNI oficial de 6 dígitos que identifica cada tipo de residuo en Europa, diferenciando lo que es reciclable de lo que es residuo peligroso o biocontaminado.",
+        impacto: "Evita que residuos inocuos se envíen por error a incinerar a 1.200 °C, reduciendo costes hasta un 80%."
+      },
+      {
+        id: "nir",
+        term: "Espectrometría NIR SAM",
+        category: "Metrología Óptica",
+        fullname: "Near-Infrared Spectral Angle Mapper (Infrarrojo Cercano)",
+        humano: "Escáner óptico que 'lee' la luz reflejada por los plásticos a 900-1750 nm para saber con exactitud química de qué polímero está hecho cada envase.",
+        impacto: "Permite separar plásticos puros de materiales contaminados con una precisión superior al 98.8%."
+      }
+    ];
+
+    function openGlossaryModal() {
+      const modal = document.getElementById('glossary-modal');
+      const container = document.getElementById('glossary-items-container');
+      if (modal && container) {
+        container.innerHTML = GLOSSARY_DATA.map(item => `
+          <div class="p-4 rounded-2xl bg-brand-void/80 border border-brand-border">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+              <span class="font-montserrat font-extrabold text-emerald-300 text-sm">${item.term}</span>
+              <span class="text-[11px] font-mono text-slate-400">${item.fullname}</span>
+            </div>
+            <p class="text-xs text-slate-200 leading-relaxed mb-2"><strong class="text-brand-green">Definición Ejecutiva:</strong> ${item.humano}</p>
+            <div class="text-[11px] font-mono text-emerald-400">Valor: ${item.impacto}</div>
+          </div>
+        `).join('');
+        modal.classList.remove('hidden');
+        lucide.createIcons();
+      }
+    }
+
+    function closeGlossaryModal() {
+      const modal = document.getElementById('glossary-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      const tooltip = document.getElementById('global-tech-tooltip');
+      const titleEl = document.getElementById('tooltip-title');
+      const humanoEl = document.getElementById('tooltip-humano');
+      const valorEl = document.getElementById('tooltip-valor');
+
+      document.querySelectorAll('.glossary-term').forEach(el => {
+        const termId = el.getAttribute('data-glossary');
+        const data = GLOSSARY_DATA.find(d => d.id === termId);
+        if (!data) return;
+        el.addEventListener('mouseenter', () => {
+          titleEl.innerText = data.fullname;
+          humanoEl.innerHTML = `<strong class="text-brand-green block mb-0.5">Traducción Ejecutiva:</strong> ${data.humano}`;
+          valorEl.innerText = `Valor: ${data.impacto}`;
+          tooltip.classList.remove('hidden');
+          const rect = el.getBoundingClientRect();
+          let top = rect.bottom + 8;
+          let left = Math.max(10, Math.min(window.innerWidth - 330, rect.left + (rect.width / 2) - 160));
+          if (top + 150 > window.innerHeight) top = rect.top - 150;
+          tooltip.style.top = `${top}px`;
+          tooltip.style.left = `${left}px`;
+        });
+        el.addEventListener('mouseleave', () => tooltip.classList.add('hidden'));
+        el.addEventListener('click', () => { tooltip.classList.add('hidden'); openGlossaryModal(); });
+      });
+    });
+  </script>
 </body>
 </html>

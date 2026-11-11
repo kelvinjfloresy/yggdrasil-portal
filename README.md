@@ -22,6 +22,7 @@
   <a href="https://yggdrasil-hidro-core-osiris-poyo-nowcast-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/💧%20DEMO%20LIVE-HYDRO--CORE%20OSIRIS-0284C7?style=for-the-badge&logo=streamlit&logoColor=fff" alt="OSIRIS Demo" /></a>
   <a href="https://yggdrasil-aqua-core-hygieia-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/🧪%20DEMO%20LIVE-AQUA--CORE%20HYGIEIA-00F5A0?style=for-the-badge&logo=streamlit&logoColor=000" alt="HYGIEIA Demo" /></a>
   <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/☀️%20DEMO%20LIVE-SOLAR--CORE%20HELIOS-F59E0B?style=for-the-badge&logo=streamlit&logoColor=000" alt="HELIOS Demo" /></a>
+  <a href="https://yggdrasil-aqua-core-ouroboros-kjfy.streamlit.app/"><img src="https://img.shields.io/badge/🔄%20DEMO%20LIVE-CIRCULAR--CORE%20OUROBOROS-10B981?style=for-the-badge&logo=streamlit&logoColor=fff" alt="OUROBOROS Demo" /></a>
 </p>
 
 <p align="center">
@@ -142,6 +143,19 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       🔗 <strong>Enlaces Oficiales:</strong> <a href="https://yggdrasil-solar-core-helios-kjfy.streamlit.app/"><strong>Streamlit Live Cloud</strong></a> · <a href="https://doi.org/10.5281/zenodo.23506041"><strong>DOI: 10.5281/zenodo.23506041</strong></a> · <a href="https://github.com/Yggdrasil-Environmental-Systems/SOLAR-CORE-HELIOS"><strong>Repositorio GitHub Open-Core</strong></a>
     </td>
   </tr>
+  <tr>
+    <td width="260" align="center">
+      <img src="assets/branding/badge_circular_ouroboros.png" width="240" alt="CIRCULAR-CORE OUROBOROS" /><br>
+      <code>DOI: 10.5281/zenodo.24114014</code>
+    </td>
+    <td>
+      <strong>CIRCULAR-CORE: OUROBOROS — Metabolismo Material, LER/EWC, Espectrometría NIR &amp; Descarbonización Scope 1-2-3 (CSRD)</strong><br>
+      🌍 <strong>En el mundo real:</strong> Pesa y clasifica digitalmente cada contenedor de residuos en hospitales e industrias para evitar mezclar residuos asimilables en bolsas de biocontaminados (que cuestan 8 veces más de destruir), audita el 100% de la masa por código LER bajo ISO 59020 y certifica el fin de condición de residuo.<br>
+      📊 <strong>Validación Operativa Multi-Sectorial:</strong> Validado sobre <strong>6 protocolos de calibración</strong>: Protocolo ALPHA (3.501 kg, 23 unidades, 25 meses: Red SERMAS Madrid y CSMC Magdalena, 74.2% valorización, 42.600 €/año ahorrados en canon Ley 7/2022 y <strong>-70.4% en Alcance 3</strong>), Quirúrgico BETA, RCD Obras Civiles (89.7% valorización), Envases (RD 1055/2022), Granza HDPE EoW (BOE-A-2026-21300) y Compost Municipal LIFE-BIOBEST Clase A.<br>
+      🔗 <strong>Enlaces Oficiales:</strong> <a href="https://yggdrasil-aqua-core-ouroboros-kjfy.streamlit.app/"><strong>Streamlit Live Cloud</strong></a> · <a href="https://doi.org/10.5281/zenodo.24114014"><strong>DOI: 10.5281/zenodo.24114014</strong></a> · <a href="https://github.com/Yggdrasil-Environmental-Systems/CIRCULAR-CORE-OUROBOROS"><strong>Repositorio GitHub Open-Core</strong></a>
+    </td>
+  </tr>
+
 </table>
 
 ---
@@ -159,16 +173,7 @@ A diferencia de los modelos de caja negra o la simulación hidráulica y térmic
       📊 <strong>Rendimiento Bancable:</strong> Edificio terciario de 4.900 m² en Madrid (Zona D3): <strong>148.6 MWh/año ahorrados (-28.4%)</strong>, <strong>SRI 84% (Clase A EPBD)</strong>, +13 años de vida útil CRREM y amortización en 8.4 meses vía Ficha TER050 (RD 36/2023).
     </td>
   </tr>
-  <tr>
-    <td width="260" align="center">
-      <img src="assets/branding/badge_circular_ouroboros.png" width="240" alt="CIRCULAR-CORE OUROBOROS" />
-    </td>
-    <td>
-      <strong>CIRCULAR-CORE: OUROBOROS — Metabolismo Circular, Reciclaje Hospitalario/Industrial & CSRD</strong><br>
-      🌍 <strong>En el mundo real:</strong> Audita flujos másicos por código LER bajo ISO 59020:2024 y RD 764/2026 (MITECO) para evitar mezclar residuos valorizables en fracciones peligrosas o vertedero.<br>
-      📊 <strong>Rendimiento Bancable:</strong> Validado en <strong>Red Hospitalaria SERMAS de Madrid (La Paz, Gregorio Marañón, 12 de Octubre, Clínico San Carlos)</strong>, <strong>Hospital CSMC Magdalena (Castellón)</strong> y <strong>Planta RCD Levante</strong>: tasa de valorización del <strong>74.2%</strong>, <strong>42.600 €/año ahorrados</strong> en canon de vertedero (Ley 7/2022) y <strong>-70.4%</strong> de huella de carbono.
-    </td>
-  </tr>
+
 </table>
 
 ---
